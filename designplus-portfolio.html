@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Designplus Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="page-portfolio">
+
+<!-- NAV -->
+<nav>
+  <a href="designplus-homepage.html" class="nav-logo">Designplus<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="designplus-homepage.html">Home</a></li>
+    <li><a href="designplus-about.html">About</a></li>
+    <li><a href="designplus-services.html">Services</a></li>
+    <li><a href="designplus-portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="designplus-clients.html">Clients</a></li>
+    <li><a href="designplus-contact.html" class="nav-cta">Get a quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-noise"></div>
+  <div class="hero-line hero-line-1"></div>
+  <div class="hero-line hero-line-2"></div>
+  <div class="hero-inner">
+    <div class="breadcrumb">Home &nbsp;/&nbsp; <span>Portfolio</span></div>
+    <div class="hero-layout">
+      <div class="hero-left">
+        <h1>Work that<br><em>speaks.</em></h1>
+        <p>Every project in this portfolio represents a real business challenge solved through design, strategy, and craft. Browse by service or scroll through — the results tell the story.</p>
+      </div>
+      <div class="hero-right">
+        <div class="hero-stats-grid">
+          <div class="hero-stat">
+            <div class="hero-stat-num">150<span>+</span></div>
+            <div class="hero-stat-label">Projects completed</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">80<span>+</span></div>
+            <div class="hero-stat-label">Happy clients</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">12<span>+</span></div>
+            <div class="hero-stat-label">Industries served</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">7<span>+</span></div>
+            <div class="hero-stat-label">Years delivering</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-tabs">
+    <button class="filter-tab active" onclick="filterProjects('all', this)">All work <span class="filter-count">12</span></button>
+    <button class="filter-tab" onclick="filterProjects('branding', this)">Branding <span class="filter-count">3</span></button>
+    <button class="filter-tab" onclick="filterProjects('web', this)">Web Design <span class="filter-count">2</span></button>
+    <button class="filter-tab" onclick="filterProjects('print', this)">Print <span class="filter-count">2</span></button>
+    <button class="filter-tab" onclick="filterProjects('social', this)">Social Media <span class="filter-count">2</span></button>
+    <button class="filter-tab" onclick="filterProjects('signage', this)">Signage <span class="filter-count">2</span></button>
+    <button class="filter-tab" onclick="filterProjects('seo', this)">SEO <span class="filter-count">1</span></button>
+  </div>
+  <div class="view-toggle">
+    <button class="view-btn active" title="Grid view">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"/></svg>
+    </button>
+    <button class="view-btn" title="List view">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- PORTFOLIO GRID -->
+<section class="portfolio-section">
+  <div class="projects-grid" id="projectsGrid">
+
+    <!-- PROJECT 01 — FEATURED -->
+    <div class="project-card featured" data-category="branding">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-branding-1">
+          <div class="pv-mark">H</div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+          </div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">Brand Identity</span>
+        <div class="project-name">Horizon Logistics — Full brand overhaul</div>
+        <div class="project-client">Horizon Logistics Ltd · Nairobi, Kenya</div>
+        <div class="project-result">New brand identity increased client enquiries by 60% within the first quarter after launch</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 02 -->
+    <div class="project-card" data-category="web">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-web-1">
+          <div class="pv-browser">
+            <div class="pv-browser-bar">
+              <div class="pv-dot" style="background:#ff5f56"></div>
+              <div class="pv-dot" style="background:#ffbd2e"></div>
+              <div class="pv-dot" style="background:#27c93f"></div>
+            </div>
+            <div class="pv-browser-body"><span>savannafoodsltd.co.ke</span></div>
+          </div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">Web Design &amp; Development</span>
+        <div class="project-name">Savanna Foods — E-commerce platform</div>
+        <div class="project-client">Savanna Foods Ltd · Nairobi, Kenya</div>
+        <div class="project-result">Online orders up 140% in the first 2 months after the new site launched</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 03 -->
+    <div class="project-card" data-category="print">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-print-1">
+          <div class="pv-cards">
+            <div class="pv-card-item"></div>
+            <div class="pv-card-item"></div>
+            <div class="pv-card-item"></div>
+          </div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">Print Design</span>
+        <div class="project-name">Summit Capital — Corporate stationery suite</div>
+        <div class="project-client">Summit Capital Group · Nairobi, Kenya</div>
+        <div class="project-result">Complete stationery system across 6 document types, printed and delivered in 5 business days</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 04 -->
+    <div class="project-card" data-category="social">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-social-1">
+          <div class="pv-posts">
+            <div class="pv-post" style="height:60px"></div>
+            <div class="pv-post" style="height:40px"></div>
+            <div class="pv-post" style="height:40px"></div>
+            <div class="pv-post" style="height:60px"></div>
+          </div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">Social Media Management</span>
+        <div class="project-name">Pearl Properties — Instagram &amp; Facebook growth</div>
+        <div class="project-client">Pearl Properties Kenya · Nairobi, Kenya</div>
+        <div class="project-result">Follower count grew from 800 to 12,400 in 6 months, generating 35+ qualified property enquiries per month</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 05 -->
+    <div class="project-card" data-category="signage">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-signage-1">
+          <div class="pv-sign"><span>Greenleaf NGO</span></div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">Office Signage</span>
+        <div class="project-name">Greenleaf NGO — Office &amp; reception branding</div>
+        <div class="project-client">Greenleaf Foundation · Nairobi, Kenya</div>
+        <div class="project-result">Full office branding installation across 3 floors completed within one week of brief sign-off</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 06 — FEATURED -->
+    <div class="project-card featured" data-category="seo">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-seo-1">
+          <div class="pv-chart">
+            <div class="pv-bar"></div>
+            <div class="pv-bar"></div>
+            <div class="pv-bar"></div>
+            <div class="pv-bar"></div>
+            <div class="pv-bar"></div>
+            <div class="pv-bar"></div>
+            <div class="pv-bar"></div>
+          </div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">SEO</span>
+        <div class="project-name">Afrique Media — From page 4 to page 1 in 90 days</div>
+        <div class="project-client">Afrique Media Group · Nairobi, Kenya</div>
+        <div class="project-result">Organic traffic increased by 320% in 3 months; 14 target keywords now ranking on page one of Google Kenya</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 07 -->
+    <div class="project-card" data-category="branding">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-branding-2">
+          <div class="pv-logo-stack">
+            <div class="pv-logo-mark"></div>
+            <div class="pv-logo-line"></div>
+            <div class="pv-logo-line" style="width:32px; margin-top:2px;"></div>
+          </div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">Brand Identity</span>
+        <div class="project-name">Amara Wellness — Brand identity from scratch</div>
+        <div class="project-client">Amara Wellness Centre · Westlands, Nairobi</div>
+        <div class="project-result">Brand launched to a sold-out opening event; 200+ Instagram followers gained on launch day alone</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 08 -->
+    <div class="project-card" data-category="web">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-web-2">
+          <div class="pv-mobile">
+            <div class="pv-mobile-header"></div>
+            <div class="pv-mobile-content">
+              <div class="pv-mobile-row"></div>
+              <div class="pv-mobile-row"></div>
+              <div class="pv-mobile-row"></div>
+              <div class="pv-mobile-btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">Web Design &amp; Development</span>
+        <div class="project-name">Karibu Hotels — Mobile-first website redesign</div>
+        <div class="project-client">Karibu Hotels &amp; Resorts · Kenya</div>
+        <div class="project-result">Bounce rate dropped by 48%; direct online bookings increased by 95% in the first month post-launch</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 09 -->
+    <div class="project-card" data-category="print">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-print-2">
+          <div class="pv-brochure">
+            <div class="pv-brochure-left"></div>
+            <div class="pv-brochure-right">
+              <div class="pv-text-line"></div>
+              <div class="pv-text-line"></div>
+              <div class="pv-text-line"></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">Print Design</span>
+        <div class="project-name">Greenleaf NGO — Annual report &amp; brochures</div>
+        <div class="project-client">Greenleaf Foundation · Nairobi, Kenya</div>
+        <div class="project-result">2,000 copies of the annual report printed and distributed to donors; praised by board as the best-ever edition</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 10 -->
+    <div class="project-card" data-category="social">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-social-2">
+          <div class="pv-linkedin">
+            <div class="pv-li-header">
+              <div class="pv-li-avatar"></div>
+              <div class="pv-li-name"></div>
+            </div>
+            <div class="pv-li-body"></div>
+            <div class="pv-li-body" style="width:80%"></div>
+            <div class="pv-li-body" style="width:60%; margin-top:4px;"></div>
+          </div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">Social Media Management</span>
+        <div class="project-name">Summit Capital — LinkedIn thought leadership</div>
+        <div class="project-client">Summit Capital Group · Nairobi, Kenya</div>
+        <div class="project-result">LinkedIn page grew from 120 to 4,800 followers in 4 months; CEO recognised as a top finance voice in Kenya</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 11 -->
+    <div class="project-card" data-category="signage">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-signage-2">
+          <div class="pv-vehicle"><span>Fleet Branding</span></div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">Vehicle Branding</span>
+        <div class="project-name">Horizon Logistics — Fleet of 22 vehicles</div>
+        <div class="project-client">Horizon Logistics Ltd · Kenya-wide</div>
+        <div class="project-result">Full fleet branded consistently across 22 vehicles in 10 days; client reported 30% increase in brand recognition on key routes</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 12 -->
+    <div class="project-card" data-category="branding">
+      <div class="project-visual">
+        <div class="project-visual-inner pv-it-1">
+          <div class="pv-code">
+            <div><span class="c-blue">const</span> <span class="c-gold">brand</span> = {</div>
+            <div>&nbsp;&nbsp;<span class="c-green">name</span>: <span class="c-red">'Afrique'</span>,</div>
+            <div>&nbsp;&nbsp;<span class="c-green">identity</span>: <span class="c-blue">new</span></div>
+            <div>&nbsp;&nbsp;<span class="c-gold">BrandSystem</span>()</div>
+            <div>}</div>
+          </div>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+          <div class="overlay-view">View project</div>
+        </div>
+      </div>
+      <div class="project-info">
+        <span class="project-service-tag">Brand Identity + IT</span>
+        <div class="project-name">Afrique Media — Brand + custom CMS build</div>
+        <div class="project-client">Afrique Media Group · Nairobi, Kenya</div>
+        <div class="project-result">New brand identity paired with a custom content management system that cut editorial workflow time by 65%</div>
+      </div>
+    </div>
+
+  </div><!-- end grid -->
+
+  <div class="load-more-wrap">
+    <button class="load-more-btn">Load more projects</button>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="case-studies">
+  <div class="cs-header">
+    <div>
+      <div class="section-label">In depth</div>
+      <h2 class="section-title">Featured case studies.</h2>
+    </div>
+    <p>Behind every result is a story. These three projects show our full process — from the brief to the outcome.</p>
+  </div>
+
+  <!-- CASE STUDY 01 -->
+  <div class="case-study">
+    <div class="cs-layout">
+      <div class="cs-visual cs-visual-1">
+        <div class="cs-visual-pattern"></div>
+        <div class="cs-visual-content">
+          <div class="cs-big-num" style="color:var(--gold);">+60<span style="color:rgba(255,255,255,0.4); font-size:48px;">%</span></div>
+          <div class="cs-big-label" style="color:rgba(255,255,255,0.4);">More enquiries</div>
+        </div>
+      </div>
+      <div class="cs-content">
+        <div class="cs-tag">Brand Identity · Signage · Web</div>
+        <div class="cs-title">How Horizon Logistics went from invisible to unmistakable</div>
+        <div class="cs-client">Horizon Logistics Ltd — Nairobi, Kenya</div>
+        <div class="cs-divider"></div>
+        <div class="cs-blocks">
+          <div class="cs-block">
+            <div class="cs-block-label">The challenge</div>
+            <p>Horizon Logistics had been operating for 8 years with a logo designed on Microsoft Word. Despite being one of the most reliable logistics firms in Nairobi, clients consistently underestimated their scale and professionalism at first impression.</p>
+          </div>
+          <div class="cs-block">
+            <div class="cs-block-label">Our approach</div>
+            <p>We conducted a full brand audit and competitor analysis, then developed a new visual identity system — logo, typography, colour palette, and brand guide. This was applied across a redesigned website, a full stationery suite, and a fleet branding programme covering all 22 vehicles.</p>
+          </div>
+        </div>
+        <div class="cs-results">
+          <div class="cs-result-pill">
+            <span class="cs-result-num">60<span>%</span></span>
+            <span class="cs-result-label">More client enquiries</span>
+          </div>
+          <div class="cs-result-pill">
+            <span class="cs-result-num">22</span>
+            <span class="cs-result-label">Vehicles branded</span>
+          </div>
+          <div class="cs-result-pill">
+            <span class="cs-result-num">3<span>wk</span></span>
+            <span class="cs-result-label">Full delivery time</span>
+          </div>
+        </div>
+        <a href="#" class="cs-read-more">Read full case study →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE STUDY 02 -->
+  <div class="case-study">
+    <div class="cs-layout reverse">
+      <div class="cs-visual cs-visual-2">
+        <div class="cs-visual-pattern"></div>
+        <div class="cs-visual-content">
+          <div class="cs-big-num" style="color:var(--gold-light);">320<span style="color:rgba(255,255,255,0.3); font-size:48px;">%</span></div>
+          <div class="cs-big-label" style="color:rgba(255,255,255,0.35);">Organic traffic growth</div>
+        </div>
+      </div>
+      <div class="cs-content">
+        <div class="cs-tag">SEO · Web Optimisation · Content</div>
+        <div class="cs-title">How Afrique Media tripled their organic traffic in 90 days</div>
+        <div class="cs-client">Afrique Media Group — Nairobi, Kenya</div>
+        <div class="cs-divider"></div>
+        <div class="cs-blocks">
+          <div class="cs-block">
+            <div class="cs-block-label">The challenge</div>
+            <p>Afrique Media had strong editorial content but almost no online visibility. Their website was buried on page 4 of Google for their most important keywords, and organic traffic had flatlined for 18 months.</p>
+          </div>
+          <div class="cs-block">
+            <div class="cs-block-label">Our approach</div>
+            <p>We started with a comprehensive technical SEO audit, fixing 47 crawl errors and improving site speed by 62%. We then developed a keyword strategy targeting 28 high-intent search terms relevant to the Kenyan media market and built a content calendar to support each one consistently over 12 weeks.</p>
+          </div>
+        </div>
+        <div class="cs-results">
+          <div class="cs-result-pill">
+            <span class="cs-result-num">320<span>%</span></span>
+            <span class="cs-result-label">Traffic increase</span>
+          </div>
+          <div class="cs-result-pill">
+            <span class="cs-result-num">14</span>
+            <span class="cs-result-label">Page 1 keywords</span>
+          </div>
+          <div class="cs-result-pill">
+            <span class="cs-result-num">90<span>d</span></span>
+            <span class="cs-result-label">To see results</span>
+          </div>
+        </div>
+        <a href="#" class="cs-read-more">Read full case study →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE STUDY 03 -->
+  <div class="case-study">
+    <div class="cs-layout">
+      <div class="cs-visual cs-visual-3">
+        <div class="cs-visual-content">
+          <div class="cs-big-num" style="color:var(--navy);">12.4<span style="color:var(--text-muted); font-size:48px;">K</span></div>
+          <div class="cs-big-label" style="color:var(--text-muted);">Instagram followers gained</div>
+        </div>
+      </div>
+      <div class="cs-content">
+        <div class="cs-tag">Social Media · Content Creation · Paid Ads</div>
+        <div class="cs-title">How Pearl Properties turned social media into their top lead source</div>
+        <div class="cs-client">Pearl Properties Kenya — Nairobi, Kenya</div>
+        <div class="cs-divider"></div>
+        <div class="cs-blocks">
+          <div class="cs-block">
+            <div class="cs-block-label">The challenge</div>
+            <p>Pearl Properties had active social media accounts but no strategy — sporadic posting, inconsistent visuals, and almost zero engagement from potential buyers. Their sales team was relying entirely on word-of-mouth referrals.</p>
+          </div>
+          <div class="cs-block">
+            <div class="cs-block-label">Our approach</div>
+            <p>We rebuilt their social presence from the ground up: a new content strategy focused on lifestyle and aspiration, professionally designed post templates consistent with their brand, a 3-posts-per-week publishing schedule, and targeted paid ads reaching potential buyers in specific Nairobi neighbourhoods. Community management was handled daily to respond to every enquiry and comment.</p>
+          </div>
+        </div>
+        <div class="cs-results">
+          <div class="cs-result-pill">
+            <span class="cs-result-num">12.4<span>K</span></span>
+            <span class="cs-result-label">New followers in 6mo</span>
+          </div>
+          <div class="cs-result-pill">
+            <span class="cs-result-num">35<span>+</span></span>
+            <span class="cs-result-label">Monthly enquiries</span>
+          </div>
+          <div class="cs-result-pill">
+            <span class="cs-result-num">#1</span>
+            <span class="cs-result-label">Lead source for sales</span>
+          </div>
+        </div>
+        <a href="#" class="cs-read-more">Read full case study →</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- INDUSTRIES STRIP -->
+<div class="industries-strip">
+  <div class="industries-inner">
+    <div class="industries-left">
+      <h3>12+ industries. One agency.</h3>
+      <p>We've worked across every major sector in Kenya.</p>
+    </div>
+    <div class="industries-pills">
+      <div class="ind-pill">Finance &amp; Banking</div>
+      <div class="ind-pill">Real Estate</div>
+      <div class="ind-pill">Healthcare</div>
+      <div class="ind-pill">NGOs &amp; Nonprofits</div>
+      <div class="ind-pill">Hospitality &amp; Tourism</div>
+      <div class="ind-pill">FMCG &amp; Retail</div>
+      <div class="ind-pill">Education</div>
+      <div class="ind-pill">Tech &amp; Startups</div>
+      <div class="ind-pill">Media &amp; Entertainment</div>
+      <div class="ind-pill">Manufacturing</div>
+      <div class="ind-pill">Logistics</div>
+      <div class="ind-pill">Government</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA + TESTIMONIALS -->
+<section class="portfolio-cta">
+  <div class="pcta-left">
+    <div class="section-label">Ready to start?</div>
+    <h2>Your project<br>could be <em>next.</em></h2>
+    <p>Every project in this portfolio started with a conversation. Tell us about your business, your challenge, and what you're hoping to achieve — and we'll show you what's possible.</p>
+    <div class="pcta-buttons">
+      <a href="designplus-contact.html" class="btn-navy">Start a project</a>
+      <a href="designplus-services.html" class="btn-outline">View our services</a>
+    </div>
+  </div>
+
+  <div class="pcta-right">
+    <div class="testimonial-stack">
+      <div class="testimonial-card featured-t">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote">"Designplus didn't just redesign our brand — they rebuilt how our clients see us. The quality of enquiries we receive has improved dramatically since the rebrand."</div>
+        <div class="t-attr">
+          <strong>James Kariuki</strong>
+          CEO, Horizon Logistics Ltd
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote">"The results from our social media campaign exceeded every expectation. Social is now our number one source of property leads."</div>
+        <div class="t-attr">
+          <strong>Wanjiru Mwenda</strong>
+          Sales Director, Pearl Properties Kenya
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote">"From page 4 to page 1 in three months. The SEO results have genuinely changed the trajectory of our business online."</div>
+        <div class="t-attr">
+          <strong>David Odhiambo</strong>
+          Digital Director, Afrique Media Group
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">Designplus<span>.</span></div>
+      <p class="footer-tagline">Your brand, built right. Full-service creative and digital solutions for businesses across Kenya.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="designplus-services.html#graphic-design">Graphic Design</a></li>
+        <li><a href="designplus-services.html#web-design">Web Design &amp; Development</a></li>
+        <li><a href="designplus-services.html#seo">SEO</a></li>
+        <li><a href="designplus-services.html#printing">Printing Services</a></li>
+        <li><a href="designplus-services.html#branding-signage">Branding &amp; Signage</a></li>
+        <li><a href="designplus-services.html#social-media">Social Media</a></li>
+        <li><a href="designplus-services.html#it-solutions">Custom IT &amp; Digital</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="designplus-about.html">About us</a></li>
+        <li><a href="designplus-portfolio.html">Portfolio</a></li>
+        <li><a href="designplus-clients.html">Clients</a></li>
+        <li><a href="designplus-contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:info@designplussolutions.co.ke">info@designplussolutions.co.ke</a></li>
+        <li><a href="tel:+254743270939">+254 743 270 939</a></li>
+        <li><a href="https://wa.me/254743270939" target="_blank">WhatsApp us</a></li>
+        <li><a href="https://maps.google.com/?q=Nairobi,+Kenya" target="_blank">Nairobi, Kenya</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Designplus Solutions. All rights reserved.</p>
+    <p>Designed with care in Nairobi, Kenya.</p>
+  </div>
+</footer>
+
+<script>
+  function filterProjects(category, btn) {
+    // Update active tab
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+
+    const grid = document.getElementById('projectsGrid');
+    grid.classList.add('filtering');
+
+    setTimeout(() => {
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      grid.classList.remove('filtering');
+    }, 300);
+  }
+</script>
+
+</body>
+</html>

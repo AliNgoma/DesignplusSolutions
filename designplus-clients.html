@@ -1,0 +1,597 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Clients — Designplus Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="page-clients">
+
+<!-- NAV -->
+<nav>
+  <a href="designplus-homepage.html" class="nav-logo">Designplus<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="designplus-homepage.html">Home</a></li>
+    <li><a href="designplus-about.html">About</a></li>
+    <li><a href="designplus-services.html">Services</a></li>
+    <li><a href="designplus-portfolio.html">Portfolio</a></li>
+    <li><a href="designplus-clients.html" class="active">Clients</a></li>
+    <li><a href="designplus-contact.html" class="nav-cta">Get a quote</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-content">
+    <div class="breadcrumb">Home &nbsp;/&nbsp; <span>Our clients</span></div>
+    <div class="hero-eyebrow">Trusted across Kenya</div>
+    <h1>Businesses that<br><span class="line-indent">chose to grow <em>with us.</em></span></h1>
+    <p class="hero-desc">From Nairobi startups finding their footing to established corporates refreshing their brand — every client we work with becomes part of a long-term partnership built on trust, results, and honest work.</p>
+    <div class="hero-trust-row">
+      <div class="hero-trust-item">
+        <div class="hero-trust-num">80<span>+</span></div>
+        <div class="hero-trust-label">Clients served</div>
+      </div>
+      <div class="hero-trust-item">
+        <div class="hero-trust-num">12<span>+</span></div>
+        <div class="hero-trust-label">Industries</div>
+      </div>
+      <div class="hero-trust-item">
+        <div class="hero-trust-num">95<span>%</span></div>
+        <div class="hero-trust-label">Client retention rate</div>
+      </div>
+      <div class="hero-trust-item">
+        <div class="hero-trust-num">7<span>+</span></div>
+        <div class="hero-trust-label">Years of trust</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLLING LOGO MARQUEE -->
+  <div class="logo-band">
+    <div class="logo-band-label">Our clients</div>
+    <div class="marquee-track">
+      <div class="marquee-item">Horizon Logistics</div>
+      <div class="marquee-item">Savanna Foods</div>
+      <div class="marquee-item">Pearl Properties</div>
+      <div class="marquee-item">Summit Capital</div>
+      <div class="marquee-item">Greenleaf Foundation</div>
+      <div class="marquee-item">Afrique Media Group</div>
+      <div class="marquee-item">Amara Wellness</div>
+      <div class="marquee-item">Karibu Hotels</div>
+      <div class="marquee-item">Kilimani Clinic</div>
+      <div class="marquee-item">Eastgate Properties</div>
+      <div class="marquee-item">Savannah Tech</div>
+      <div class="marquee-item">Nairobi Eats</div>
+      <!-- duplicated for seamless loop -->
+      <div class="marquee-item">Horizon Logistics</div>
+      <div class="marquee-item">Savanna Foods</div>
+      <div class="marquee-item">Pearl Properties</div>
+      <div class="marquee-item">Summit Capital</div>
+      <div class="marquee-item">Greenleaf Foundation</div>
+      <div class="marquee-item">Afrique Media Group</div>
+      <div class="marquee-item">Amara Wellness</div>
+      <div class="marquee-item">Karibu Hotels</div>
+      <div class="marquee-item">Kilimani Clinic</div>
+      <div class="marquee-item">Eastgate Properties</div>
+      <div class="marquee-item">Savannah Tech</div>
+      <div class="marquee-item">Nairobi Eats</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLIENTS BY SECTOR ── -->
+<section class="by-sector">
+  <div class="by-sector-header">
+    <div class="section-label">Our client roster</div>
+    <h2 class="section-title">Trusted by businesses<br>across every sector.</h2>
+    <p class="section-sub">We've built a diverse portfolio of long-term client relationships — from scrappy startups to established corporates. Browse by industry below.</p>
+  </div>
+
+  <div class="sector-tabs">
+    <button class="sector-tab active" onclick="showSector('all', this)">All clients</button>
+    <button class="sector-tab" onclick="showSector('corporate', this)">Corporates &amp; Finance</button>
+    <button class="sector-tab" onclick="showSector('sme', this)">SMEs &amp; Startups</button>
+    <button class="sector-tab" onclick="showSector('ngo', this)">NGOs &amp; Nonprofits</button>
+    <button class="sector-tab" onclick="showSector('hospitality', this)">Hospitality &amp; Retail</button>
+    <button class="sector-tab" onclick="showSector('health', this)">Healthcare</button>
+  </div>
+
+  <!-- ALL -->
+  <div class="sector-panel active" id="panel-all">
+    <div class="clients-logo-grid">
+      <div class="client-logo-card"><div class="client-logo-name">Horizon Logistics Ltd</div><div class="client-logo-sub">Logistics &amp; Transport</div><div class="client-logo-service">Branding · Web · Signage</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Savanna Foods Ltd</div><div class="client-logo-sub">FMCG &amp; Retail</div><div class="client-logo-service">Web · Packaging · Print</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Pearl Properties Kenya</div><div class="client-logo-sub">Real Estate</div><div class="client-logo-service">Branding · Social Media · Web</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Summit Capital Group</div><div class="client-logo-sub">Finance &amp; Investment</div><div class="client-logo-service">Branding · Print · Social</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Greenleaf Foundation</div><div class="client-logo-sub">NGO &amp; Nonprofit</div><div class="client-logo-service">Branding · Print · Signage</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Afrique Media Group</div><div class="client-logo-sub">Media &amp; Publishing</div><div class="client-logo-service">SEO · Web · Branding</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Amara Wellness Centre</div><div class="client-logo-sub">Healthcare &amp; Wellness</div><div class="client-logo-service">Branding · Social · Web</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Karibu Hotels &amp; Resorts</div><div class="client-logo-sub">Hospitality &amp; Tourism</div><div class="client-logo-service">Web · Social · Print</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Kilimani Clinic</div><div class="client-logo-sub">Healthcare</div><div class="client-logo-service">Branding · Web · Signage</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Eastgate Properties</div><div class="client-logo-sub">Real Estate</div><div class="client-logo-service">Branding · Web · Print</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Savannah Tech</div><div class="client-logo-sub">Technology &amp; Startups</div><div class="client-logo-service">Web · Branding · IT</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Nairobi Eats</div><div class="client-logo-sub">Food &amp; Hospitality</div><div class="client-logo-service">Branding · Social · Print</div></div>
+    </div>
+  </div>
+
+  <!-- CORPORATES -->
+  <div class="sector-panel" id="panel-corporate">
+    <div class="clients-logo-grid">
+      <div class="client-logo-card"><div class="client-logo-name">Summit Capital Group</div><div class="client-logo-sub">Finance &amp; Investment</div><div class="client-logo-service">Branding · Print · Social</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Horizon Logistics Ltd</div><div class="client-logo-sub">Logistics &amp; Transport</div><div class="client-logo-service">Branding · Web · Signage</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Afrique Media Group</div><div class="client-logo-sub">Media &amp; Publishing</div><div class="client-logo-service">SEO · Web · Branding</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Eastgate Properties</div><div class="client-logo-sub">Real Estate Development</div><div class="client-logo-service">Branding · Web · Print</div></div>
+    </div>
+  </div>
+
+  <!-- SMES -->
+  <div class="sector-panel" id="panel-sme">
+    <div class="clients-logo-grid">
+      <div class="client-logo-card"><div class="client-logo-name">Savannah Tech</div><div class="client-logo-sub">Technology &amp; Startups</div><div class="client-logo-service">Web · Branding · IT</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Amara Wellness Centre</div><div class="client-logo-sub">Health &amp; Wellness</div><div class="client-logo-service">Branding · Social · Web</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Nairobi Eats</div><div class="client-logo-sub">Food &amp; Hospitality</div><div class="client-logo-service">Branding · Social · Print</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Pearl Properties Kenya</div><div class="client-logo-sub">Real Estate Agency</div><div class="client-logo-service">Branding · Social · Web</div></div>
+    </div>
+  </div>
+
+  <!-- NGOs -->
+  <div class="sector-panel" id="panel-ngo">
+    <div class="clients-logo-grid">
+      <div class="client-logo-card"><div class="client-logo-name">Greenleaf Foundation</div><div class="client-logo-sub">Environmental NGO</div><div class="client-logo-service">Branding · Print · Signage</div></div>
+      <div class="client-logo-card" style="background:var(--off-white); cursor:default;"><div class="client-logo-name" style="color:var(--text-muted); font-size:15px; font-style:italic;">Your organisation here?</div><div class="client-logo-sub" style="margin-top:8px;">We love working with mission-driven organisations.</div><div class="client-logo-service"><a href="designplus-contact.html" style="color:var(--gold); text-decoration:none;">Get in touch &rarr;</a></div></div>
+    </div>
+  </div>
+
+  <!-- HOSPITALITY -->
+  <div class="sector-panel" id="panel-hospitality">
+    <div class="clients-logo-grid">
+      <div class="client-logo-card"><div class="client-logo-name">Karibu Hotels &amp; Resorts</div><div class="client-logo-sub">Hospitality &amp; Tourism</div><div class="client-logo-service">Web · Social · Print</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Nairobi Eats</div><div class="client-logo-sub">Restaurant &amp; Delivery</div><div class="client-logo-service">Branding · Social · Print</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Savanna Foods Ltd</div><div class="client-logo-sub">FMCG &amp; Retail</div><div class="client-logo-service">Web · Packaging · Print</div></div>
+    </div>
+  </div>
+
+  <!-- HEALTH -->
+  <div class="sector-panel" id="panel-health">
+    <div class="clients-logo-grid">
+      <div class="client-logo-card"><div class="client-logo-name">Kilimani Clinic</div><div class="client-logo-sub">Healthcare</div><div class="client-logo-service">Branding · Web · Signage</div></div>
+      <div class="client-logo-card"><div class="client-logo-name">Amara Wellness Centre</div><div class="client-logo-sub">Health &amp; Wellness</div><div class="client-logo-service">Branding · Social · Web</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="testimonials">
+  <div class="testimonials-header">
+    <div>
+      <div class="section-label">What clients say</div>
+      <h2 class="section-title">In their own words.</h2>
+    </div>
+    <p>We don't ask for reviews — our clients offer them. These are real words from real people who trusted us with their brand.</p>
+  </div>
+
+  <div class="testimonials-grid">
+
+    <!-- FEATURED -->
+    <div class="t-card featured">
+      <div class="t-top">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-service-badge">Brand Identity + Fleet</div>
+      </div>
+      <div class="t-quote">"Designplus didn't just give us a new logo — they gave us a new identity. Our clients, drivers, and even our own staff carry themselves differently now. The quality of business we attract has genuinely changed since the rebrand. I can't recommend them highly enough."</div>
+      <div class="t-bottom">
+        <div class="t-avatar" style="background: rgba(200,149,42,0.2);">
+          <span class="t-avatar-initials" style="color:var(--gold);">JK</span>
+        </div>
+        <div>
+          <div class="t-name">James Kariuki</div>
+          <div class="t-role">CEO, Horizon Logistics Ltd</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="t-card">
+      <div class="t-top">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-service-badge">Social Media</div>
+      </div>
+      <div class="t-quote">"Social media went from being our weakest channel to our number one source of property leads. The strategy, the content, the community management — everything was handled with real professionalism."</div>
+      <div class="t-bottom">
+        <div class="t-avatar" style="background: rgba(10,31,68,0.08);">
+          <span class="t-avatar-initials" style="color:var(--navy);">WM</span>
+        </div>
+        <div>
+          <div class="t-name">Wanjiru Mwenda</div>
+          <div class="t-role">Sales Director, Pearl Properties Kenya</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="t-card">
+      <div class="t-top">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-service-badge">SEO</div>
+      </div>
+      <div class="t-quote">"Page 4 to page 1 in three months. The SEO results have genuinely changed the trajectory of our business online. Clear reporting, honest communication, real results."</div>
+      <div class="t-bottom">
+        <div class="t-avatar" style="background: rgba(10,31,68,0.08);">
+          <span class="t-avatar-initials" style="color:var(--navy);">DO</span>
+        </div>
+        <div>
+          <div class="t-name">David Odhiambo</div>
+          <div class="t-role">Digital Director, Afrique Media Group</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="t-card">
+      <div class="t-top">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-service-badge">Web Design</div>
+      </div>
+      <div class="t-quote">"Our new website has completely changed how guests find and book us. Direct bookings nearly doubled in the first month. The team understood hospitality immediately — no lengthy explanations needed."</div>
+      <div class="t-bottom">
+        <div class="t-avatar" style="background: rgba(10,31,68,0.08);">
+          <span class="t-avatar-initials" style="color:var(--navy);">AO</span>
+        </div>
+        <div>
+          <div class="t-name">Aisha Omondi</div>
+          <div class="t-role">General Manager, Karibu Hotels &amp; Resorts</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="t-card">
+      <div class="t-top">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-service-badge">Print + Signage</div>
+      </div>
+      <div class="t-quote">"Our annual report had never looked this good. Donors were commenting on the design before they'd even read the content. Designplus understood our mission from day one."</div>
+      <div class="t-bottom">
+        <div class="t-avatar" style="background: rgba(10,31,68,0.08);">
+          <span class="t-avatar-initials" style="color:var(--navy);">FN</span>
+        </div>
+        <div>
+          <div class="t-name">Faith Njoroge</div>
+          <div class="t-role">Executive Director, Greenleaf Foundation</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="t-card">
+      <div class="t-top">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-service-badge">Full Brand Package</div>
+      </div>
+      <div class="t-quote">"We launched our wellness centre with zero brand recognition. Within three months of working with Designplus, we had a waiting list. The brand they created for us feels genuinely premium."</div>
+      <div class="t-bottom">
+        <div class="t-avatar" style="background: rgba(10,31,68,0.08);">
+          <span class="t-avatar-initials" style="color:var(--navy);">SK</span>
+        </div>
+        <div>
+          <div class="t-name">Stella Kamau</div>
+          <div class="t-role">Founder, Amara Wellness Centre</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── RESULTS WALL ── -->
+<section class="results-wall">
+  <div class="results-header">
+    <div class="section-label">The numbers</div>
+    <h2 class="section-title section-title-light">Results our clients have seen.</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.45);">Every number below represents a real outcome for a real Kenyan business. We track results so our clients always know their investment is working.</p>
+  </div>
+  <div class="results-grid">
+    <div class="result-cell">
+      <div class="result-num">60<span>%</span></div>
+      <div class="result-desc">Increase in client enquiries after a full brand overhaul</div>
+      <div class="result-client">Horizon Logistics Ltd</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-num">320<span>%</span></div>
+      <div class="result-desc">Growth in organic website traffic within 90 days of SEO</div>
+      <div class="result-client">Afrique Media Group</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-num">12.4<span>K</span></div>
+      <div class="result-desc">New Instagram followers gained in 6 months of management</div>
+      <div class="result-client">Pearl Properties Kenya</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-num">95<span>%</span></div>
+      <div class="result-desc">Increase in direct online bookings after website redesign</div>
+      <div class="result-client">Karibu Hotels &amp; Resorts</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-num">140<span>%</span></div>
+      <div class="result-desc">Rise in online orders in the first 2 months after launch</div>
+      <div class="result-client">Savanna Foods Ltd</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-num">4.8<span>K</span></div>
+      <div class="result-desc">LinkedIn followers from 120 in under 4 months</div>
+      <div class="result-client">Summit Capital Group</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-num">65<span>%</span></div>
+      <div class="result-desc">Reduction in editorial workflow time after custom CMS build</div>
+      <div class="result-client">Afrique Media Group</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-num">95<span>%</span></div>
+      <div class="result-desc">Client retention rate — most clients stay and grow with us</div>
+      <div class="result-client">Designplus Solutions</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW WE WORK WITH CLIENTS ── -->
+<section class="how-we-work">
+  <div class="how-layout">
+    <div class="how-left">
+      <div class="section-label">Our approach</div>
+      <h2 class="section-title">How we build relationships, not just deliverables.</h2>
+      <p class="section-sub">Our 95% client retention rate isn't an accident. It comes from treating every client as a long-term partner — not a one-off transaction. Here's what that looks like in practice.</p>
+      <div class="how-quote">
+        <p>"The thing I value most about Designplus is that they push back when they think we're wrong — and they're usually right. That kind of honesty is rare."</p>
+        <div class="how-quote-attr"><strong>Michael Ng'ang'a</strong>Managing Director, Eastgate Properties</div>
+      </div>
+    </div>
+    <div class="how-right">
+      <div class="how-point">
+        <div class="how-point-num">01</div>
+        <div class="how-point-text">
+          <h4>We learn your business before we touch your brand</h4>
+          <p>Every engagement starts with a deep-dive conversation about your business — your goals, your audience, your competitors, your challenges. We don't design in a vacuum. The more we understand about what you're building, the better the work we create for it.</p>
+        </div>
+      </div>
+      <div class="how-point">
+        <div class="how-point-num">02</div>
+        <div class="how-point-text">
+          <h4>We communicate proactively, not reactively</h4>
+          <p>You'll never be left wondering where your project is. We give you a clear timeline upfront and provide regular progress updates throughout. If something changes, you hear it from us first — never after the fact.</p>
+        </div>
+      </div>
+      <div class="how-point">
+        <div class="how-point-num">03</div>
+        <div class="how-point-text">
+          <h4>We give honest advice, even when it's uncomfortable</h4>
+          <p>If we think a direction won't serve your brand well, we'll tell you — respectfully, with reasoning, and with an alternative. We're not a yes-agency. We're a trusted advisor, and that means sometimes steering you away from a bad idea, not just executing it.</p>
+        </div>
+      </div>
+      <div class="how-point">
+        <div class="how-point-num">04</div>
+        <div class="how-point-text">
+          <h4>We think about your next step, not just the current one</h4>
+          <p>The best creative work is built for the long term. We design brand systems that can grow with you — scalable, adaptable, and consistent — so you don't have to start from scratch every time your business evolves.</p>
+        </div>
+      </div>
+      <div class="how-point">
+        <div class="how-point-num">05</div>
+        <div class="how-point-text">
+          <h4>We stay available long after the project ends</h4>
+          <p>Many of our best client relationships are with businesses we first worked with years ago. We offer ongoing retainer support for exactly this reason — so you always have a trusted creative team a call away, without having to brief someone new every time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INDUSTRIES ── -->
+<section class="industries">
+  <div class="industries-layout">
+    <div class="industries-left">
+      <div class="section-label">Sector expertise</div>
+      <h2 class="section-title">Every industry has its own language. We speak them all.</h2>
+      <p class="section-sub">We don't apply the same template to every client. Each industry has different audiences, different trust signals, and different visual conventions — and we design accordingly.</p>
+    </div>
+    <div class="industry-cards">
+      <div class="industry-card">
+        <div class="ic-icon">🏦</div>
+        <div class="ic-name">Finance &amp; Banking</div>
+        <div class="ic-count">6 clients</div>
+      </div>
+      <div class="industry-card">
+        <div class="ic-icon">🏘️</div>
+        <div class="ic-name">Real Estate</div>
+        <div class="ic-count">8 clients</div>
+      </div>
+      <div class="industry-card">
+        <div class="ic-icon">🏥</div>
+        <div class="ic-name">Healthcare &amp; Wellness</div>
+        <div class="ic-count">7 clients</div>
+      </div>
+      <div class="industry-card">
+        <div class="ic-icon">🌱</div>
+        <div class="ic-name">NGOs &amp; Nonprofits</div>
+        <div class="ic-count">5 clients</div>
+      </div>
+      <div class="industry-card">
+        <div class="ic-icon">🏨</div>
+        <div class="ic-name">Hospitality &amp; Tourism</div>
+        <div class="ic-count">9 clients</div>
+      </div>
+      <div class="industry-card">
+        <div class="ic-icon">🛒</div>
+        <div class="ic-name">FMCG &amp; Retail</div>
+        <div class="ic-count">11 clients</div>
+      </div>
+      <div class="industry-card">
+        <div class="ic-icon">🎓</div>
+        <div class="ic-name">Education</div>
+        <div class="ic-count">6 clients</div>
+      </div>
+      <div class="industry-card">
+        <div class="ic-icon">💻</div>
+        <div class="ic-name">Tech &amp; Startups</div>
+        <div class="ic-count">10 clients</div>
+      </div>
+      <div class="industry-card">
+        <div class="ic-icon">📺</div>
+        <div class="ic-name">Media &amp; Entertainment</div>
+        <div class="ic-count">5 clients</div>
+      </div>
+      <div class="industry-card">
+        <div class="ic-icon">🏭</div>
+        <div class="ic-name">Manufacturing</div>
+        <div class="ic-count">4 clients</div>
+      </div>
+      <div class="industry-card">
+        <div class="ic-icon">🚛</div>
+        <div class="ic-name">Logistics &amp; Transport</div>
+        <div class="ic-count">6 clients</div>
+      </div>
+      <div class="industry-card">
+        <div class="ic-icon">🏛️</div>
+        <div class="ic-name">Government &amp; Public</div>
+        <div class="ic-count">3 clients</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLIENT PROMISE ── -->
+<section class="promise">
+  <div class="promise-layout">
+    <div class="promise-left">
+      <h2>What every client<br>can <em>count on.</em></h2>
+      <p>These aren't aspirations — they're the minimum standard we hold ourselves to on every single engagement, regardless of budget or project size.</p>
+    </div>
+    <div class="promise-right">
+      <div class="promise-item">
+        <div class="promise-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+        </div>
+        <div class="promise-text">
+          <h4>Deadlines honoured, every time</h4>
+          <p>We don't move goalposts without good reason. If we commit to a delivery date, we meet it. If something genuinely changes, we tell you immediately — not the day before.</p>
+        </div>
+      </div>
+      <div class="promise-item">
+        <div class="promise-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75"/></svg>
+        </div>
+        <div class="promise-text">
+          <h4>Transparent pricing, no surprises</h4>
+          <p>Your quote is your quote. We agree the scope upfront and stick to it. Any additional work is discussed and approved before we do it — never invoiced as a surprise at the end.</p>
+        </div>
+      </div>
+      <div class="promise-item">
+        <div class="promise-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+        </div>
+        <div class="promise-text">
+          <h4>Quality that reflects your brand, not ours</h4>
+          <p>We don't have a "Designplus house style" that we impose on every client. Every piece of work is designed specifically for you — your audience, your industry, your voice.</p>
+        </div>
+      </div>
+      <div class="promise-item">
+        <div class="promise-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+        </div>
+        <div class="promise-text">
+          <h4>A dedicated point of contact who knows your work</h4>
+          <p>You'll have one person who owns your account and knows your brand inside out. No more repeating yourself to different people, no more briefing strangers on your own identity.</p>
+        </div>
+      </div>
+      <div class="promise-item">
+        <div class="promise-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+        </div>
+        <div class="promise-text">
+          <h4>Support that doesn't disappear after launch</h4>
+          <p>We're invested in your success beyond the delivery. Our retainer packages exist because your brand will keep evolving — and we want to be there for every chapter.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="clients-cta">
+  <div class="clients-cta-inner">
+    <div class="section-label">Join our client family</div>
+    <h2>Ready to become<br>our next <em>success story?</em></h2>
+    <p>Whether you're launching a new brand, refreshing an existing one, or looking for a long-term creative partner — we'd love to start the conversation. No pressure. Just a good chat about what you're building.</p>
+    <div class="cta-buttons">
+      <a href="designplus-contact.html" class="btn-navy">Get a free quote</a>
+      <a href="https://wa.me/254743270939" class="btn-wa" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">Designplus<span>.</span></div>
+      <p class="footer-tagline">Your brand, built right. Full-service creative and digital solutions for businesses across Kenya.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="designplus-services.html#graphic-design">Graphic Design</a></li>
+        <li><a href="designplus-services.html#web-design">Web Design &amp; Development</a></li>
+        <li><a href="designplus-services.html#seo">SEO</a></li>
+        <li><a href="designplus-services.html#printing">Printing Services</a></li>
+        <li><a href="designplus-services.html#branding-signage">Branding &amp; Signage</a></li>
+        <li><a href="designplus-services.html#social-media">Social Media</a></li>
+        <li><a href="designplus-services.html#it-solutions">Custom IT &amp; Digital</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="designplus-about.html">About us</a></li>
+        <li><a href="designplus-portfolio.html">Portfolio</a></li>
+        <li><a href="designplus-clients.html">Clients</a></li>
+        <li><a href="designplus-contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:info@designplussolutions.co.ke">info@designplussolutions.co.ke</a></li>
+        <li><a href="tel:+254743270939">+254 743 270 939</a></li>
+        <li><a href="https://wa.me/254743270939" target="_blank">WhatsApp us</a></li>
+        <li><a href="https://maps.google.com/?q=Nairobi,+Kenya" target="_blank">Nairobi, Kenya</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Designplus Solutions. All rights reserved.</p>
+    <p>Designed with care in Nairobi, Kenya.</p>
+  </div>
+</footer>
+
+<script>
+  function showSector(sector, btn) {
+    document.querySelectorAll('.sector-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.sector-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + sector).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
