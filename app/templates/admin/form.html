@@ -1,0 +1,124 @@
+{% extends "admin/base.html" %}
+{% block title %}{{ 'New' if is_new else 'Edit' }} {{ resource.singular | lower }}{% endblock %}
+
+{% macro render_field(field, row) %}
+  {% set value = row[field.name] %}
+  {% if field.kind == 'bool' %}
+    <div class="field check">
+      <input type="checkbox" id="{{ field.name }}" name="{{ field.name }}" value="1"
+             {% if value %}checked{% endif %}>
+      <div>
+        <label for="{{ field.name }}">{{ field.label }}</label>
+        {% if field.help %}<div class="hint">{{ field.help }}</div>{% endif %}
+      </div>
+    </div>
+
+  {% elif field.kind == 'select' %}
+    <div class="field">
+      <label class="field-label" for="{{ field.name }}">
+        {{ field.label }}{% if field.required %} <span class="required-star">*</span>{% endif %}
+      </label>
+      <select id="{{ field.name }}" name="{{ field.name }}" {% if field.required %}required{% endif %}>
+        {% for option_value, option_label in field.choices() %}
+        <option value="{{ option_value }}"
+                {% if option_value == (value | string) %}selected{% endif %}>{{ option_label }}</option>
+        {% endfor %}
+      </select>
+      {% if field.help %}<div class="hint">{{ field.help }}</div>{% endif %}
+    </div>
+
+  {% elif field.kind in ('textarea', 'code') %}
+    <div class="field">
+      <label class="field-label" for="{{ field.name }}">
+        {{ field.label }}{% if field.required %} <span class="required-star">*</span>{% endif %}
+      </label>
+      <textarea id="{{ field.name }}" name="{{ field.name }}" rows="{{ field.rows }}"
+                class="{{ 'code' if field.kind == 'code' }}"
+                placeholder="{{ field.placeholder }}"
+                {% if field.required %}required{% endif %}>{{ value or '' }}</textarea>
+      {% if field.help %}<div class="hint">{{ field.help }}</div>{% endif %}
+    </div>
+
+  {% elif field.kind == 'image' %}
+    <div class="field">
+      <label class="field-label" for="{{ field.name }}">{{ field.label }}</label>
+      <input type="file" id="{{ field.name }}" name="{{ field.name }}"
+             accept=".jpg,.jpeg,.png,.webp,.svg,.gif">
+      {% if field.help %}<div class="hint">{{ field.help }}</div>{% endif %}
+      {% if value %}
+      <div class="thumb">
+        <img src="{{ upload_url(value) }}" alt="">
+        <div>
+          <div style="font-size:12.5px">{{ value }}</div>
+          <label class="hint" style="display:flex; gap:6px; align-items:center; margin-top:5px; cursor:pointer">
+            <input type="checkbox" name="{{ field.name }}__clear" value="1"> Remove this image
+          </label>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+  {% else %}
+    <div class="field">
+      <label class="field-label" for="{{ field.name }}">
+        {{ field.label }}{% if field.required %} <span class="required-star">*</span>{% endif %}
+      </label>
+      <input type="{{ 'number' if field.kind == 'number' else field.kind if field.kind in ('email','url','tel') else 'text' }}"
+             id="{{ field.name }}" name="{{ field.name }}" value="{{ value if value is not none else '' }}"
+             placeholder="{{ field.placeholder }}" {% if field.required %}required{% endif %}>
+      {% if field.help %}<div class="hint">{{ field.help }}</div>{% endif %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{% block content %}
+{% set main_fields = resource.fields | rejectattr('advanced') | list %}
+{% set advanced_fields = resource.fields | selectattr('advanced') | list %}
+
+<div class="page-head">
+  <div>
+    <div class="crumb">
+      <a href="{{ url_for('admin.dashboard') }}">Dashboard</a> /
+      <a href="{{ url_for('admin.resource_list', key=resource.key) }}">{{ resource.title }}</a> /
+      {{ 'New' if is_new else 'Edit' }}
+    </div>
+    <h1>{{ 'New ' ~ resource.singular | lower if is_new else row }}</h1>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-body">
+    <form method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+      <div class="form-grid">
+        {% for field in main_fields %}{{ render_field(field, row) }}{% endfor %}
+      </div>
+
+      {% if advanced_fields %}
+      <details class="advanced">
+        <summary>Advanced settings</summary>
+        <div class="form-grid">
+          {% for field in advanced_fields %}{{ render_field(field, row) }}{% endfor %}
+        </div>
+      </details>
+      {% endif %}
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">
+          {{ 'Create ' ~ resource.singular | lower if is_new else 'Save changes' }}
+        </button>
+        <a class="btn btn-secondary" href="{{ url_for('admin.resource_list', key=resource.key) }}">Cancel</a>
+
+        {% if not is_new and resource.can_delete %}
+        <span class="spacer"></span>
+        <button type="submit" class="btn btn-danger"
+                formaction="{{ url_for('admin.resource_delete', key=resource.key, row_id=row.id) }}"
+                formnovalidate
+                onclick="return confirm('Delete “{{ row }}”? This cannot be undone.');">Delete</button>
+        {% endif %}
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

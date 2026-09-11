@@ -1,0 +1,83 @@
+{% extends "admin/base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="page-head">
+  <div>
+    <h1>Dashboard</h1>
+    <p>Everything on the public site is edited from here. Changes go live immediately.</p>
+  </div>
+  <a class="btn btn-secondary" href="{{ url_for('public.home') }}" target="_blank" rel="noopener">View the site &rarr;</a>
+</div>
+
+<div class="stat-cards">
+  <a class="stat-card" href="{{ url_for('admin.enquiries', status='new') }}">
+    <div class="num">{{ counts.new }}</div>
+    <div class="cap">New enquiries</div>
+  </a>
+  <a class="stat-card" href="{{ url_for('admin.enquiries') }}">
+    <div class="num">{{ counts.week }}</div>
+    <div class="cap">Received this week</div>
+  </a>
+  <a class="stat-card" href="{{ url_for('admin.enquiries') }}">
+    <div class="num">{{ counts.total }}</div>
+    <div class="cap">Enquiries all time</div>
+  </a>
+</div>
+
+{% if todos %}
+<div class="panel">
+  <div class="panel-head">
+    <h2>Still to fill in before launch</h2>
+    <a class="btn btn-secondary btn-small" href="{{ url_for('admin.settings') }}">Open settings</a>
+  </div>
+  <div class="table-scroll">
+  <table>
+    <tbody>
+      {% for item in todos %}
+      <tr>
+        <td class="primary">{{ item.label }}</td>
+        <td class="muted">{{ item.value }}</td>
+        <td><span class="pill pill-new">Placeholder</span></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+{% endif %}
+
+<div class="panel">
+  <div class="panel-head">
+    <h2>Latest enquiries</h2>
+    <a class="btn btn-secondary btn-small" href="{{ url_for('admin.enquiries') }}">See all</a>
+  </div>
+  {% if recent %}
+  <div class="table-scroll">
+  <table>
+    <thead>
+      <tr><th>Received</th><th>From</th><th>Service</th><th>Status</th><th></th></tr>
+    </thead>
+    <tbody>
+      {% for item in recent %}
+      <tr>
+        <td class="muted">{{ item.created_at.strftime('%d %b, %H:%M') }}</td>
+        <td class="primary">
+          <a href="{{ url_for('admin.enquiry_detail', enquiry_id=item.id) }}">{{ item.name }}</a>
+          {% if item.company %}<div class="muted" style="font-size:12.5px">{{ item.company }}</div>{% endif %}
+        </td>
+        <td>{{ item.service or '—' }}</td>
+        <td><span class="pill pill-{{ item.status }}">{{ item.status.replace('_', ' ') | title }}</span></td>
+        <td class="actions">
+          <a class="btn btn-secondary btn-small" href="{{ url_for('admin.enquiry_detail', enquiry_id=item.id) }}">Open</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% else %}
+  <div class="empty">No enquiries yet. They will appear here the moment someone submits the contact form.</div>
+  {% endif %}
+</div>
+{% endblock %}

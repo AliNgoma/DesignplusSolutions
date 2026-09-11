@@ -1,0 +1,47 @@
+{% extends "admin/base.html" %}
+{% block title %}Site settings{% endblock %}
+
+{% block content %}
+<div class="page-head">
+  <div>
+    <div class="crumb"><a href="{{ url_for('admin.dashboard') }}">Dashboard</a> / Configuration</div>
+    <h1>Site settings</h1>
+    <p>Contact details, social links and opening hours. These feed the footer of every page and the whole contact page — change one here and it changes everywhere.</p>
+  </div>
+</div>
+
+<form method="POST">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+  {% for group, rows in grouped.items() %}
+  <div class="panel">
+    <div class="panel-head"><h2>{{ group }}</h2></div>
+    <div class="panel-body">
+      <div class="form-grid">
+        {% for row in rows %}
+        <div class="field">
+          <label class="field-label" for="{{ row.key }}">{{ row.label }}</label>
+          {% if row.kind == 'textarea' %}
+          <textarea id="{{ row.key }}" name="{{ row.key }}" rows="3">{{ row.value }}</textarea>
+          {% else %}
+          <input type="{{ row.kind if row.kind in ('email','url','tel') else 'text' }}"
+                 id="{{ row.key }}" name="{{ row.key }}" value="{{ row.value }}">
+          {% endif %}
+          {% if row.help_text %}
+          <div class="hint">
+            {% if row.help_text.startswith('TODO') %}<span class="pill pill-new">Placeholder</span> {% endif %}
+            {{ row.help_text.replace('TODO — ', '') }}
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Save settings</button>
+  </div>
+</form>
+{% endblock %}

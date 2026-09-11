@@ -1,0 +1,59 @@
+{% extends "admin/base.html" %}
+{% block title %}Enquiries{% endblock %}
+
+{% block content %}
+<div class="page-head">
+  <div>
+    <h1>Enquiries</h1>
+    <p>Every contact form submission, kept here whether or not the notification email went through.</p>
+  </div>
+  <a class="btn btn-secondary" href="{{ url_for('admin.enquiries_csv') }}">Export CSV</a>
+</div>
+
+<div class="filter-row">
+  <a class="filter-chip" href="{{ url_for('admin.enquiries') }}"
+     aria-current="{{ 'true' if not status else 'false' }}">All</a>
+  {% for name, count in tallies.items() %}
+  <a class="filter-chip" href="{{ url_for('admin.enquiries', status=name) }}"
+     aria-current="{{ 'true' if status == name else 'false' }}">{{ name.replace('_', ' ') | title }} ({{ count }})</a>
+  {% endfor %}
+  <form method="GET">
+    {% if status %}<input type="hidden" name="status" value="{{ status }}">{% endif %}
+    <input type="search" name="q" value="{{ search }}" placeholder="Search name, email, message">
+    <button class="btn btn-secondary" type="submit">Search</button>
+  </form>
+</div>
+
+<div class="panel">
+  {% if enquiries %}
+  <div class="table-scroll">
+  <table>
+    <thead>
+      <tr><th>Received</th><th>From</th><th>Service</th><th>Budget</th><th>Status</th><th></th></tr>
+    </thead>
+    <tbody>
+      {% for item in enquiries %}
+      <tr>
+        <td class="muted">{{ item.created_at.strftime('%d %b %Y, %H:%M') }}</td>
+        <td class="primary">
+          <a href="{{ url_for('admin.enquiry_detail', enquiry_id=item.id) }}">{{ item.name }}</a>
+          <div class="muted" style="font-size:12.5px">{{ item.company or item.email }}</div>
+        </td>
+        <td>{{ item.service or '—' }}</td>
+        <td>{{ item.budget or '—' }}</td>
+        <td><span class="pill pill-{{ item.status }}">{{ item.status.replace('_', ' ') | title }}</span></td>
+        <td class="actions">
+          <a class="btn btn-secondary btn-small" href="{{ url_for('admin.enquiry_detail', enquiry_id=item.id) }}">Open</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% else %}
+  <div class="empty">
+    {% if search or status %}Nothing matches that filter.{% else %}No enquiries yet.{% endif %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

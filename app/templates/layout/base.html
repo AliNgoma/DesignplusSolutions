@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}{{ page.title }}{% endblock %}</title>
+<meta name="description" content="{{ page.meta_description }}">
+<link rel="canonical" href="{{ site_url }}{{ request.path }}">
+<meta name="theme-color" content="#0a1f44">
+{% if not page.is_indexed %}<meta name="robots" content="noindex, nofollow">{% endif %}
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ settings.company_name }}">
+<meta property="og:locale" content="en_KE">
+<meta property="og:title" content="{{ page.social_title }}">
+<meta property="og:description" content="{{ page.social_description }}">
+<meta property="og:url" content="{{ site_url }}{{ request.path }}">
+{% if page.og_image %}
+<meta property="og:image" content="{{ upload_url(page.og_image) }}">
+<meta name="twitter:card" content="summary_large_image">
+{% else %}
+<meta name="twitter:card" content="summary">
+{% endif %}
+<meta name="twitter:title" content="{{ page.social_title }}">
+<meta name="twitter:description" content="{{ page.social_description }}">
+
+<link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<script src="{{ url_for('static', filename='js/site.js') }}" defer></script>
+<style>
+{% block styles %}{% endblock %}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav>
+  <a href="{{ url_for('public.home') }}" class="nav-logo">{{ settings.company_name.replace(' Solutions', '') }}<span>.</span></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    {% for item in nav_pages if item.slug != 'contact' %}
+      <li><a href="{{ url_for('public.' ~ item.slug) }}"
+             {% if request.endpoint == 'public.' ~ item.slug %}aria-current="page"{% endif %}>{{ item.nav_label }}</a></li>
+    {% endfor %}
+    <li><a href="{{ url_for('public.contact') }}" class="nav-cta"
+           {% if request.endpoint == 'public.contact' %}aria-current="page"{% endif %}>Get a quote</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+{% block content %}{% endblock %}
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="{{ url_for('public.home') }}" class="footer-logo">{{ settings.company_name.replace(' Solutions', '') }}<span>.</span></a>
+      <p class="footer-tagline">{{ settings.footer_blurb }}</p>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        {% for service in footer_services %}
+          <li><a href="{{ url_for('public.services') }}#{{ service.slug }}">{{ service.short_title or service.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="{{ url_for('public.about') }}">About us</a></li>
+        <li><a href="{{ url_for('public.portfolio') }}">Portfolio</a></li>
+        <li><a href="{{ url_for('public.clients') }}">Clients</a></li>
+        <li><a href="{{ url_for('public.contact') }}">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        {% if settings.email %}<li><a href="mailto:{{ settings.email }}">{{ settings.email }}</a></li>{% endif %}
+        {% if settings.phone %}<li><a href="tel:+{{ settings.phone | phone_digits }}">{{ settings.phone }}</a></li>{% endif %}
+        {% if settings.whatsapp %}<li><a href="https://wa.me/{{ settings.whatsapp | phone_digits }}" target="_blank" rel="noopener">WhatsApp us</a></li>{% endif %}
+        <li><a href="{{ url_for('public.contact') }}#office">{{ settings.city }}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span data-current-year>{{ current_year }}</span> {{ settings.company_name }}. All rights reserved.</p>
+    <p>Designed with care in {{ settings.city }}.</p>
+  </div>
+</footer>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

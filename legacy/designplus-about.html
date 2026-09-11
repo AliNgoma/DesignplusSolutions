@@ -1,28 +1,331 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us — Designplus Solutions</title>
+<meta name="description" content="Meet the Nairobi creative and digital agency behind 150+ projects for 80+ clients — our story, mission, values and the team building brands across East Africa.">
+<link rel="canonical" href="https://designplussolutions.co.ke/designplus-about.html">
+<meta name="theme-color" content="#0a1f44">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Designplus Solutions">
+<meta property="og:locale" content="en_KE">
+<meta property="og:title" content="About Us — Designplus Solutions">
+<meta property="og:description" content="Meet the Nairobi creative and digital agency behind 150+ projects for 80+ clients — our story, mission, values and the team building brands across East Africa.">
+<meta property="og:url" content="https://designplussolutions.co.ke/designplus-about.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About Us — Designplus Solutions">
+<meta name="twitter:description" content="Meet the Nairobi creative and digital agency behind 150+ projects for 80+ clients — our story, mission, values and the team building brands across East Africa.">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<script src="assets/js/site.js" defer></script>
+<style>
+
+
+  /* PAGE HERO */
+  .page-hero {
+    background: var(--navy);
+    padding: 148px 5vw 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .page-hero-glow {
+    position: absolute; right: 5vw; top: 50%; transform: translateY(-50%);
+    width: 480px; height: 480px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,149,42,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero-content { position: relative; z-index: 2; max-width: 800px; animation: fadeUp 0.8s ease both; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px; }
+  .breadcrumb span { color: var(--gold); }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(52px, 7vw, 96px);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+  .page-hero h1 em { color: var(--gold); font-style: italic; }
+  .page-hero-sub {
+    font-size: 18px; color: rgba(255,255,255,0.6); line-height: 1.75;
+    max-width: 600px; font-weight: 300;
+  }
+
+  /* STORY */
+  .story {
+    padding: 100px 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+  }
+  .story-left { position: sticky; top: 100px; }
+  .section-label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 12px; }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .story-divider { width: 40px; height: 2px; background: var(--gold); margin: 24px 0; }
+  .story-pull {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-style: italic;
+    color: var(--text-mid);
+    line-height: 1.55;
+  }
+  .story-right { padding-top: 8px; }
+  .story-body p {
+    font-size: 16px; color: var(--text-mid); line-height: 1.85;
+    margin-bottom: 24px; font-weight: 300;
+  }
+  .story-body p:last-child { margin-bottom: 0; }
+  .story-body strong { color: var(--text-dark); font-weight: 500; }
+
+  .story-highlight {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 32px 36px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .story-highlight::before {
+    content: '"';
+    font-family: var(--font-display);
+    font-size: 120px;
+    color: rgba(200,149,42,0.12);
+    position: absolute; top: -20px; left: 16px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .story-highlight p {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+    position: relative; z-index: 1;
+    margin-bottom: 0 !important;
+  }
+
+  /* MISSION VISION */
+  .mv {
+    background: var(--cream);
+    padding: 100px 5vw;
+  }
+  .mv-header { margin-bottom: 56px; }
+  .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .mv-card {
+    padding: 48px 44px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  .mv-card-mission { background: var(--navy); }
+  .mv-card-vision { background: var(--black); }
+  .mv-card-accent {
+    position: absolute; bottom: -40px; right: -40px;
+    width: 200px; height: 200px; border-radius: 50%;
+    background: rgba(200,149,42,0.08);
+    pointer-events: none;
+  }
+  .mv-card-label {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .mv-card-label::before { content: ''; width: 20px; height: 1px; background: var(--gold); display: block; }
+  .mv-card h3 {
+    font-family: var(--font-display);
+    font-size: 30px; font-weight: 600;
+    color: var(--white); line-height: 1.3;
+    margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+  .mv-card p {
+    font-size: 15px; color: rgba(255,255,255,0.55);
+    line-height: 1.75; font-weight: 300;
+    position: relative; z-index: 1;
+  }
+
+  /* VALUES */
+  .values { padding: 100px 5vw; background: var(--white); }
+  .values-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; flex-wrap: wrap; gap: 24px; }
+  .values-header p { font-size: 16px; color: var(--text-muted); max-width: 400px; line-height: 1.7; font-weight: 300; }
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2px; background: var(--gray-light); border: 1px solid var(--gray-light); }
+  .value-card { background: var(--white); padding: 36px 32px; transition: background 0.25s; }
+  .value-card:hover { background: var(--off-white); }
+  .value-num {
+    font-family: var(--font-display);
+    font-size: 48px; font-weight: 600;
+    color: var(--gray-light);
+    line-height: 1; margin-bottom: 20px;
+    transition: color 0.25s;
+  }
+  .value-card:hover .value-num { color: var(--gold); }
+  .value-card h4 { font-size: 16px; font-weight: 500; color: var(--text-dark); margin-bottom: 10px; }
+  .value-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
+
+  /* STATS */
+  .stats { background: var(--navy); padding: 80px 5vw; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.08); }
+  .stat-item { padding: 48px 36px; background: var(--navy); text-align: center; }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 60px; font-weight: 600;
+    color: var(--white); line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-num span { color: var(--gold); }
+  .stat-desc { font-size: 13px; color: rgba(255,255,255,0.4); letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* TEAM */
+  .team { padding: 100px 5vw; background: var(--off-white); }
+  .team-header { margin-bottom: 56px; }
+  .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+  .team-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--gray-light);
+    transition: transform 0.2s;
+  }
+  .team-card:hover { transform: translateY(-4px); }
+  .team-photo {
+    height: 220px;
+    background: var(--navy-mid);
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: flex-end;
+  }
+  .team-photo-placeholder {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .team-initials {
+    font-family: var(--font-display);
+    font-size: 64px; font-weight: 600;
+    color: rgba(255,255,255,0.15);
+  }
+  .team-photo-stripe {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px; background: var(--gold);
+  }
+  .team-info { padding: 20px 22px; }
+  .team-name { font-size: 16px; font-weight: 500; color: var(--text-dark); margin-bottom: 3px; }
+  .team-role { font-size: 13px; color: var(--gold); font-weight: 400; margin-bottom: 10px; }
+  .team-bio { font-size: 13px; color: var(--text-muted); line-height: 1.6; font-weight: 300; }
+
+  /* JOURNEY TIMELINE */
+  .journey { padding: 100px 5vw; background: var(--white); }
+  .journey-header { margin-bottom: 64px; }
+  .timeline { position: relative; max-width: 820px; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 0; top: 12px; bottom: 12px;
+    width: 1px; background: var(--gray-light);
+  }
+  .tl-item { display: flex; gap: 40px; margin-bottom: 52px; padding-left: 0; position: relative; }
+  .tl-item:last-child { margin-bottom: 0; }
+  .tl-year {
+    font-family: var(--font-display);
+    font-size: 22px; font-weight: 600;
+    color: var(--navy); min-width: 80px;
+    padding-top: 0; position: relative;
+    flex-shrink: 0;
+  }
+  .tl-year::after {
+    content: '';
+    position: absolute; right: -22px; top: 10px;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 3px rgba(200,149,42,0.2);
+  }
+  .tl-content { padding-left: 24px; }
+  .tl-content h4 { font-size: 16px; font-weight: 500; color: var(--text-dark); margin-bottom: 6px; }
+  .tl-content p { font-size: 14px; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
+
+  /* CTA */
+  .about-cta {
+    background: var(--black);
+    padding: 100px 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 48px; flex-wrap: wrap;
+    position: relative; overflow: hidden;
+  }
+  .about-cta::before {
+    content: '';
+    position: absolute; right: -60px; top: 50%; transform: translateY(-50%);
+    width: 400px; height: 400px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,149,42,0.07) 0%, transparent 70%);
+  }
+  .about-cta-text { position: relative; z-index: 1; }
+  .about-cta-text h2 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4vw, 48px);
+    color: var(--white); font-weight: 600;
+    margin-bottom: 12px; line-height: 1.2;
+  }
+  .about-cta-text p { font-size: 16px; color: rgba(255,255,255,0.45); max-width: 480px; line-height: 1.7; font-weight: 300; }
+  .about-cta-buttons { display: flex; gap: 14px; flex-wrap: wrap; position: relative; z-index: 1; flex-shrink: 0; }
+  .btn-primary { background: var(--gold); color: var(--navy); padding: 15px 34px; border-radius: 4px; font-size: 15px; font-weight: 500; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s, transform 0.15s; display: inline-block; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: rgba(255,255,255,0.75); padding: 15px 34px; border-radius: 4px; font-size: 15px; font-weight: 400; text-decoration: none; border: 1px solid rgba(255,255,255,0.18); transition: all 0.2s; display: inline-block; }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.45); color: var(--white); transform: translateY(-1px); }
+
+  @media (max-width: 900px) {
+    .story { grid-template-columns: 1fr; gap: 48px; }
+    .story-left { position: static; }
+    .mv-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .values-header { flex-direction: column; align-items: flex-start; }
+    .about-cta { flex-direction: column; }
+  }
+
+  @media (max-width: 560px) {
+    .stats-grid { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
-<body id="page-about">
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV -->
 <nav>
   <a href="designplus-homepage.html" class="nav-logo">Designplus<span>.</span></a>
-  <ul class="nav-links">
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="designplus-homepage.html">Home</a></li>
-    <li><a href="designplus-about.html" class="active">About</a></li>
+    <li><a href="designplus-about.html" aria-current="page">About</a></li>
     <li><a href="designplus-services.html">Services</a></li>
     <li><a href="designplus-portfolio.html">Portfolio</a></li>
     <li><a href="designplus-clients.html">Clients</a></li>
     <li><a href="designplus-contact.html" class="nav-cta">Get a quote</a></li>
   </ul>
 </nav>
+
+<main id="main">
 
 <!-- PAGE HERO -->
 <section class="page-hero">
@@ -299,10 +602,12 @@
 </section>
 
 <!-- FOOTER -->
+</main>
+
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <div class="footer-logo">Designplus<span>.</span></div>
+      <a href="designplus-homepage.html" class="footer-logo">Designplus<span>.</span></a>
       <p class="footer-tagline">Your brand, built right. Full-service creative and digital solutions for businesses across Kenya.</p>
     </div>
     <div class="footer-links">
@@ -314,6 +619,7 @@
         <li><a href="designplus-services.html#printing">Printing Services</a></li>
         <li><a href="designplus-services.html#branding-signage">Branding &amp; Signage</a></li>
         <li><a href="designplus-services.html#social-media">Social Media</a></li>
+        <li><a href="designplus-services.html#it-solutions">Custom IT &amp; Digital</a></li>
       </ul>
     </div>
     <div class="footer-links">
@@ -329,14 +635,14 @@
       <h4>Contact</h4>
       <ul>
         <li><a href="mailto:info@designplussolutions.co.ke">info@designplussolutions.co.ke</a></li>
-        <li><a href="tel:+254743270939">+254 743 270 939</a></li>
-        <li><a href="https://maps.google.com/?q=Nairobi,+Kenya" target="_blank">Nairobi, Kenya</a></li>
-        <li><a href="https://wa.me/254743270939" target="_blank">WhatsApp us</a></li>
+        <li><a href="tel:+254700000000">+254 700 000 000</a></li>
+        <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp us</a></li>
+        <li><a href="designplus-contact.html#office">Nairobi, Kenya</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 Designplus Solutions. All rights reserved.</p>
+    <p>&copy; <span data-current-year>2026</span> Designplus Solutions. All rights reserved.</p>
     <p>Designed with care in Nairobi, Kenya.</p>
   </div>
 </footer>

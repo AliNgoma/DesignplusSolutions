@@ -1,0 +1,440 @@
+{% extends "layout/base.html" %}
+
+{% block styles %}
+
+
+  /* PAGE HERO */
+  .page-hero {
+    background: var(--navy); padding: 148px 5vw 100px;
+    position: relative; overflow: hidden;
+  }
+  .hero-dots {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .hero-shape {
+    position: absolute; right: 0; top: 0; bottom: 0; width: 45%;
+    background: rgba(255,255,255,0.015);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    pointer-events: none;
+  }
+  .hero-glow {
+    position: absolute; right: 10vw; top: 50%; transform: translateY(-50%);
+    width: 420px; height: 420px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,149,42,0.13) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 2; animation: fadeUp 0.8s ease both; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.32); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px; }
+  .breadcrumb span { color: var(--gold); }
+  .hero-inner h1 {
+    font-family: var(--font-display);
+    font-size: clamp(46px, 6.5vw, 88px); font-weight: 700;
+    color: var(--white); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 28px;
+  }
+  .hero-inner h1 em { font-style: italic; color: var(--gold); }
+  .hero-inner p { font-size: 18px; color: rgba(255,255,255,0.58); line-height: 1.75; max-width: 580px; font-weight: 300; margin-bottom: 44px; }
+  .hero-service-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .hero-pill {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px; padding: 7px 18px; font-size: 13px;
+    color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.2s; text-decoration: none;
+  }
+  .hero-pill:hover { background: rgba(200,149,42,0.15); border-color: rgba(200,149,42,0.4); color: var(--gold-light); }
+
+  /* SECTION COMMON */
+  .section-label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 10px; }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 3.5vw, 46px); font-weight: 700;
+    color: var(--navy); line-height: 1.18; letter-spacing: -0.01em;
+  }
+  .section-title-light { color: var(--white); }
+  .section-sub { font-size: 16px; color: var(--text-muted); line-height: 1.75; font-weight: 300; max-width: 560px; margin-top: 14px; }
+
+  /* SERVICE OVERVIEW STRIP */
+  .overview-strip {
+    background: var(--off-white); padding: 0; overflow: hidden;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  .overview-inner {
+    display: flex; overflow-x: auto; scrollbar-width: none;
+  }
+  .overview-inner::-webkit-scrollbar { display: none; }
+  .ov-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 18px 28px; flex-shrink: 0;
+    border-right: 1px solid var(--gray-light);
+    text-decoration: none; color: var(--text-mid);
+    font-size: 13px; font-weight: 400; transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .ov-item:hover { background: var(--white); color: var(--navy); }
+  .ov-item svg { opacity: 0.5; flex-shrink: 0; }
+  .ov-item:hover svg { opacity: 1; }
+
+  /* INDIVIDUAL SERVICE SECTIONS */
+  .service-section {
+    padding: 96px 5vw; border-bottom: 1px solid var(--gray-light);
+  }
+  .service-section:nth-child(even) { background: var(--off-white); }
+  .service-section:nth-child(odd) { background: var(--white); }
+
+  .service-layout {
+    display: grid; grid-template-columns: 380px 1fr; gap: 80px; align-items: start;
+  }
+  .service-layout.reverse { grid-template-columns: 1fr 380px; }
+  .service-layout.reverse .service-left { order: 2; }
+  .service-layout.reverse .service-right { order: 1; }
+
+  .service-left { position: sticky; top: 96px; }
+  .service-num {
+    font-family: var(--font-display);
+    font-size: 72px; font-weight: 700; line-height: 1;
+    color: var(--gray-light); margin-bottom: 16px;
+    display: block; letter-spacing: -0.03em;
+  }
+  .service-icon-ring {
+    width: 56px; height: 56px; border-radius: 12px;
+    background: rgba(10,31,68,0.07); display: flex; align-items: center;
+    justify-content: center; margin-bottom: 20px;
+  }
+  .service-left h2 {
+    font-family: var(--font-display);
+    font-size: 28px; font-weight: 700; color: var(--navy); line-height: 1.25; margin-bottom: 14px;
+  }
+  .service-left p { font-size: 15px; color: var(--text-muted); line-height: 1.75; font-weight: 300; margin-bottom: 24px; }
+  .service-tag {
+    display: inline-block; background: rgba(10,31,68,0.07);
+    border-radius: 100px; padding: 5px 14px; font-size: 12px;
+    color: var(--navy-mid); font-weight: 500; letter-spacing: 0.03em; margin-right: 6px; margin-bottom: 6px;
+  }
+  .get-quote-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 24px; font-size: 14px; font-weight: 500;
+    color: var(--gold); text-decoration: none; letter-spacing: 0.02em;
+    border-bottom: 1px solid rgba(200,149,42,0.3); padding-bottom: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .get-quote-link:hover { color: var(--gold-light); border-color: var(--gold-light); }
+
+  .service-right {}
+  .deliverables-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); font-weight: 500; margin-bottom: 20px; }
+  .deliverables-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 36px; }
+  .deliverable-card {
+    background: var(--white); border: 1px solid var(--gray-light); border-radius: 8px;
+    padding: 18px 20px; transition: border-color 0.2s, transform 0.2s;
+  }
+  .service-section:nth-child(even) .deliverable-card { background: var(--white); }
+  .deliverable-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+  .deliverable-card h4 { font-size: 14px; font-weight: 500; color: var(--text-dark); margin-bottom: 5px; }
+  .deliverable-card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; font-weight: 300; }
+
+  .why-choose-box {
+    background: var(--navy); border-radius: 8px; padding: 28px 32px;
+    margin-top: 4px;
+  }
+  .why-choose-box h4 { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 14px; }
+  .why-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .why-list li { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.55; font-weight: 300; display: flex; gap: 10px; align-items: flex-start; }
+  .why-list li::before { content: '→'; color: var(--gold); flex-shrink: 0; font-size: 13px; margin-top: 1px; }
+
+  /* PACKAGES */
+  .packages { background: var(--navy); padding: 100px 5vw; }
+  .packages-header { margin-bottom: 56px; }
+  .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pkg-card {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px; padding: 36px 32px; position: relative; transition: border-color 0.2s;
+  }
+  .pkg-card:hover { border-color: rgba(255,255,255,0.25); }
+  .pkg-card.featured { border-color: var(--gold); background: rgba(200,149,42,0.06); }
+  .pkg-badge {
+    position: absolute; top: -13px; left: 32px;
+    background: var(--gold); color: var(--navy); font-size: 11px;
+    font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 14px; border-radius: 100px;
+  }
+  .pkg-name { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-weight: 500; margin-bottom: 10px; }
+  .pkg-title { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+  .pkg-subtitle { font-size: 14px; color: rgba(255,255,255,0.45); font-weight: 300; margin-bottom: 28px; line-height: 1.5; }
+  .pkg-divider { height: 1px; background: rgba(255,255,255,0.1); margin-bottom: 24px; }
+  .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 11px; margin-bottom: 32px; }
+  .pkg-features li { font-size: 14px; color: rgba(255,255,255,0.65); font-weight: 300; display: flex; gap: 10px; align-items: flex-start; line-height: 1.5; }
+  .pkg-features li::before { content: '✓'; color: var(--gold); flex-shrink: 0; font-size: 13px; font-weight: 500; }
+  .pkg-cta {
+    display: block; text-align: center; padding: 13px 24px; border-radius: 5px;
+    font-size: 14px; font-weight: 500; text-decoration: none; letter-spacing: 0.02em; transition: all 0.2s;
+  }
+  .pkg-cta-outline { border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); }
+  .pkg-cta-outline:hover { border-color: rgba(255,255,255,0.5); color: var(--white); }
+  .pkg-cta-gold { background: var(--gold); color: var(--navy); }
+  .pkg-cta-gold:hover { background: var(--gold-light); }
+
+  /* PROCESS */
+  .process { background: var(--cream); padding: 100px 5vw; }
+  .process-header { margin-bottom: 60px; }
+  .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+  .process-steps::before {
+    content: ''; position: absolute; top: 28px; left: 10%; right: 10%;
+    height: 1px; background: var(--gray-light); z-index: 0;
+  }
+  .process-step { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+  .step-bubble {
+    width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 18px; font-weight: 700;
+    color: var(--white); background: var(--navy); border: 3px solid var(--cream);
+    position: relative; z-index: 2;
+  }
+  .process-step:nth-child(3) .step-bubble { background: var(--gold); }
+  .step-title { font-size: 15px; font-weight: 500; color: var(--text-dark); margin-bottom: 8px; }
+  .step-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; font-weight: 300; }
+
+  /* FAQ */
+  .faq { background: var(--white); padding: 100px 5vw; }
+  .faq-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
+  .faq-left { position: sticky; top: 100px; }
+  .faq-left .section-sub { margin-top: 14px; }
+  .faq-list { display: flex; flex-direction: column; gap: 0; }
+  .faq-item { border-bottom: 1px solid var(--gray-light); }
+  .faq-q {
+    width: 100%; background: none; border: none; text-align: left;
+    padding: 20px 0; display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-body); font-size: 15px; font-weight: 500;
+    color: var(--text-dark); cursor: pointer; gap: 16px; transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--navy); }
+  .faq-icon { font-size: 20px; color: var(--gold); flex-shrink: 0; line-height: 1; transition: transform 0.25s; font-weight: 300; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a { display: none; padding: 0 0 20px; font-size: 14px; color: var(--text-muted); line-height: 1.75; font-weight: 300; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* CTA */
+  .services-cta {
+    background: var(--black); padding: 100px 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 48px; flex-wrap: wrap; position: relative; overflow: hidden;
+  }
+  .services-cta::after {
+    content: ''; position: absolute; left: -80px; bottom: -80px;
+    width: 360px; height: 360px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,149,42,0.08) 0%, transparent 70%);
+  }
+  .cta-text { position: relative; z-index: 1; }
+  .cta-text h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 46px); font-weight: 700;
+    color: var(--white); line-height: 1.2; margin-bottom: 12px;
+  }
+  .cta-text p { font-size: 16px; color: rgba(255,255,255,0.45); max-width: 480px; line-height: 1.7; font-weight: 300; }
+  .cta-btns { display: flex; gap: 14px; flex-wrap: wrap; position: relative; z-index: 1; flex-shrink: 0; }
+  .btn-gold { background: var(--gold); color: var(--navy); padding: 15px 34px; border-radius: 4px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-wa { background: #25D366; color: #fff; padding: 15px 28px; border-radius: 4px; font-size: 15px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s, transform 0.15s; }
+  .btn-wa:hover { background: #1db954; transform: translateY(-1px); }
+
+  @media (max-width: 960px) {
+    .service-layout, .service-layout.reverse { grid-template-columns: 1fr; gap: 40px; }
+    .service-layout.reverse .service-left, .service-layout.reverse .service-right { order: unset; }
+    .service-left { position: static; }
+    .packages-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .process-steps::before { display: none; }
+    .faq-layout { grid-template-columns: 1fr; gap: 40px; }
+    .faq-left { position: static; }
+    .services-cta { flex-direction: column; }
+  }
+  @media (max-width: 600px) {
+    .deliverables-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+  }
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-dots"></div>
+  <div class="hero-shape"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="breadcrumb">Home &nbsp;/&nbsp; <span>Services</span></div>
+    <h1>Everything<br>your brand<br><em>needs.</em></h1>
+    <p>One agency. Seven core services. Zero compromises. From the first sketch of your logo to your website ranking on page one of Google — we handle every touchpoint so your brand stays consistent, powerful, and growing.</p>
+    <div class="hero-service-pills">
+      {% for service in services %}
+      <a href="#{{ service.slug }}" class="hero-pill">{{ service.title }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW STRIP -->
+<div class="overview-strip">
+  <div class="overview-inner">
+    {% for service in services %}
+    <a href="#{{ service.slug }}" class="ov-item">
+      {{ service.icon_svg | safe }}
+      {{ service.short_title or service.title }}
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- 01 GRAPHIC DESIGN -->
+{% for service in services %}
+<section class="service-section" id="{{ service.slug }}">
+  <div class="service-layout">
+    <div class="service-left">
+      <span class="service-num">{{ '%02d' % loop.index }}</span>
+      <div class="service-icon-ring">
+        {{ service.icon_svg | safe }}
+      </div>
+      <h2>{{ service.title }}</h2>
+      <p>{{ service.intro }}</p>
+      <div>
+        {% for tag in service.tag_list %}<span class="service-tag">{{ tag }}</span>{% endfor %}
+      </div>
+      <a href="{{ url_for('public.contact') }}?service={{ service.slug }}" class="get-quote-link">Get a quote for this service &rarr;</a>
+    </div>
+    <div class="service-right">
+      <div class="deliverables-label">What's included</div>
+      <div class="deliverables-grid">
+        {% for item in service.deliverables %}
+        <div class="deliverable-card">
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% if service.why_list %}
+      <div class="why-choose-box">
+        <h4>{{ service.why_title }}</h4>
+        <ul class="why-list">
+          {% for point in service.why_list %}<li>{{ point }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<!-- PACKAGES -->
+<section class="packages">
+  <div class="packages-header">
+    <div class="section-label" style="color:var(--gold)">Pricing tiers</div>
+    <h2 class="section-title section-title-light">A package for every stage<br>of your business.</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.48);">Every business is different — these tiers give you a starting point. We'll tailor the right combination of services for your goals and budget.</p>
+  </div>
+
+  <div class="packages-grid">
+    {% for package in packages %}
+    <div class="pkg-card{% if package.is_highlighted %} featured{% endif %}">
+      {% if package.is_highlighted %}<div class="pkg-badge">Most popular</div>{% endif %}
+      <div class="pkg-name">{{ package.tier_label }}</div>
+      <div class="pkg-title">{{ package.title }}</div>
+      <div class="pkg-subtitle">{{ package.subtitle }}</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        {% for feature in package.feature_list %}<li>{{ feature }}</li>{% endfor %}
+      </ul>
+      <a href="{{ url_for('public.contact') }}?service=multiple"
+         class="pkg-cta {% if package.is_highlighted %}pkg-cta-gold{% else %}pkg-cta-outline{% endif %}">Get a quote &rarr;</a>
+    </div>
+    {% endfor %}
+  </div>
+
+  <p style="text-align:center; margin-top:36px; font-size:14px; color:rgba(255,255,255,0.3); font-weight:300; font-style:italic;">
+    All packages are fully customisable. Contact us for a tailored proposal built around your specific needs and budget.
+  </p>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="process-header">
+    <div class="section-label">How it works</div>
+    <h2 class="section-title">Our process — simple, clear, and collaborative.</h2>
+    <p class="section-sub">We've refined our workflow over hundreds of projects to make it effortless for you from first enquiry to final delivery.</p>
+  </div>
+
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-bubble">1</div>
+      <div class="step-title">Discovery call</div>
+      <div class="step-desc">We listen first. You tell us about your business, your goals, and what you need. No jargon, no pressure — just a good conversation.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-bubble">2</div>
+      <div class="step-title">Proposal &amp; quote</div>
+      <div class="step-desc">We send a clear, detailed proposal with scope, timeline, and pricing. No hidden fees. No surprises. You approve, we begin.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-bubble">3</div>
+      <div class="step-title">Creation &amp; collaboration</div>
+      <div class="step-desc">We get to work and share progress with you throughout. Your feedback shapes every stage — this is your project, not ours.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-bubble">4</div>
+      <div class="step-title">Review &amp; refine</div>
+      <div class="step-desc">We revise until you're completely satisfied. We won't push for sign-off until the work is exactly right — that's our standard.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-bubble">5</div>
+      <div class="step-title">Delivery &amp; launch</div>
+      <div class="step-desc">Final files delivered, campaigns launched, sites go live. We stick around to make sure everything runs smoothly after handover.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-layout">
+    <div class="faq-left">
+      <div class="section-label">Common questions</div>
+      <h2 class="section-title">Things clients often ask us.</h2>
+      <p class="section-sub">Can't find your answer here? Get in touch — we're always happy to have a conversation before you commit to anything.</p>
+      <a href="{{ url_for('public.contact') }}?service=not-sure" style="display:inline-flex; align-items:center; gap:8px; margin-top:28px; font-size:14px; font-weight:500; color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(200,149,42,0.3); padding-bottom:2px;">Ask us directly →</a>
+    </div>
+
+    <div class="faq-right">
+      <div class="faq-list">
+        {% for faq in faqs %}
+        <div class="faq-item{% if loop.first %} open{% endif %}">
+          <button class="faq-q" type="button" id="faq-q-{{ loop.index }}"
+                  aria-expanded="false" aria-controls="faq-a-{{ loop.index }}">
+            {{ faq.question }}
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-{{ loop.index }}" role="region"
+               aria-labelledby="faq-q-{{ loop.index }}" hidden>{{ faq.answer }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="services-cta">
+  <div class="cta-text">
+    <h2>Not sure where to start?<br>Just talk to us.</h2>
+    <p>Tell us about your business and what you're trying to achieve. We'll recommend the right services, give you a transparent quote, and get to work — no pressure, no jargon.</p>
+  </div>
+  <div class="cta-btns">
+    <a href="https://wa.me/{{ settings.whatsapp | phone_digits }}" class="btn-wa" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      Chat on WhatsApp
+    </a>
+    <a href="{{ url_for('public.contact') }}" class="btn-gold">Get a free quote</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/services.js') }}" defer></script>
+{% endblock %}

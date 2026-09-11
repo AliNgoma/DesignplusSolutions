@@ -1,0 +1,98 @@
+{% extends "admin/base.html" %}
+{% block title %}{{ enquiry.name }}{% endblock %}
+
+{% block content %}
+<div class="page-head">
+  <div>
+    <div class="crumb">
+      <a href="{{ url_for('admin.dashboard') }}">Dashboard</a> /
+      <a href="{{ url_for('admin.enquiries') }}">Enquiries</a> / {{ enquiry.name }}
+    </div>
+    <h1>{{ enquiry.name }}</h1>
+    <p>Received {{ enquiry.created_at.strftime('%A %d %B %Y at %H:%M') }} UTC</p>
+  </div>
+  <a class="btn btn-primary" href="mailto:{{ enquiry.email }}?subject=Re: your enquiry to Designplus Solutions">Reply by email</a>
+</div>
+
+<div class="detail-grid">
+  <div>
+    <div class="panel">
+      <div class="panel-head"><h2>Their message</h2></div>
+      <div class="panel-body">
+        <p class="message-body">{{ enquiry.message }}</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><h2>Your notes</h2></div>
+      <div class="panel-body">
+        <form method="POST" class="form-grid">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <input type="hidden" name="status" value="{{ enquiry.status }}">
+          <div class="field">
+            <label class="field-label" for="internal_notes">Internal notes</label>
+            <textarea id="internal_notes" name="internal_notes" rows="6"
+                      placeholder="Quote sent 12 Feb, following up Friday.">{{ enquiry.internal_notes }}</textarea>
+            <div class="hint">Only visible here. Never shown on the site or sent to the client.</div>
+          </div>
+          <div class="form-actions" style="margin-top:0; border:none; padding-top:0">
+            <button type="submit" class="btn btn-primary">Save notes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="panel">
+      <div class="panel-head"><h2>Details</h2></div>
+      <div class="panel-body">
+        <dl class="detail-list">
+          <div><dt>Email</dt><dd><a href="mailto:{{ enquiry.email }}">{{ enquiry.email }}</a></dd></div>
+          {% if enquiry.phone %}
+          <div><dt>Phone</dt><dd><a href="tel:+{{ enquiry.phone | phone_digits }}">{{ enquiry.phone }}</a></dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/{{ enquiry.phone | phone_digits }}" target="_blank" rel="noopener">Open chat &rarr;</a></dd></div>
+          {% endif %}
+          {% if enquiry.company %}<div><dt>Company</dt><dd>{{ enquiry.company }}</dd></div>{% endif %}
+          <div><dt>Service</dt><dd>{{ enquiry.service or '—' }}</dd></div>
+          <div><dt>Budget</dt><dd>{{ enquiry.budget or '—' }}</dd></div>
+          <div><dt>Heard via</dt><dd>{{ enquiry.heard_from or '—' }}</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><h2>Status</h2></div>
+      <div class="panel-body">
+        <form method="POST" class="form-grid">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <input type="hidden" name="internal_notes" value="{{ enquiry.internal_notes }}">
+          <div class="field">
+            <label class="field-label" for="status">Where this stands</label>
+            <select id="status" name="status">
+              {% for option in enquiry.STATUSES %}
+              <option value="{{ option }}" {% if enquiry.status == option %}selected{% endif %}>
+                {{ option.replace('_', ' ') | title }}
+              </option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-actions" style="margin-top:0; border:none; padding-top:0">
+            <button type="submit" class="btn btn-primary">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-body">
+        <form method="POST" action="{{ url_for('admin.enquiry_delete', enquiry_id=enquiry.id) }}"
+              onsubmit="return confirm('Delete this enquiry permanently?');">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <button type="submit" class="btn btn-danger">Delete enquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

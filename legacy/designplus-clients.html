@@ -1,28 +1,352 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Clients — Designplus Solutions</title>
+<meta name="description" content="80+ clients across 12 industries trust Designplus Solutions with their brand — from Nairobi startups to established corporates, NGOs, hospitality and healthcare.">
+<link rel="canonical" href="https://designplussolutions.co.ke/designplus-clients.html">
+<meta name="theme-color" content="#0a1f44">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Designplus Solutions">
+<meta property="og:locale" content="en_KE">
+<meta property="og:title" content="Our Clients — Designplus Solutions">
+<meta property="og:description" content="80+ clients across 12 industries trust Designplus Solutions with their brand — from Nairobi startups to established corporates, NGOs, hospitality and healthcare.">
+<meta property="og:url" content="https://designplussolutions.co.ke/designplus-clients.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Our Clients — Designplus Solutions">
+<meta name="twitter:description" content="80+ clients across 12 industries trust Designplus Solutions with their brand — from Nairobi startups to established corporates, NGOs, hospitality and healthcare.">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<script src="assets/js/site.js" defer></script>
+<style>
+
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding-top: 68px;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 40%, rgba(200,149,42,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 10% 70%, rgba(30,64,128,0.4) 0%, transparent 60%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .hero-content {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 5vw 60px; position: relative; z-index: 2;
+    animation: fadeUp 0.9s ease both;
+  }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.32); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 32px; }
+  .breadcrumb span { color: var(--gold); }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-bottom: 24px;
+  }
+  .hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); display: block; }
+  .hero-content h1 {
+    font-family: var(--font-display);
+    font-size: clamp(56px, 8vw, 112px);
+    color: var(--white); line-height: 0.95;
+    letter-spacing: -0.03em; margin-bottom: 36px;
+    max-width: 800px;
+  }
+  .hero-content h1 em { font-style: italic; color: var(--gold); }
+  .hero-content h1 .line-indent { padding-left: 4vw; display: block; }
+  .hero-desc {
+    font-size: 18px; color: rgba(255,255,255,0.55); line-height: 1.75;
+    font-weight: 300; max-width: 520px; margin-bottom: 48px;
+  }
+  .hero-trust-row {
+    display: flex; gap: 40px; flex-wrap: wrap;
+  }
+  .hero-trust-item { display: flex; flex-direction: column; gap: 4px; }
+  .hero-trust-num {
+    font-family: var(--font-display);
+    font-size: 36px; color: var(--white); line-height: 1; font-weight: 400;
+  }
+  .hero-trust-num span { color: var(--gold); }
+  .hero-trust-label { font-size: 12px; color: rgba(255,255,255,0.38); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* LOGO MARQUEE BAND */
+  .logo-band {
+    position: relative; z-index: 2;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 28px 0; overflow: hidden;
+    background: rgba(0,0,0,0.2);
+  }
+  .logo-band-label {
+    position: absolute; left: 5vw; top: 50%; transform: translateY(-50%);
+    font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(255,255,255,0.25); font-weight: 500; z-index: 3;
+    background: rgba(10,31,68,0.95); padding-right: 20px;
+  }
+  .marquee-track {
+    display: flex; gap: 0;
+    animation: marquee 28s linear infinite;
+    width: max-content;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee-item {
+    padding: 0 48px; border-right: 1px solid rgba(255,255,255,0.07);
+    font-family: var(--font-display);
+    font-size: 17px; color: rgba(255,255,255,0.25);
+    white-space: nowrap; transition: color 0.2s; cursor: default;
+    display: flex; align-items: center;
+  }
+  .marquee-item:hover { color: rgba(255,255,255,0.65); }
+
+  /* ── SECTION COMMONS ── */
+  .section-label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 10px; }
+  .section-title { font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); color: var(--navy); line-height: 1.1; letter-spacing: -0.02em; }
+  .section-title-light { color: var(--white); }
+  .section-sub { font-size: 16px; color: var(--text-muted); line-height: 1.75; font-weight: 300; max-width: 540px; margin-top: 14px; }
+
+  /* ── CLIENTS BY SECTOR ── */
+  .by-sector { padding: 100px 5vw; background: var(--white); }
+  .by-sector-header { margin-bottom: 64px; }
+  .sector-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--gray-light); margin-bottom: 56px; overflow-x: auto; scrollbar-width: none; }
+  .sector-tabs::-webkit-scrollbar { display: none; }
+  .sector-tab {
+    padding: 14px 26px; font-size: 14px; font-weight: 400;
+    color: var(--text-muted); cursor: pointer; white-space: nowrap;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+    background: none; border-top: none; border-left: none; border-right: none;
+    font-family: var(--font-body); transition: all 0.2s;
+  }
+  .sector-tab:hover { color: var(--navy); }
+  .sector-tab.active { color: var(--navy); border-bottom-color: var(--gold); font-weight: 500; }
+
+  .sector-panel { display: none; }
+  .sector-panel.active { display: block; animation: fadeUp 0.4s ease both; }
+
+  .clients-logo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--gray-light); border: 1px solid var(--gray-light); }
+  .client-logo-card {
+    background: var(--white); padding: 36px 28px;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between;
+    min-height: 140px; transition: background 0.2s;
+    cursor: default;
+  }
+  .client-logo-card:hover { background: var(--off-white); }
+  .client-logo-name {
+    font-family: var(--font-display);
+    font-size: 18px; color: var(--navy); font-weight: 400;
+    line-height: 1.25; margin-bottom: 8px;
+  }
+  .client-logo-sub { font-size: 12px; color: var(--text-muted); font-weight: 300; }
+  .client-logo-service {
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-top: 16px;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: var(--off-white); padding: 100px 5vw; }
+  .testimonials-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; flex-wrap: wrap; gap: 24px; }
+  .testimonials-header p { font-size: 15px; color: var(--text-muted); max-width: 360px; line-height: 1.7; font-weight: 300; }
+
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+  .t-card {
+    background: var(--white); border: 1px solid var(--gray-light);
+    border-radius: 10px; padding: 32px 28px;
+    display: flex; flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .t-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(10,31,68,0.08); }
+  .t-card.featured { background: var(--navy); border-color: var(--navy); grid-column: span 2; }
+
+  .t-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+  .t-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; }
+  .t-service-badge {
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-muted); font-weight: 500;
+    background: var(--off-white); border-radius: 100px; padding: 4px 10px;
+  }
+  .t-card.featured .t-service-badge { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); }
+
+  .t-quote {
+    font-family: var(--font-display);
+    font-size: 18px; font-style: italic;
+    color: var(--text-mid); line-height: 1.6; flex: 1; margin-bottom: 24px;
+  }
+  .t-card.featured .t-quote { font-size: 22px; color: rgba(255,255,255,0.88); }
+
+  .t-bottom { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid var(--gray-light); }
+  .t-card.featured .t-bottom { border-top-color: rgba(255,255,255,0.1); }
+  .t-avatar {
+    width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 16px; font-weight: 400;
+  }
+  .t-avatar-initials { font-size: 15px; color: var(--white); }
+  .t-name { font-size: 14px; font-weight: 500; color: var(--text-dark); margin-bottom: 2px; }
+  .t-card.featured .t-name { color: var(--white); }
+  .t-role { font-size: 12px; color: var(--text-muted); font-weight: 300; }
+  .t-card.featured .t-role { color: rgba(255,255,255,0.45); }
+
+  /* ── RESULTS WALL ── */
+  .results-wall { background: var(--black); padding: 100px 5vw; }
+  .results-header { margin-bottom: 64px; }
+  .results-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.06); }
+  .result-cell { padding: 48px 36px; background: var(--black); position: relative; overflow: hidden; }
+  .result-cell::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 2px; background: var(--gold); transform: scaleX(0);
+    transform-origin: left; transition: transform 0.4s ease;
+  }
+  .result-cell:hover::before { transform: scaleX(1); }
+  .result-cell:hover { background: rgba(255,255,255,0.02); }
+  .result-num {
+    font-family: var(--font-display);
+    font-size: 52px; color: var(--white); line-height: 1; margin-bottom: 6px; font-weight: 400;
+  }
+  .result-num span { color: var(--gold); }
+  .result-desc { font-size: 14px; color: rgba(255,255,255,0.42); line-height: 1.6; font-weight: 300; }
+  .result-client { font-size: 12px; color: rgba(255,255,255,0.22); margin-top: 12px; font-weight: 300; letter-spacing: 0.04em; }
+
+  /* ── HOW WE WORK WITH CLIENTS ── */
+  .how-we-work { background: var(--cream); padding: 100px 5vw; }
+  .how-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start; }
+  .how-left { position: sticky; top: 100px; }
+  .how-left .section-sub { margin-bottom: 36px; }
+  .how-quote {
+    background: var(--navy); border-radius: 8px; padding: 32px 36px;
+    margin-top: 36px;
+  }
+  .how-quote p {
+    font-family: var(--font-display);
+    font-size: 20px; font-style: italic; color: rgba(255,255,255,0.82); line-height: 1.6; margin-bottom: 16px;
+  }
+  .how-quote-attr { font-size: 13px; color: rgba(255,255,255,0.38); font-weight: 300; }
+  .how-quote-attr strong { display: block; color: var(--gold); font-weight: 500; font-size: 14px; margin-bottom: 2px; font-style: normal; }
+
+  .how-right { }
+  .how-point { padding: 28px 0; border-bottom: 1px solid var(--gray-light); display: flex; gap: 24px; align-items: flex-start; }
+  .how-point:first-child { padding-top: 0; }
+  .how-point:last-child { border-bottom: none; }
+  .how-point-num {
+    font-family: var(--font-display);
+    font-size: 13px; color: var(--gold); font-weight: 400;
+    width: 28px; flex-shrink: 0; padding-top: 3px;
+  }
+  .how-point-text h4 { font-size: 16px; font-weight: 500; color: var(--text-dark); margin-bottom: 8px; }
+  .how-point-text p { font-size: 14px; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
+
+  /* ── INDUSTRIES ── */
+  .industries { background: var(--white); padding: 100px 5vw; }
+  .industries-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
+  .industries-left { position: sticky; top: 100px; }
+  .industries-left .section-sub { margin-bottom: 28px; }
+  .industry-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .industry-card {
+    border: 1px solid var(--gray-light); border-radius: 8px; padding: 20px 18px;
+    transition: all 0.2s; cursor: default;
+  }
+  .industry-card:hover { background: var(--navy); border-color: var(--navy); }
+  .industry-card:hover .ic-name { color: var(--white); }
+  .industry-card:hover .ic-count { color: rgba(255,255,255,0.45); }
+  .industry-card:hover .ic-icon { color: var(--gold); }
+  .ic-icon { font-size: 20px; margin-bottom: 10px; color: var(--navy); transition: color 0.2s; }
+  .ic-name { font-size: 15px; font-weight: 500; color: var(--text-dark); margin-bottom: 3px; transition: color 0.2s; }
+  .ic-count { font-size: 12px; color: var(--text-muted); font-weight: 300; transition: color 0.2s; }
+
+  /* ── CLIENT PROMISE ── */
+  .promise { background: var(--navy); padding: 100px 5vw; }
+  .promise-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .promise-left h2 { font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); color: var(--white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; }
+  .promise-left h2 em { font-style: italic; color: var(--gold); }
+  .promise-left p { font-size: 16px; color: rgba(255,255,255,0.52); line-height: 1.75; font-weight: 300; max-width: 460px; }
+  .promise-right { display: flex; flex-direction: column; gap: 0; }
+  .promise-item { padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; gap: 20px; align-items: flex-start; }
+  .promise-item:first-child { padding-top: 0; }
+  .promise-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .promise-icon {
+    width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0;
+    background: rgba(200,149,42,0.12); display: flex; align-items: center; justify-content: center;
+    color: var(--gold);
+  }
+  .promise-text h4 { font-size: 15px; font-weight: 500; color: var(--white); margin-bottom: 5px; }
+  .promise-text p { font-size: 14px; color: rgba(255,255,255,0.48); line-height: 1.65; font-weight: 300; }
+
+  /* ── CTA ── */
+  .clients-cta { background: var(--off-white); padding: 100px 5vw; text-align: center; position: relative; overflow: hidden; }
+  .clients-cta::before {
+    content: 'Designplus'; font-family: var(--font-display);
+    font-size: clamp(80px, 14vw, 180px); color: rgba(10,31,68,0.04);
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    white-space: nowrap; pointer-events: none; font-style: italic; letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .clients-cta-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+  .clients-cta h2 { font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px); color: var(--navy); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 20px; }
+  .clients-cta h2 em { font-style: italic; color: var(--gold); }
+  .clients-cta p { font-size: 17px; color: var(--text-muted); line-height: 1.75; font-weight: 300; margin-bottom: 44px; }
+  .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-navy { background: var(--navy); color: var(--white); padding: 16px 36px; border-radius: 4px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; }
+  .btn-navy:hover { background: var(--navy-mid); transform: translateY(-1px); }
+  .btn-wa { background: #25D366; color: #fff; padding: 16px 28px; border-radius: 4px; font-size: 15px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s, transform 0.15s; }
+  .btn-wa:hover { background: #1db954; transform: translateY(-1px); }
+
+  @media (max-width: 1024px) {
+    .how-layout, .industries-layout, .promise-layout { grid-template-columns: 1fr; gap: 48px; }
+    .how-left, .industries-left { position: static; }
+    .results-grid { grid-template-columns: 1fr 1fr; }
+    .clients-logo-grid { grid-template-columns: 1fr 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .t-card.featured { grid-column: span 1; }
+  }
+  @media (max-width: 768px) {
+    .hero-trust-row { gap: 24px; }
+    .results-grid { grid-template-columns: 1fr 1fr; }
+    .industry-cards { grid-template-columns: 1fr; }
+    .promise-layout { grid-template-columns: 1fr; }
+    .clients-logo-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .results-grid { grid-template-columns: 1fr; }
+    .clients-logo-grid { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
-<body id="page-clients">
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV -->
 <nav>
   <a href="designplus-homepage.html" class="nav-logo">Designplus<span>.</span></a>
-  <ul class="nav-links">
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="designplus-homepage.html">Home</a></li>
     <li><a href="designplus-about.html">About</a></li>
     <li><a href="designplus-services.html">Services</a></li>
     <li><a href="designplus-portfolio.html">Portfolio</a></li>
-    <li><a href="designplus-clients.html" class="active">Clients</a></li>
+    <li><a href="designplus-clients.html" aria-current="page">Clients</a></li>
     <li><a href="designplus-contact.html" class="nav-cta">Get a quote</a></li>
   </ul>
 </nav>
+
+<main id="main">
 
 <!-- ── HERO ── -->
 <section class="hero">
@@ -95,17 +419,17 @@
     <p class="section-sub">We've built a diverse portfolio of long-term client relationships — from scrappy startups to established corporates. Browse by industry below.</p>
   </div>
 
-  <div class="sector-tabs">
-    <button class="sector-tab active" onclick="showSector('all', this)">All clients</button>
-    <button class="sector-tab" onclick="showSector('corporate', this)">Corporates &amp; Finance</button>
-    <button class="sector-tab" onclick="showSector('sme', this)">SMEs &amp; Startups</button>
-    <button class="sector-tab" onclick="showSector('ngo', this)">NGOs &amp; Nonprofits</button>
-    <button class="sector-tab" onclick="showSector('hospitality', this)">Hospitality &amp; Retail</button>
-    <button class="sector-tab" onclick="showSector('health', this)">Healthcare</button>
+  <div class="sector-tabs" role="tablist" aria-label="Clients by sector">
+    <button class="sector-tab active" type="button" role="tab" id="tab-all" aria-controls="panel-all" aria-selected="true" tabindex="0" data-sector="all">All clients</button>
+    <button class="sector-tab" type="button" role="tab" id="tab-corporate" aria-controls="panel-corporate" aria-selected="false" tabindex="-1" data-sector="corporate">Corporates &amp; Finance</button>
+    <button class="sector-tab" type="button" role="tab" id="tab-sme" aria-controls="panel-sme" aria-selected="false" tabindex="-1" data-sector="sme">SMEs &amp; Startups</button>
+    <button class="sector-tab" type="button" role="tab" id="tab-ngo" aria-controls="panel-ngo" aria-selected="false" tabindex="-1" data-sector="ngo">NGOs &amp; Nonprofits</button>
+    <button class="sector-tab" type="button" role="tab" id="tab-hospitality" aria-controls="panel-hospitality" aria-selected="false" tabindex="-1" data-sector="hospitality">Hospitality &amp; Retail</button>
+    <button class="sector-tab" type="button" role="tab" id="tab-health" aria-controls="panel-health" aria-selected="false" tabindex="-1" data-sector="health">Healthcare</button>
   </div>
 
   <!-- ALL -->
-  <div class="sector-panel active" id="panel-all">
+  <div class="sector-panel active" id="panel-all" role="tabpanel" aria-labelledby="tab-all" tabindex="0">
     <div class="clients-logo-grid">
       <div class="client-logo-card"><div class="client-logo-name">Horizon Logistics Ltd</div><div class="client-logo-sub">Logistics &amp; Transport</div><div class="client-logo-service">Branding · Web · Signage</div></div>
       <div class="client-logo-card"><div class="client-logo-name">Savanna Foods Ltd</div><div class="client-logo-sub">FMCG &amp; Retail</div><div class="client-logo-service">Web · Packaging · Print</div></div>
@@ -123,7 +447,7 @@
   </div>
 
   <!-- CORPORATES -->
-  <div class="sector-panel" id="panel-corporate">
+  <div class="sector-panel" id="panel-corporate" role="tabpanel" aria-labelledby="tab-corporate" tabindex="0" hidden>
     <div class="clients-logo-grid">
       <div class="client-logo-card"><div class="client-logo-name">Summit Capital Group</div><div class="client-logo-sub">Finance &amp; Investment</div><div class="client-logo-service">Branding · Print · Social</div></div>
       <div class="client-logo-card"><div class="client-logo-name">Horizon Logistics Ltd</div><div class="client-logo-sub">Logistics &amp; Transport</div><div class="client-logo-service">Branding · Web · Signage</div></div>
@@ -133,7 +457,7 @@
   </div>
 
   <!-- SMES -->
-  <div class="sector-panel" id="panel-sme">
+  <div class="sector-panel" id="panel-sme" role="tabpanel" aria-labelledby="tab-sme" tabindex="0" hidden>
     <div class="clients-logo-grid">
       <div class="client-logo-card"><div class="client-logo-name">Savannah Tech</div><div class="client-logo-sub">Technology &amp; Startups</div><div class="client-logo-service">Web · Branding · IT</div></div>
       <div class="client-logo-card"><div class="client-logo-name">Amara Wellness Centre</div><div class="client-logo-sub">Health &amp; Wellness</div><div class="client-logo-service">Branding · Social · Web</div></div>
@@ -143,15 +467,15 @@
   </div>
 
   <!-- NGOs -->
-  <div class="sector-panel" id="panel-ngo">
+  <div class="sector-panel" id="panel-ngo" role="tabpanel" aria-labelledby="tab-ngo" tabindex="0" hidden>
     <div class="clients-logo-grid">
       <div class="client-logo-card"><div class="client-logo-name">Greenleaf Foundation</div><div class="client-logo-sub">Environmental NGO</div><div class="client-logo-service">Branding · Print · Signage</div></div>
-      <div class="client-logo-card" style="background:var(--off-white); cursor:default;"><div class="client-logo-name" style="color:var(--text-muted); font-size:15px; font-style:italic;">Your organisation here?</div><div class="client-logo-sub" style="margin-top:8px;">We love working with mission-driven organisations.</div><div class="client-logo-service"><a href="designplus-contact.html" style="color:var(--gold); text-decoration:none;">Get in touch &rarr;</a></div></div>
+      <div class="client-logo-card" style="background:var(--off-white); cursor:default;"><div class="client-logo-name" style="color:var(--text-muted); font-size:15px; font-style:italic;">Your organisation here?</div><div class="client-logo-sub" style="margin-top:8px;">We love working with mission-driven organisations.</div><div class="client-logo-service"><a href="designplus-contact.html" style="color:var(--gold); text-decoration:none;">Get in touch →</a></div></div>
     </div>
   </div>
 
   <!-- HOSPITALITY -->
-  <div class="sector-panel" id="panel-hospitality">
+  <div class="sector-panel" id="panel-hospitality" role="tabpanel" aria-labelledby="tab-hospitality" tabindex="0" hidden>
     <div class="clients-logo-grid">
       <div class="client-logo-card"><div class="client-logo-name">Karibu Hotels &amp; Resorts</div><div class="client-logo-sub">Hospitality &amp; Tourism</div><div class="client-logo-service">Web · Social · Print</div></div>
       <div class="client-logo-card"><div class="client-logo-name">Nairobi Eats</div><div class="client-logo-sub">Restaurant &amp; Delivery</div><div class="client-logo-service">Branding · Social · Print</div></div>
@@ -160,7 +484,7 @@
   </div>
 
   <!-- HEALTH -->
-  <div class="sector-panel" id="panel-health">
+  <div class="sector-panel" id="panel-health" role="tabpanel" aria-labelledby="tab-health" tabindex="0" hidden>
     <div class="clients-logo-grid">
       <div class="client-logo-card"><div class="client-logo-name">Kilimani Clinic</div><div class="client-logo-sub">Healthcare</div><div class="client-logo-service">Branding · Web · Signage</div></div>
       <div class="client-logo-card"><div class="client-logo-name">Amara Wellness Centre</div><div class="client-logo-sub">Health &amp; Wellness</div><div class="client-logo-service">Branding · Social · Web</div></div>
@@ -532,7 +856,7 @@
     <p>Whether you're launching a new brand, refreshing an existing one, or looking for a long-term creative partner — we'd love to start the conversation. No pressure. Just a good chat about what you're building.</p>
     <div class="cta-buttons">
       <a href="designplus-contact.html" class="btn-navy">Get a free quote</a>
-      <a href="https://wa.me/254743270939" class="btn-wa" target="_blank">
+      <a href="https://wa.me/254700000000" class="btn-wa" target="_blank">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
         Chat on WhatsApp
       </a>
@@ -541,10 +865,12 @@
 </section>
 
 <!-- FOOTER -->
+</main>
+
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <div class="footer-logo">Designplus<span>.</span></div>
+      <a href="designplus-homepage.html" class="footer-logo">Designplus<span>.</span></a>
       <p class="footer-tagline">Your brand, built right. Full-service creative and digital solutions for businesses across Kenya.</p>
     </div>
     <div class="footer-links">
@@ -572,25 +898,52 @@
       <h4>Contact</h4>
       <ul>
         <li><a href="mailto:info@designplussolutions.co.ke">info@designplussolutions.co.ke</a></li>
-        <li><a href="tel:+254743270939">+254 743 270 939</a></li>
-        <li><a href="https://wa.me/254743270939" target="_blank">WhatsApp us</a></li>
-        <li><a href="https://maps.google.com/?q=Nairobi,+Kenya" target="_blank">Nairobi, Kenya</a></li>
+        <li><a href="tel:+254700000000">+254 700 000 000</a></li>
+        <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp us</a></li>
+        <li><a href="designplus-contact.html#office">Nairobi, Kenya</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 Designplus Solutions. All rights reserved.</p>
+    <p>&copy; <span data-current-year>2026</span> Designplus Solutions. All rights reserved.</p>
     <p>Designed with care in Nairobi, Kenya.</p>
   </div>
 </footer>
 
 <script>
-  function showSector(sector, btn) {
-    document.querySelectorAll('.sector-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.sector-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('panel-' + sector).classList.add('active');
-  }
+(function () {
+  'use strict';
+
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.sector-tab'));
+  if (!tabs.length) return;
+
+  var select = function (tab, moveFocus) {
+    tabs.forEach(function (other) {
+      var isTarget = other === tab;
+      var panel = document.getElementById('panel-' + other.dataset.sector);
+      other.classList.toggle('active', isTarget);
+      other.setAttribute('aria-selected', String(isTarget));
+      other.tabIndex = isTarget ? 0 : -1;
+      if (panel) {
+        panel.classList.toggle('active', isTarget);
+        panel.hidden = !isTarget;
+      }
+    });
+    if (moveFocus) tab.focus();
+  };
+
+  tabs.forEach(function (tab, index) {
+    tab.addEventListener('click', function () { select(tab, false); });
+
+    // Left/right arrows move between tabs, as expected of a tablist.
+    tab.addEventListener('keydown', function (event) {
+      var offset = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0;
+      if (!offset) return;
+      event.preventDefault();
+      select(tabs[(index + offset + tabs.length) % tabs.length], true);
+    });
+  });
+})();
 </script>
 
 </body>

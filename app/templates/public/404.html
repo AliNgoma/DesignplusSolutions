@@ -1,0 +1,33 @@
+{% extends "layout/base.html" %}
+{% set page = {'title': 'Page not found — ' ~ settings.company_name,
+               'meta_description': '', 'social_title': '', 'social_description': '',
+               'og_image': '', 'is_indexed': false} %}
+
+{% block styles %}
+  .error-page {
+    min-height: 70vh; background: var(--navy);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 140px 5vw 100px; gap: 18px;
+  }
+  .error-code { font-family: var(--font-display); font-size: 96px; color: var(--gold); line-height: 1; }
+  .error-page h1 { font-family: var(--font-display); font-size: 32px; color: var(--white); font-weight: 400; }
+  .error-page p { font-size: 15px; color: rgba(255,255,255,0.55); max-width: 460px; line-height: 1.7; font-weight: 300; }
+  .error-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 14px; }
+  .error-actions a {
+    padding: 13px 28px; border-radius: 4px; font-size: 14px; font-weight: 500; text-decoration: none;
+  }
+  .error-primary { background: var(--gold); color: var(--navy); }
+  .error-secondary { border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.8); }
+{% endblock %}
+
+{% block content %}
+<section class="error-page">
+  <div class="error-code">404</div>
+  <h1>That page has moved on.</h1>
+  <p>The link you followed doesn't lead anywhere any more. Try the work, the services, or just tell us what you were looking for.</p>
+  <div class="error-actions">
+    <a class="error-primary" href="{{ url_for('public.home') }}">Back to home</a>
+    <a class="error-secondary" href="{{ url_for('public.contact') }}">Get in touch</a>
+  </div>
+</section>
+{% endblock %}

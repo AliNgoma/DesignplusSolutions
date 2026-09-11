@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Designplus Solutions</title>
+<meta name="description" content="Tell us about your project and get a free, no-obligation quote within 24 hours. Call, WhatsApp or email Designplus Solutions in Nairobi, Kenya.">
+<link rel="canonical" href="https://designplussolutions.co.ke/designplus-contact.html">
+<meta name="theme-color" content="#0a1f44">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Designplus Solutions">
+<meta property="og:locale" content="en_KE">
+<meta property="og:title" content="Contact Us — Designplus Solutions">
+<meta property="og:description" content="Tell us about your project and get a free, no-obligation quote within 24 hours. Call, WhatsApp or email Designplus Solutions in Nairobi, Kenya.">
+<meta property="og:url" content="https://designplussolutions.co.ke/designplus-contact.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Contact Us — Designplus Solutions">
+<meta name="twitter:description" content="Tell us about your project and get a free, no-obligation quote within 24 hours. Call, WhatsApp or email Designplus Solutions in Nairobi, Kenya.">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<script src="assets/js/site.js" defer></script>
+<style>
+
+
+  /* HERO */
+  .page-hero {
+    background: var(--navy);
+    padding: 148px 5vw 0;
+    position: relative; overflow: hidden;
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: end; gap: 0;
+    min-height: 72vh;
+  }
+  .hero-bg-dots {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(rgba(255,255,255,0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .hero-bg-glow {
+    position: absolute; top: 0; right: 0; bottom: 0; width: 55%;
+    background: linear-gradient(135deg, transparent 0%, rgba(22,49,99,0.6) 100%);
+    pointer-events: none;
+  }
+  .hero-left { position: relative; z-index: 2; padding-bottom: 80px; animation: fadeUp 0.8s ease both; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.32); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px; }
+  .breadcrumb span { color: var(--gold); }
+  .hero-left h1 {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 6.5vw, 90px);
+    color: var(--white); line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 24px;
+  }
+  .hero-left h1 em { font-style: italic; color: var(--gold); }
+  .hero-left p { font-size: 17px; color: rgba(255,255,255,0.58); line-height: 1.78; max-width: 480px; font-weight: 300; margin-bottom: 40px; }
+  .hero-response-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px; padding: 8px 18px;
+    font-size: 13px; color: rgba(255,255,255,0.6);
+  }
+  .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 3px rgba(74,222,128,0.2); flex-shrink: 0; animation: pulse 2s infinite; }
+
+  @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 3px rgba(74,222,128,0.2); } 50% { box-shadow: 0 0 0 6px rgba(74,222,128,0.1); } }
+
+  /* HERO QUICK CONTACTS */
+  .hero-right {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding-bottom: 0; align-self: end;
+  }
+  .quick-contacts {
+    display: flex; flex-direction: column;
+  }
+  .qc-item {
+    display: flex; align-items: center; gap: 20px;
+    padding: 22px 32px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .qc-item:hover { background: rgba(255,255,255,0.04); }
+  .qc-icon {
+    width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; transition: transform 0.2s;
+  }
+  .qc-item:hover .qc-icon { transform: scale(1.08); }
+  .qc-icon-wa { background: rgba(37,211,102,0.12); color: var(--green); }
+  .qc-icon-phone { background: rgba(200,149,42,0.12); color: var(--gold); }
+  .qc-icon-email { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7); }
+  .qc-icon-location { background: rgba(30,64,128,0.4); color: rgba(255,255,255,0.6); }
+  .qc-text-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.32); font-weight: 500; margin-bottom: 2px; }
+  .qc-text-value { font-size: 15px; color: rgba(255,255,255,0.85); font-weight: 400; }
+  .qc-arrow { margin-left: auto; font-size: 16px; color: rgba(255,255,255,0.2); flex-shrink: 0; transition: color 0.2s, transform 0.2s; }
+  .qc-item:hover .qc-arrow { color: var(--gold); transform: translateX(3px); }
+
+  /* MAIN CONTENT */
+  .contact-main {
+    display: grid; grid-template-columns: 1fr 420px; gap: 0;
+    align-items: start;
+  }
+
+  /* FORM */
+  .form-section {
+    padding: 80px 5vw 80px 5vw; border-right: 1px solid var(--gray-light);
+  }
+  .section-label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 10px; }
+  .section-title { font-family: var(--font-display); font-size: clamp(28px, 3vw, 40px); color: var(--navy); line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .section-sub { font-size: 15px; color: var(--text-muted); line-height: 1.7; font-weight: 300; margin-bottom: 40px; }
+
+  .contact-form { display: flex; flex-direction: column; gap: 20px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 7px; }
+  .form-group label { font-size: 13px; font-weight: 500; color: var(--text-dark); letter-spacing: 0.01em; }
+  .form-group label span { color: var(--gold); margin-left: 2px; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 13px 16px;
+    border: 1.5px solid var(--gray-light);
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 14px; font-weight: 300;
+    color: var(--text-dark);
+    background: var(--white);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(10,31,68,0.07);
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--gray-mid); font-weight: 300; }
+  .form-group textarea { resize: vertical; min-height: 130px; }
+  .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' viewBox='0 0 24 24' stroke='%239a9990' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 38px; cursor: pointer; color: var(--text-dark); }
+  .form-group select option[value=""] { color: var(--gray-mid); }
+
+  .budget-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .budget-option { position: relative; }
+  .budget-option input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
+  .budget-label {
+    display: block; padding: 10px 12px; text-align: center;
+    border: 1.5px solid var(--gray-light); border-radius: 6px;
+    font-size: 13px; color: var(--text-muted); cursor: pointer;
+    transition: all 0.18s; font-weight: 400;
+  }
+  .budget-option input:checked + .budget-label {
+    border-color: var(--navy); background: rgba(10,31,68,0.04); color: var(--navy); font-weight: 500;
+  }
+  .budget-label:hover { border-color: var(--navy-mid); color: var(--navy); }
+
+  .form-note { font-size: 12px; color: var(--text-muted); line-height: 1.6; font-weight: 300; }
+  .form-note a { color: var(--navy); text-decoration: underline; text-underline-offset: 2px; }
+
+  .submit-btn {
+    background: var(--navy); color: var(--white);
+    border: none; border-radius: 6px;
+    padding: 16px 36px; font-size: 15px; font-weight: 500;
+    font-family: var(--font-body);
+    cursor: pointer; letter-spacing: 0.02em;
+    transition: background 0.2s, transform 0.15s;
+    display: flex; align-items: center; gap: 10px;
+    align-self: flex-start;
+  }
+  .submit-btn:hover { background: var(--navy-mid); transform: translateY(-1px); }
+  .submit-btn svg { transition: transform 0.2s; }
+  .submit-btn:hover svg { transform: translateX(3px); }
+
+  /* SUCCESS MESSAGE */
+  .form-success {
+    display: none; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 60px 20px; gap: 16px;
+  }
+  .success-icon {
+    width: 64px; height: 64px; background: rgba(10,31,68,0.06); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 8px;
+  }
+  .form-success h3 { font-family: var(--font-display); font-size: 26px; color: var(--navy); }
+  .form-success p { font-size: 15px; color: var(--text-muted); line-height: 1.7; max-width: 340px; font-weight: 300; }
+
+  .form-error {
+    background: rgba(220,38,38,0.06);
+    border: 1px solid rgba(220,38,38,0.25);
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #b91c1c;
+    font-weight: 300;
+  }
+  .form-error a { color: #b91c1c; font-weight: 500; }
+  .submit-btn[aria-busy="true"] { opacity: 0.65; cursor: progress; }
+
+  /* SIDEBAR */
+  .contact-sidebar { padding: 80px 40px; background: var(--off-white); }
+
+  .sidebar-block { margin-bottom: 44px; padding-bottom: 44px; border-bottom: 1px solid var(--gray-light); }
+  .sidebar-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .sidebar-block-title { font-size: 13px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; letter-spacing: 0.02em; }
+
+  /* OFFICE HOURS */
+  .hours-list { display: flex; flex-direction: column; gap: 8px; }
+  .hours-item { display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+  .hours-day { color: var(--text-muted); font-weight: 300; }
+  .hours-time { color: var(--text-dark); font-weight: 400; }
+  .hours-item.today .hours-day { color: var(--navy); font-weight: 500; }
+  .hours-item.today .hours-time { color: var(--navy); font-weight: 500; }
+  .hours-closed { color: var(--gray-mid) !important; }
+  .open-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.25); border-radius: 100px; padding: 3px 10px; font-size: 11px; color: #16a34a; font-weight: 500; margin-bottom: 14px; }
+  .open-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; }
+
+  /* SOCIAL */
+  .social-links { display: flex; flex-direction: column; gap: 10px; }
+  .social-link {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 14px; border-radius: 8px;
+    background: var(--white); border: 1px solid var(--gray-light);
+    text-decoration: none; color: var(--text-dark); font-size: 14px;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .social-link:hover { border-color: var(--navy); transform: translateX(3px); }
+  .social-link-icon { width: 32px; height: 32px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .social-link-handle { font-size: 12px; color: var(--text-muted); font-weight: 300; display: block; margin-top: 1px; }
+  .social-link-arrow { margin-left: auto; font-size: 14px; color: var(--gray-mid); }
+
+  /* MAP PLACEHOLDER */
+  .map-block { background: var(--navy); border-radius: 8px; overflow: hidden; }
+  .map-placeholder {
+    height: 180px; background: var(--navy-mid);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 10px; position: relative; overflow: hidden;
+  }
+  .map-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .map-pin { position: relative; z-index: 1; }
+  .map-pin-dot { width: 14px; height: 14px; background: var(--gold); border-radius: 50%; margin: 0 auto 4px; box-shadow: 0 0 0 4px rgba(200,149,42,0.25); }
+  .map-pin-line { width: 1px; height: 20px; background: var(--gold); margin: 0 auto; opacity: 0.5; }
+  .map-label { position: relative; z-index: 1; font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; text-transform: uppercase; }
+  .map-info { padding: 16px 20px; }
+  .map-address { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.6; font-weight: 300; margin-bottom: 10px; }
+  .map-directions { font-size: 12px; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-weight: 500; transition: color 0.2s; }
+  .map-directions:hover { color: var(--gold-light); }
+
+  /* WHAT TO EXPECT */
+  .expect-section { background: var(--cream); padding: 80px 5vw; }
+  .expect-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+  .expect-card {
+    background: var(--white); border: 1px solid var(--gray-light);
+    border-radius: 8px; padding: 32px 28px; position: relative; overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .expect-card:hover { transform: translateY(-3px); border-color: var(--navy-mid); }
+  .expect-step {
+    font-family: var(--font-display);
+    font-size: 52px; color: var(--gray-light);
+    line-height: 1; margin-bottom: 16px;
+    transition: color 0.2s;
+  }
+  .expect-card:hover .expect-step { color: rgba(200,149,42,0.25); }
+  .expect-card h4 { font-size: 16px; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
+  .expect-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
+  .expect-time { display: inline-block; margin-top: 14px; font-size: 12px; color: var(--gold); font-weight: 500; letter-spacing: 0.04em; }
+
+  /* REASSURANCE STRIP */
+  .reassurance {
+    background: var(--navy); padding: 48px 5vw;
+    display: flex; align-items: center; justify-content: space-around;
+    flex-wrap: wrap; gap: 32px;
+  }
+  .reassure-item { display: flex; align-items: center; gap: 14px; }
+  .reassure-icon { color: var(--gold); flex-shrink: 0; }
+  .reassure-text strong { display: block; font-size: 14px; font-weight: 500; color: var(--white); margin-bottom: 2px; }
+  .reassure-text span { font-size: 13px; color: rgba(255,255,255,0.42); font-weight: 300; }
+
+  /* ALTERNATE CHANNELS */
+  .alt-channels { background: var(--white); padding: 80px 5vw; }
+  .channels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+  .channel-card {
+    border: 1.5px solid var(--gray-light); border-radius: 10px;
+    padding: 32px 28px; text-decoration: none; color: var(--text-dark);
+    transition: all 0.2s; display: flex; flex-direction: column; gap: 16px;
+  }
+  .channel-card:hover { border-color: var(--navy); background: var(--off-white); transform: translateY(-2px); }
+  .channel-icon-wrap { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+  .channel-card h4 { font-size: 17px; font-weight: 500; color: var(--navy); }
+  .channel-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; font-weight: 300; flex: 1; }
+  .channel-action { font-size: 13px; font-weight: 500; color: var(--gold); display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; }
+
+  @media (max-width: 1024px) {
+    .page-hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-right { border-top: 1px solid rgba(255,255,255,0.07); }
+    .quick-contacts { flex-direction: row; flex-wrap: wrap; }
+    .qc-item { flex: 1 1 200px; }
+    .contact-main { grid-template-columns: 1fr; }
+    .form-section { border-right: none; border-bottom: 1px solid var(--gray-light); }
+    .expect-grid, .channels-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .form-row { grid-template-columns: 1fr; }
+    .budget-grid { grid-template-columns: 1fr 1fr; }
+    .expect-grid, .channels-grid { grid-template-columns: 1fr; }
+    .reassurance { flex-direction: column; align-items: flex-start; }
+    .hero-left h1 { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- NAV -->
+<nav>
+  <a href="designplus-homepage.html" class="nav-logo">Designplus<span>.</span></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="designplus-homepage.html">Home</a></li>
+    <li><a href="designplus-about.html">About</a></li>
+    <li><a href="designplus-services.html">Services</a></li>
+    <li><a href="designplus-portfolio.html">Portfolio</a></li>
+    <li><a href="designplus-clients.html">Clients</a></li>
+    <li><a href="designplus-contact.html" class="nav-cta" aria-current="page">Get a quote</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-bg-dots"></div>
+  <div class="hero-bg-glow"></div>
+
+  <div class="hero-left">
+    <div class="breadcrumb">Home &nbsp;/&nbsp; <span>Contact us</span></div>
+    <h1>Let's build<br>something<br><em>great.</em></h1>
+    <p>Whether you have a detailed brief or just a vague idea — we'd love to hear about it. Tell us what you need and we'll get back to you within 24 hours with ideas and a quote.</p>
+    <div class="hero-response-badge">
+      <span class="badge-dot"></span>
+      We typically respond within 2–4 hours during business hours
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="quick-contacts">
+      <a href="https://wa.me/254700000000" class="qc-item" target="_blank">
+        <div class="qc-icon qc-icon-wa">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </div>
+        <div>
+          <div class="qc-text-label">WhatsApp</div>
+          <div class="qc-text-value">+254 700 000 000</div>
+        </div>
+        <span class="qc-arrow">→</span>
+      </a>
+      <a href="tel:+254700000000" class="qc-item">
+        <div class="qc-icon qc-icon-phone">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.338c0 1.01.122 1.994.353 2.934m0 0c.485 2.03 1.508 3.86 2.882 5.34M2.603 9.272l1.09-.454a1.125 1.125 0 0 1 1.302.4l1.734 2.312a1.125 1.125 0 0 1-.217 1.532l-.93.784a10.903 10.903 0 0 0 5.585 5.585l.785-.931a1.125 1.125 0 0 1 1.531-.216l2.313 1.734a1.125 1.125 0 0 1 .399 1.302l-.453 1.09A11.973 11.973 0 0 1 2.25 6.338Z"/></svg>
+        </div>
+        <div>
+          <div class="qc-text-label">Call us</div>
+          <div class="qc-text-value">+254 700 000 000</div>
+        </div>
+        <span class="qc-arrow">→</span>
+      </a>
+      <a href="mailto:info@designplussolutions.co.ke" class="qc-item">
+        <div class="qc-icon qc-icon-email">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+        </div>
+        <div>
+          <div class="qc-text-label">Email us</div>
+          <div class="qc-text-value">info@designplussolutions.co.ke</div>
+        </div>
+        <span class="qc-arrow">→</span>
+      </a>
+      <div class="qc-item" style="cursor:default;">
+        <div class="qc-icon qc-icon-location">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+        </div>
+        <div>
+          <div class="qc-text-label">Our office</div>
+          <div class="qc-text-value">Nairobi, Kenya</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REASSURANCE STRIP -->
+<div class="reassurance">
+  <div class="reassure-item">
+    <div class="reassure-icon">
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+    </div>
+    <div class="reassure-text">
+      <strong>Response within 24 hours</strong>
+      <span>Usually much faster — we don't keep you waiting</span>
+    </div>
+  </div>
+  <div class="reassure-item">
+    <div class="reassure-icon">
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75"/></svg>
+    </div>
+    <div class="reassure-text">
+      <strong>Free, no-obligation quote</strong>
+      <span>A detailed proposal with transparent pricing</span>
+    </div>
+  </div>
+  <div class="reassure-item">
+    <div class="reassure-icon">
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+    </div>
+    <div class="reassure-text">
+      <strong>No pressure, no jargon</strong>
+      <span>Just a straightforward conversation about your needs</span>
+    </div>
+  </div>
+  <div class="reassure-item">
+    <div class="reassure-icon">
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+    </div>
+    <div class="reassure-text">
+      <strong>Dedicated point of contact</strong>
+      <span>One person who knows your project inside out</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN: FORM + SIDEBAR -->
+<div class="contact-main">
+
+  <!-- FORM -->
+  <div class="form-section">
+    <div class="section-label">Send us a message</div>
+    <h2 class="section-title">Tell us about your project.</h2>
+    <p class="section-sub">Fill in as much or as little as you know right now. We'll use this to put together a tailored proposal and reach out to discuss the details.</p>
+
+    <form class="contact-form" id="contactForm" method="POST"
+          action="https://formspree.io/f/YOUR_FORM_ID">
+      <!-- Replace YOUR_FORM_ID with your Formspree (or Netlify/Basin) form ID.
+           Until you do, the form falls back to opening a pre-filled email so no
+           enquiry is ever silently lost. See README.md. -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full name <span>*</span></label>
+          <input type="text" id="name" name="name" placeholder="e.g. Sarah Wanjiku" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Company / business name</label>
+          <input type="text" id="company" name="company" placeholder="e.g. Horizon Logistics Ltd">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email address <span>*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@yourcompany.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone / WhatsApp number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+254 7XX XXX XXX">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="service">Which service are you interested in? <span>*</span></label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Select a service</option>
+          <option value="graphic-design">Graphic Design</option>
+          <option value="web-design">Web Design &amp; Development</option>
+          <option value="seo">Search Engine Optimisation (SEO)</option>
+          <option value="printing">Printing Services</option>
+          <option value="branding-signage">Branding &amp; Signage</option>
+          <option value="social-media">Social Media Management</option>
+          <option value="it-solutions">Custom IT &amp; Digital Solutions</option>
+          <option value="multiple">Multiple services / full package</option>
+          <option value="not-sure">Not sure yet — need advice</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>What's your approximate budget?</label>
+        <div class="budget-grid">
+          <div class="budget-option">
+            <input type="radio" name="budget" id="b1" value="Under KSh 50k">
+            <label class="budget-label" for="b1">Under KSh 50k</label>
+          </div>
+          <div class="budget-option">
+            <input type="radio" name="budget" id="b2" value="KSh 50k–150k">
+            <label class="budget-label" for="b2">KSh 50k–150k</label>
+          </div>
+          <div class="budget-option">
+            <input type="radio" name="budget" id="b3" value="KSh 150k–500k">
+            <label class="budget-label" for="b3">KSh 150k–500k</label>
+          </div>
+          <div class="budget-option">
+            <input type="radio" name="budget" id="b4" value="KSh 500k+">
+            <label class="budget-label" for="b4">KSh 500k+</label>
+          </div>
+          <div class="budget-option">
+            <input type="radio" name="budget" id="b5" value="Ongoing retainer">
+            <label class="budget-label" for="b5">Retainer</label>
+          </div>
+          <div class="budget-option">
+            <input type="radio" name="budget" id="b6" value="Not sure">
+            <label class="budget-label" for="b6">Not sure yet</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Tell us about your project <span>*</span></label>
+        <textarea id="message" name="message" placeholder="Describe what you're looking for — the more context you give us, the better we can help. What does your business do? What do you need? When do you need it by? Any reference examples you love?" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="hear">How did you hear about us?</label>
+        <select id="hear" name="hear">
+          <option value="" disabled selected>Select one</option>
+          <option value="google">Google search</option>
+          <option value="referral">Referral from someone I know</option>
+          <option value="social">Social media</option>
+          <option value="existing-client">I'm an existing client</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <p class="form-note">By submitting this form, you agree to us contacting you about your enquiry. We'll never share your details with third parties, and we only use them to respond to your enquiry.</p>
+
+      <p class="form-error" id="formError" role="alert" hidden></p>
+
+      <button type="submit" class="submit-btn" id="submitBtn">
+        <span class="submit-btn-label">Send my enquiry</span>
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+      </button>
+    </form>
+
+    <div class="form-success" id="formSuccess" role="status" tabindex="-1">
+      <div class="success-icon">
+        <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#0a1f44" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+      </div>
+      <h3>Message received!</h3>
+      <p>Thank you for reaching out. One of the Designplus team will be in touch within 24 hours — usually much sooner.</p>
+      <p style="margin-top:8px;">In a hurry? <a href="https://wa.me/254700000000" style="color:var(--navy); font-weight:500;">Chat with us on WhatsApp</a> for an immediate response.</p>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="contact-sidebar">
+
+    <div class="sidebar-block">
+      <div class="sidebar-block-title">Office hours</div>
+      <div class="open-badge" hidden><span class="open-dot"></span> <span class="open-badge-text">Open now</span></div>
+      <div class="hours-list">
+        <div class="hours-item" data-day="1" data-open="08:00" data-close="18:00">
+          <span class="hours-day">Monday</span>
+          <span class="hours-time">8:00 AM – 6:00 PM</span>
+        </div>
+        <div class="hours-item" data-day="2" data-open="08:00" data-close="18:00">
+          <span class="hours-day">Tuesday</span>
+          <span class="hours-time">8:00 AM – 6:00 PM</span>
+        </div>
+        <div class="hours-item" data-day="3" data-open="08:00" data-close="18:00">
+          <span class="hours-day">Wednesday</span>
+          <span class="hours-time">8:00 AM – 6:00 PM</span>
+        </div>
+        <div class="hours-item" data-day="4" data-open="08:00" data-close="18:00">
+          <span class="hours-day">Thursday</span>
+          <span class="hours-time">8:00 AM – 6:00 PM</span>
+        </div>
+        <div class="hours-item" data-day="5" data-open="08:00" data-close="17:00">
+          <span class="hours-day">Friday</span>
+          <span class="hours-time">8:00 AM – 5:00 PM</span>
+        </div>
+        <div class="hours-item" data-day="6" data-open="09:00" data-close="13:00">
+          <span class="hours-day">Saturday</span>
+          <span class="hours-time">9:00 AM – 1:00 PM</span>
+        </div>
+        <div class="hours-item" data-day="0">
+          <span class="hours-day">Sunday</span>
+          <span class="hours-time hours-closed">Closed</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-block-title">Find us on social media</div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/designplussolutions" class="social-link" target="_blank" rel="noopener">
+          <div class="social-link-icon" style="background:#1877f215; color:#1877f2;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:14px; font-weight:400; color:var(--text-dark);">Facebook</div>
+            <span class="social-link-handle">@designplussolutions</span>
+          </div>
+          <span class="social-link-arrow">→</span>
+        </a>
+        <a href="https://www.instagram.com/designplussolutions" class="social-link" target="_blank" rel="noopener">
+          <div class="social-link-icon" style="background:#e114741a; color:#e11474;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:14px; font-weight:400; color:var(--text-dark);">Instagram</div>
+            <span class="social-link-handle">@designplussolutions</span>
+          </div>
+          <span class="social-link-arrow">→</span>
+        </a>
+        <a href="https://www.linkedin.com/company/designplussolutions" class="social-link" target="_blank" rel="noopener">
+          <div class="social-link-icon" style="background:#0a66c21a; color:#0a66c2;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:14px; font-weight:400; color:var(--text-dark);">LinkedIn</div>
+            <span class="social-link-handle">Designplus Solutions</span>
+          </div>
+          <span class="social-link-arrow">→</span>
+        </a>
+        <a href="https://x.com/designplussol" class="social-link" target="_blank" rel="noopener">
+          <div class="social-link-icon" style="background:#0000001a; color:#000;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.843L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:14px; font-weight:400; color:var(--text-dark);">X (Twitter)</div>
+            <span class="social-link-handle">@designplussol</span>
+          </div>
+          <span class="social-link-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="sidebar-block" id="office">
+      <div class="sidebar-block-title">Our location</div>
+      <div class="map-block">
+        <div class="map-placeholder">
+          <div class="map-grid"></div>
+          <div class="map-pin">
+            <div class="map-pin-dot"></div>
+            <div class="map-pin-line"></div>
+          </div>
+          <div class="map-label">Nairobi, Kenya</div>
+        </div>
+        <div class="map-info">
+          <p class="map-address">
+            Your Office Address,<br>
+            Building Name, Floor,<br>
+            Nairobi, Kenya
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Designplus+Solutions+Nairobi+Kenya" target="_blank" rel="noopener" class="map-directions">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+            Get directions on Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- WHAT TO EXPECT -->
+<section class="expect-section">
+  <div class="section-label">After you reach out</div>
+  <h2 class="section-title">What happens next.</h2>
+  <p class="section-sub">We've made the process as smooth and pressure-free as possible. Here's exactly what to expect after you get in touch.</p>
+
+  <div class="expect-grid">
+    <div class="expect-card">
+      <div class="expect-step">01</div>
+      <h4>We review your enquiry</h4>
+      <p>As soon as your message lands with us, a member of the team reads it carefully. We look at what you need, what stage you're at, and who on the team is best placed to help.</p>
+      <span class="expect-time">⏱ Within 2–4 business hours</span>
+    </div>
+    <div class="expect-card">
+      <div class="expect-step">02</div>
+      <h4>We reach out to learn more</h4>
+      <p>We'll contact you by your preferred method — email, phone, or WhatsApp — to ask any follow-up questions and get the full picture. This call is free, informal, and totally without obligation.</p>
+      <span class="expect-time">⏱ Within 24 hours</span>
+    </div>
+    <div class="expect-card">
+      <div class="expect-step">03</div>
+      <h4>You receive a clear proposal</h4>
+      <p>We put together a detailed, itemised proposal with a clear scope of work, timeline, and pricing. No vague estimates. No hidden costs. Just a straightforward document you can review at your own pace.</p>
+      <span class="expect-time">⏱ Within 2–3 business days</span>
+    </div>
+  </div>
+</section>
+
+<!-- ALTERNATE CHANNELS -->
+<section class="alt-channels">
+  <div class="section-label">Prefer a different way to connect?</div>
+  <h2 class="section-title">We're easy to reach,<br>however you like.</h2>
+
+  <div class="channels-grid">
+    <a href="https://wa.me/254700000000" class="channel-card" target="_blank">
+      <div class="channel-icon-wrap" style="background:rgba(37,211,102,0.1); color:var(--green);">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      </div>
+      <h4>WhatsApp</h4>
+      <p>The fastest way to reach us. Send a message anytime and we'll get back to you quickly — ideal if you have a quick question or an urgent brief.</p>
+      <span class="channel-action">Chat now → </span>
+    </a>
+
+    <a href="tel:+254700000000" class="channel-card">
+      <div class="channel-icon-wrap" style="background:rgba(200,149,42,0.1); color:var(--gold);">
+        <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.338c0 1.01.122 1.994.353 2.934m0 0c.485 2.03 1.508 3.86 2.882 5.34M2.603 9.272l1.09-.454a1.125 1.125 0 0 1 1.302.4l1.734 2.312a1.125 1.125 0 0 1-.217 1.532l-.93.784a10.903 10.903 0 0 0 5.585 5.585l.785-.931a1.125 1.125 0 0 1 1.531-.216l2.313 1.734a1.125 1.125 0 0 1 .399 1.302l-.453 1.09A11.973 11.973 0 0 1 2.25 6.338Z"/></svg>
+      </div>
+      <h4>Call us directly</h4>
+      <p>Prefer to talk it through? Give us a call during office hours and speak directly with a member of the Designplus team — no call centres, no hold music.</p>
+      <span class="channel-action">+254 700 000 000 → </span>
+    </a>
+
+    <a href="mailto:info@designplussolutions.co.ke" class="channel-card">
+      <div class="channel-icon-wrap" style="background:rgba(10,31,68,0.07); color:var(--navy);">
+        <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+      </div>
+      <h4>Send an email</h4>
+      <p>Prefer email? Write to us at info@designplussolutions.co.ke with as much detail about your project as you like. We reply to every email, every time.</p>
+      <span class="channel-action">info@designplussolutions.co.ke → </span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="designplus-homepage.html" class="footer-logo">Designplus<span>.</span></a>
+      <p class="footer-tagline">Your brand, built right. Full-service creative and digital solutions for businesses across Kenya.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="designplus-services.html#graphic-design">Graphic Design</a></li>
+        <li><a href="designplus-services.html#web-design">Web Design &amp; Development</a></li>
+        <li><a href="designplus-services.html#seo">SEO</a></li>
+        <li><a href="designplus-services.html#printing">Printing Services</a></li>
+        <li><a href="designplus-services.html#branding-signage">Branding &amp; Signage</a></li>
+        <li><a href="designplus-services.html#social-media">Social Media</a></li>
+        <li><a href="designplus-services.html#it-solutions">Custom IT &amp; Digital</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="designplus-about.html">About us</a></li>
+        <li><a href="designplus-portfolio.html">Portfolio</a></li>
+        <li><a href="designplus-clients.html">Clients</a></li>
+        <li><a href="designplus-contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:info@designplussolutions.co.ke">info@designplussolutions.co.ke</a></li>
+        <li><a href="tel:+254700000000">+254 700 000 000</a></li>
+        <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp us</a></li>
+        <li><a href="designplus-contact.html#office">Nairobi, Kenya</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span data-current-year>2026</span> Designplus Solutions. All rights reserved.</p>
+    <p>Designed with care in Nairobi, Kenya.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── Office hours ───────────────────────────────────────────────────────
+     Both the "today" highlight and the open/closed badge are derived from the
+     data attributes on the rows, so the badge can never disagree with the
+     hours printed next to it. */
+
+  var DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var now = new Date();
+  var today = now.getDay();
+  var minutesNow = now.getHours() * 60 + now.getMinutes();
+
+  var toMinutes = function (hhmm) {
+    var parts = String(hhmm).split(':');
+    return Number(parts[0]) * 60 + Number(parts[1]);
+  };
+
+  var openNow = false;
+
+  document.querySelectorAll('.hours-item').forEach(function (item) {
+    if (Number(item.dataset.day) !== today) return;
+
+    item.classList.add('today');
+    var dayEl = item.querySelector('.hours-day');
+    if (dayEl) dayEl.textContent = DAY_NAMES[today] + ' \u2190 Today';
+
+    if (item.dataset.open && item.dataset.close) {
+      openNow = minutesNow >= toMinutes(item.dataset.open) &&
+                minutesNow < toMinutes(item.dataset.close);
+    }
+  });
+
+  var badge = document.querySelector('.open-badge');
+  if (badge) {
+    var badgeText = badge.querySelector('.open-badge-text');
+    var dot = badge.querySelector('.open-dot');
+    if (!openNow) {
+      badge.style.background = 'rgba(239,68,68,0.1)';
+      badge.style.borderColor = 'rgba(239,68,68,0.25)';
+      badge.style.color = '#dc2626';
+      if (dot) {
+        dot.style.background = '#ef4444';
+        dot.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.2)';
+      }
+      if (badgeText) badgeText.textContent = 'Currently closed';
+    }
+    badge.hidden = false;
+  }
+
+  /* ── Prefill the service from ?service= ─────────────────────────────────
+     The service links across the site carry the value the visitor already
+     chose, so they do not have to pick it twice. */
+
+  var requested = new URLSearchParams(window.location.search).get('service');
+  var serviceEl = document.getElementById('service');
+  if (requested && serviceEl && serviceEl.querySelector('option[value="' + CSS.escape(requested) + '"]')) {
+    serviceEl.value = requested;
+  }
+
+  /* ── Submission ────────────────────────────────────────────────────────
+     Posts to the form's own action. If the endpoint has not been configured
+     yet, or the request fails, the enquiry is handed to the visitor's email
+     client rather than being thrown away. */
+
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('formSuccess');
+  var errorEl = document.getElementById('formError');
+  var button = document.getElementById('submitBtn');
+  var label = button && button.querySelector('.submit-btn-label');
+
+  var FALLBACK_EMAIL = 'info@designplussolutions.co.ke';
+  var UNCONFIGURED = /YOUR_FORM_ID/;
+
+  var describe = function (data) {
+    var lines = [];
+    form.querySelectorAll('label').forEach(function (l) {
+      var field = document.getElementById(l.getAttribute('for'));
+      if (!field || field.type === 'radio') return;
+      var value = data.get(field.name);
+      if (value) lines.push(l.textContent.replace('*', '').trim() + ': ' + value);
+    });
+    var budget = data.get('budget');
+    if (budget) lines.push('Budget: ' + budget);
+    return lines.join('\n');
+  };
+
+  var mailtoFallback = function (data) {
+    return 'mailto:' + FALLBACK_EMAIL +
+      '?subject=' + encodeURIComponent('Website enquiry — ' + (data.get('name') || 'New project')) +
+      '&body=' + encodeURIComponent(describe(data));
+  };
+
+  var showError = function (data) {
+    if (!errorEl) return;
+    errorEl.innerHTML = 'We could not send that automatically. ' +
+      '<a href="' + mailtoFallback(data) + '">Email it to us instead</a> ' +
+      'or <a href="https://wa.me/254700000000" target="_blank" rel="noopener">message us on WhatsApp</a> — ' +
+      'your answers are still in the form.';
+    errorEl.hidden = false;
+  };
+
+  var showSuccess = function () {
+    form.hidden = true;
+    if (errorEl) errorEl.hidden = true;
+    success.style.display = 'flex';
+    success.focus();
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
+  if (form && success && button) {
+    form.addEventListener('submit', function (event) {
+      // Let the browser show its own messages for empty required fields.
+      if (!form.checkValidity()) return;
+
+      var data = new FormData(form);
+
+      // No endpoint configured yet — hand off to email instead of pretending.
+      if (UNCONFIGURED.test(form.action)) {
+        event.preventDefault();
+        showError(data);
+        return;
+      }
+
+      event.preventDefault();
+      if (errorEl) errorEl.hidden = true;
+      button.setAttribute('aria-busy', 'true');
+      button.disabled = true;
+      if (label) label.textContent = 'Sending…';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' }
+      }).then(function (response) {
+        if (!response.ok) throw new Error('Request failed: ' + response.status);
+        showSuccess();
+      }).catch(function () {
+        showError(data);
+      }).then(function () {
+        button.removeAttribute('aria-busy');
+        button.disabled = false;
+        if (label) label.textContent = 'Send my enquiry';
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,910 @@
+{
+  "pages": [
+    {
+      "slug": "home",
+      "nav_label": "Home",
+      "position": 1,
+      "title": "Designplus Solutions — Your Brand, Built Right",
+      "meta_description": "Designplus Solutions is a full-service creative and digital agency in Nairobi, Kenya — brand identity, web design, SEO, printing, signage and social media for businesses across East Africa."
+    },
+    {
+      "slug": "about",
+      "nav_label": "About",
+      "position": 2,
+      "title": "About Us — Designplus Solutions",
+      "meta_description": "Meet the Nairobi creative and digital agency behind 150+ projects for 80+ clients — our story, mission, values and the team building brands across East Africa."
+    },
+    {
+      "slug": "services",
+      "nav_label": "Services",
+      "position": 3,
+      "title": "Services — Designplus Solutions",
+      "meta_description": "Seven services, one agency: graphic design, web design and development, SEO, printing, branding and signage, social media management and custom IT solutions in Nairobi, Kenya."
+    },
+    {
+      "slug": "portfolio",
+      "nav_label": "Portfolio",
+      "position": 4,
+      "title": "Portfolio — Designplus Solutions",
+      "meta_description": "Real projects, real results — branding, web design, print, signage, social media and SEO work delivered for businesses across Kenya by Designplus Solutions."
+    },
+    {
+      "slug": "clients",
+      "nav_label": "Clients",
+      "position": 5,
+      "title": "Our Clients — Designplus Solutions",
+      "meta_description": "80+ clients across 12 industries trust Designplus Solutions with their brand — from Nairobi startups to established corporates, NGOs, hospitality and healthcare."
+    },
+    {
+      "slug": "contact",
+      "nav_label": "Contact",
+      "position": 6,
+      "title": "Contact Us — Designplus Solutions",
+      "meta_description": "Tell us about your project and get a free, no-obligation quote within 24 hours. Call, WhatsApp or email Designplus Solutions in Nairobi, Kenya."
+    }
+  ],
+  "services": [
+    {
+      "slug": "graphic-design",
+      "position": 1,
+      "title": "Graphic Design",
+      "intro": "Your visual identity is the first impression you make — and first impressions stick. We create designs that don't just look good; they communicate your brand's personality, build trust, and make you instantly recognisable in any market.",
+      "tags": [
+        "Brand Identity",
+        "Print Design",
+        "Digital Graphics"
+      ],
+      "icon_svg": "<svg width=\"24\" height=\"24\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"#0a1f44\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42\"/></svg>",
+      "why_title": "Why clients choose us for design",
+      "why_points": [
+        "We take the time to understand your brand before we create anything",
+        "Unlimited revisions until you're completely happy",
+        "Fast turnaround — most projects delivered within 3–5 business days",
+        "All source files handed over — you own your design outright"
+      ],
+      "deliverables": [
+        {
+          "title": "Logo design",
+          "description": "Custom logo concepts with full source files and brand usage guidelines — designed to work across every medium."
+        },
+        {
+          "title": "Brand identity systems",
+          "description": "Colour palettes, typography, icon sets, and full brand style guides so your look stays consistent everywhere."
+        },
+        {
+          "title": "Marketing materials",
+          "description": "Brochures, flyers, posters, pitch decks, proposals, and catalogues — professionally designed and print-ready."
+        },
+        {
+          "title": "Social media graphics",
+          "description": "Scroll-stopping post designs, story templates, cover images, and ad creatives tailored to each platform."
+        },
+        {
+          "title": "Packaging design",
+          "description": "Product packaging that stands out on the shelf — from concept and dieline to final print-ready artwork."
+        },
+        {
+          "title": "Presentations & pitch decks",
+          "description": "Investor decks, company profiles, and corporate presentations designed to impress in any boardroom."
+        }
+      ],
+      "short_title": "Graphic Design",
+      "summary": "Logos, brand identity, marketing materials, packaging, and social graphics that make your brand unforgettable."
+    },
+    {
+      "slug": "web-design",
+      "position": 2,
+      "title": "Web Design & Development",
+      "intro": "Your website is your hardest-working employee — available 24/7, speaking to thousands of customers simultaneously. We build sites that are beautiful to look at, effortless to use, and engineered to turn visitors into paying customers.",
+      "tags": [
+        "Corporate Websites",
+        "E-commerce",
+        "Landing Pages"
+      ],
+      "icon_svg": "<svg width=\"24\" height=\"24\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"#0a1f44\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0H3\"/></svg>",
+      "why_title": "What sets our websites apart",
+      "why_points": [
+        "Mobile-first design — flawless across every screen size and device",
+        "Built for speed — fast load times that keep visitors from bouncing",
+        "SEO-ready from day one — clean code and proper structure",
+        "Training included — we show you how to manage your own content"
+      ],
+      "deliverables": [
+        {
+          "title": "Corporate & business websites",
+          "description": "Multi-page professional websites with custom design, content management systems, and full mobile optimisation."
+        },
+        {
+          "title": "E-commerce stores",
+          "description": "Fully functional online shops with product catalogues, secure payment integrations, and order management."
+        },
+        {
+          "title": "Landing pages",
+          "description": "High-converting single-page sites for campaigns, product launches, and lead generation — built to perform."
+        },
+        {
+          "title": "Website redesigns",
+          "description": "Transforming outdated websites into fast, modern, user-friendly platforms that reflect your current brand."
+        },
+        {
+          "title": "Website maintenance",
+          "description": "Ongoing updates, security patches, backups, and performance optimisation so your site never lets you down."
+        },
+        {
+          "title": "Web hosting setup",
+          "description": "Domain registration, hosting configuration, SSL certificates, and professional email setup — all handled for you."
+        }
+      ],
+      "short_title": "Web Design & Development",
+      "summary": "Beautiful, fast, mobile-ready websites and e-commerce platforms built to convert visitors into customers."
+    },
+    {
+      "slug": "seo",
+      "position": 3,
+      "title": "Search Engine Optimisation",
+      "intro": "What's the point of a great website if no one can find it? SEO is how your ideal customers discover you on Google — before they find your competitors. We build your visibility organically, sustainably, and with measurable results.",
+      "tags": [
+        "Local SEO",
+        "Technical SEO",
+        "Content Strategy"
+      ],
+      "icon_svg": "<svg width=\"24\" height=\"24\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"#0a1f44\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z\"/></svg>",
+      "why_title": "Our SEO approach",
+      "why_points": [
+        "No black-hat shortcuts — only white-hat strategies that last",
+        "Local expertise: we know how Kenyan audiences search online",
+        "Transparent monthly reports with real, trackable metrics",
+        "SEO that compounds over time — the longer we work, the stronger you rank"
+      ],
+      "deliverables": [
+        {
+          "title": "SEO audit & strategy",
+          "description": "A full technical and content audit of your current site, with a clear prioritised roadmap to improve your rankings."
+        },
+        {
+          "title": "Keyword research",
+          "description": "We find the exact search terms your target customers use in Kenya and East Africa — then build a strategy around them."
+        },
+        {
+          "title": "On-page optimisation",
+          "description": "Page titles, meta descriptions, headings, image alt text, internal linking — every on-page element tuned for Google."
+        },
+        {
+          "title": "Technical SEO",
+          "description": "Site speed, mobile usability, crawlability, structured data, and schema markup — the foundation Google needs to rank you."
+        },
+        {
+          "title": "Local SEO & Google Business",
+          "description": "Google Business Profile optimisation, local citations, and map ranking strategies to dominate local search in Nairobi and beyond."
+        },
+        {
+          "title": "Monthly reporting",
+          "description": "Clear, jargon-free reports showing your keyword positions, organic traffic growth, and ROI — every single month."
+        }
+      ],
+      "short_title": "Search Engine Optimisation",
+      "summary": "Get found on Google. We optimise your site so the right customers find you — not your competitors."
+    },
+    {
+      "slug": "printing",
+      "position": 4,
+      "title": "Printing Services",
+      "intro": "In a digital world, physical print still commands attention. A beautifully printed brochure, a well-designed business card, a sharp pull-up banner — these are the touchpoints that clients hold, keep, and remember. We produce print that makes the right impression.",
+      "tags": [
+        "Business Stationery",
+        "Large Format",
+        "Marketing Print"
+      ],
+      "icon_svg": "<svg width=\"24\" height=\"24\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"#0a1f44\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659\"/></svg>",
+      "why_title": "Our print promise",
+      "why_points": [
+        "High-quality output — no faded colours, no poor registration",
+        "We review every file before it goes to press — zero surprises",
+        "Competitive pricing for both small runs and bulk orders",
+        "Fast turnaround with delivery anywhere in Nairobi"
+      ],
+      "deliverables": [
+        {
+          "title": "Business stationery",
+          "description": "Business cards, letterheads, compliment slips, envelopes, and branded office stationery in any finish or quantity."
+        },
+        {
+          "title": "Marketing collateral",
+          "description": "Flyers, brochures, catalogues, posters, and leaflets — designed and printed to a standard that represents your brand."
+        },
+        {
+          "title": "Banners & pull-ups",
+          "description": "Exhibition banners, retractable pull-ups, step-and-repeat backdrops, and event display materials in large format."
+        },
+        {
+          "title": "Branded merchandise",
+          "description": "Branded notebooks, pens, folders, bags, apparel, and corporate gift items for events, teams, and client gifting."
+        },
+        {
+          "title": "Calendars & diaries",
+          "description": "Custom-branded wall calendars, desk diaries, and planners — popular corporate gifting items that keep your brand visible year-round."
+        },
+        {
+          "title": "Design + print packages",
+          "description": "No artwork? No problem. Our designers create your print-ready files, then we produce and deliver the finished product."
+        }
+      ],
+      "short_title": "Printing Services",
+      "summary": "Business cards, brochures, flyers, banners, and large-format print — all produced to the highest quality."
+    },
+    {
+      "slug": "branding-signage",
+      "position": 5,
+      "title": "Branding & Signage",
+      "intro": "Your brand doesn't stop at a screen — it lives in the physical world too. From vehicle wraps turning heads on Nairobi's roads to office signage that commands respect the moment a client walks in, we bring your brand into every space it occupies.",
+      "tags": [
+        "Vehicle Branding",
+        "Office Signage",
+        "Outdoor Advertising"
+      ],
+      "icon_svg": "<svg width=\"24\" height=\"24\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"#0a1f44\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21\"/></svg>",
+      "why_title": "End-to-end physical branding",
+      "why_points": [
+        "Design, production, and installation — all handled by one team",
+        "Durable materials built for Kenya's climate and outdoor use",
+        "Fleet and multi-site branding — consistent across all locations",
+        "Competitive rates with no compromise on finish quality"
+      ],
+      "deliverables": [
+        {
+          "title": "Vehicle branding & wraps",
+          "description": "Full and partial vehicle wraps, fleet branding, and car graphics that turn every journey into a moving advertisement."
+        },
+        {
+          "title": "Office & reception signage",
+          "description": "Dimensional lettering, acrylic logos, directional signs, and reception displays that make your space look the part."
+        },
+        {
+          "title": "Outdoor advertising",
+          "description": "Billboards, building fascias, hoarding boards, and street-level displays designed for maximum visual impact."
+        },
+        {
+          "title": "Event & exhibition branding",
+          "description": "Full event branding packages — from tent and booth design to backdrops, branded uniforms, and giveaway materials."
+        },
+        {
+          "title": "Shop fronts & window graphics",
+          "description": "Eye-catching retail and outlet graphics that attract foot traffic and communicate your brand at street level."
+        },
+        {
+          "title": "Installation & fitting",
+          "description": "We don't just design and print — our professional installation team ensures everything is fitted perfectly and securely."
+        }
+      ],
+      "short_title": "Branding & Signage",
+      "summary": "Vehicle branding, office signage, outdoor displays, and event graphics that make your brand visible everywhere."
+    },
+    {
+      "slug": "social-media",
+      "position": 6,
+      "title": "Social Media Management",
+      "intro": "Social media is where your brand's personality lives — and where your customers decide whether to trust you. We handle every aspect of your social presence so you can focus on running your business while we grow your audience, engagement, and influence.",
+      "tags": [
+        "Content Creation",
+        "Community Management",
+        "Paid Advertising"
+      ],
+      "icon_svg": "<svg width=\"24\" height=\"24\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"#0a1f44\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z\"/></svg>",
+      "why_title": "What makes our social management different",
+      "why_points": [
+        "Content that sounds like your brand — not generic agency copy",
+        "We understand Kenyan social media culture and what performs locally",
+        "Consistent posting — no gaps, no dry spells, no excuses",
+        "Fully managed or collaborative — we work however suits you best"
+      ],
+      "deliverables": [
+        {
+          "title": "Social media strategy",
+          "description": "A clear, platform-specific strategy aligned to your business goals — covering content themes, posting frequency, and growth targets."
+        },
+        {
+          "title": "Content creation",
+          "description": "Professionally designed posts, reels scripts, captions, and stories — created to reflect your brand voice and stop the scroll."
+        },
+        {
+          "title": "Scheduling & publishing",
+          "description": "We schedule and publish your content at the optimal times for maximum reach and engagement on every platform."
+        },
+        {
+          "title": "Community management",
+          "description": "Responding to comments and DMs, engaging with your audience, and maintaining the conversations that build loyalty."
+        },
+        {
+          "title": "Paid social advertising",
+          "description": "Targeted Facebook, Instagram, LinkedIn, and TikTok ad campaigns designed to reach your ideal audience and generate real leads."
+        },
+        {
+          "title": "Monthly analytics reports",
+          "description": "Clear performance reports showing follower growth, reach, engagement, and ad results — with recommendations to improve."
+        }
+      ],
+      "short_title": "Social Media Management",
+      "summary": "Strategy, content creation, scheduling, and community management that grows your audience and drives engagement."
+    },
+    {
+      "slug": "it-solutions",
+      "position": 7,
+      "title": "Custom IT & Digital Solutions",
+      "intro": "As your business grows, you need digital tools that grow with it. We design and build custom software, automate processes, integrate systems, and provide ongoing IT support — so your technology works for you, not against you.",
+      "tags": [
+        "Custom Software",
+        "System Integration",
+        "IT Support"
+      ],
+      "icon_svg": "<svg width=\"24\" height=\"24\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"#0a1f44\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z\"/></svg>",
+      "why_title": "Our digital solutions approach",
+      "why_points": [
+        "We build for your specific needs — no off-the-shelf compromises",
+        "Plain-English communication — no tech jargon, no confusion",
+        "Scalable solutions that grow as your business grows",
+        "Ongoing support available — we don't disappear after launch"
+      ],
+      "deliverables": [
+        {
+          "title": "Custom web applications",
+          "description": "Bespoke web-based tools, portals, dashboards, and internal systems built precisely around your business workflows."
+        },
+        {
+          "title": "System integrations",
+          "description": "Connecting your existing tools — CRM, accounting software, e-commerce platforms, APIs — so everything works together seamlessly."
+        },
+        {
+          "title": "Business process automation",
+          "description": "Automating repetitive tasks, approvals, and workflows to save your team time and reduce costly manual errors."
+        },
+        {
+          "title": "IT consulting & strategy",
+          "description": "Expert advice on your digital infrastructure, software selection, and technology roadmap — without the jargon."
+        },
+        {
+          "title": "Email & productivity setup",
+          "description": "Professional email hosting, Microsoft 365 or Google Workspace setup, and cloud collaboration tools for your team."
+        },
+        {
+          "title": "Ongoing IT support",
+          "description": "Monthly retainer support packages for businesses that need a reliable technology partner on call — no issue too big or small."
+        }
+      ],
+      "short_title": "Custom IT & Digital Solutions",
+      "summary": "From custom software and system integrations to IT support — tailored digital solutions built around your business needs."
+    }
+  ],
+  "packages": [
+    {
+      "position": 1,
+      "tier_label": "Tier one",
+      "title": "Starter",
+      "subtitle": "For startups and new businesses establishing their brand for the first time.",
+      "features": [
+        "Logo design (3 concepts)",
+        "Basic brand identity guide",
+        "Business card design & print",
+        "5-page website (mobile-ready)",
+        "Social media profile setup (2 platforms)",
+        "Google Business Profile setup"
+      ],
+      "is_highlighted": false
+    },
+    {
+      "position": 2,
+      "tier_label": "Tier two",
+      "title": "Growth",
+      "subtitle": "For growing businesses ready to invest in a complete, professional brand presence.",
+      "features": [
+        "Full brand identity system",
+        "Stationery & marketing print pack",
+        "10-page website with CMS",
+        "SEO setup & on-page optimisation",
+        "Social media management (3 months)",
+        "Signage or vehicle branding",
+        "Monthly performance report"
+      ],
+      "is_highlighted": true
+    },
+    {
+      "position": 3,
+      "tier_label": "Tier three",
+      "title": "Enterprise",
+      "subtitle": "For established organisations needing comprehensive, ongoing creative and digital support.",
+      "features": [
+        "Complete brand overhaul or refresh",
+        "Custom web application or e-commerce",
+        "Full digital marketing strategy",
+        "Ongoing SEO retainer",
+        "Fully managed social media",
+        "Fleet or multi-site signage",
+        "Dedicated account manager",
+        "Custom IT & integration support"
+      ],
+      "is_highlighted": false
+    }
+  ],
+  "faqs": [
+    {
+      "position": 1,
+      "question": "How long does a typical project take?",
+      "answer": "It depends on the scope. A logo design typically takes 3–5 business days. A full brand identity takes 1–2 weeks. A website takes 2–6 weeks depending on complexity. We'll give you a clear timeline in your proposal — and we stick to it."
+    },
+    {
+      "position": 2,
+      "question": "Do you work with businesses outside Nairobi?",
+      "answer": "Absolutely. We work with clients across Kenya and East Africa. For design, web, SEO, and social media work, everything can be handled remotely. For physical services like signage and vehicle branding, we can discuss logistics depending on your location."
+    },
+    {
+      "position": 3,
+      "question": "How much does it cost?",
+      "answer": "Every project is unique, so we don't publish fixed prices — we'd rather give you an accurate quote than a ballpark figure that doesn't reflect your actual needs. Contact us with a brief summary of what you need and we'll get back to you with a detailed, transparent proposal. There are no hidden fees."
+    },
+    {
+      "position": 4,
+      "question": "What information do you need to get started?",
+      "answer": "Don't worry if you don't have everything figured out — that's partly what we're here for. The more context you can give us about your business, your target audience, and what you're trying to achieve, the better. If you have existing brand materials, share those too. We'll ask the right questions to fill in any gaps."
+    },
+    {
+      "position": 5,
+      "question": "Do you offer ongoing support after a project is completed?",
+      "answer": "Yes — and this is something we actively encourage. Your brand will evolve, your website will need updates, and your marketing needs will grow. We offer ongoing retainer packages for web maintenance, social media, SEO, and general creative support so you always have a trusted partner on hand."
+    },
+    {
+      "position": 6,
+      "question": "Can you handle multiple services at once?",
+      "answer": "Yes — and it actually works better that way. When one team handles your design, your website, your print, and your social media, everything stays consistent. There's no briefing multiple agencies or trying to make sure different suppliers match your brand guidelines. We coordinate everything internally, so you get a seamless result."
+    },
+    {
+      "position": 7,
+      "question": "What payment terms do you offer?",
+      "answer": "We typically require a 50% deposit to begin work, with the balance due on completion. For larger projects or ongoing retainers, we can discuss phased payment schedules. We accept M-Pesa, bank transfer, and other payment methods convenient to you."
+    }
+  ],
+  "categories": [
+    {
+      "slug": "branding",
+      "label": "Branding",
+      "position": 1
+    },
+    {
+      "slug": "web",
+      "label": "Web Design",
+      "position": 2
+    },
+    {
+      "slug": "print",
+      "label": "Print",
+      "position": 3
+    },
+    {
+      "slug": "social",
+      "label": "Social Media",
+      "position": 4
+    },
+    {
+      "slug": "signage",
+      "label": "Signage",
+      "position": 5
+    },
+    {
+      "slug": "seo",
+      "label": "SEO",
+      "position": 6
+    }
+  ],
+  "projects": [
+    {
+      "position": 1,
+      "title": "Horizon Logistics — Full brand overhaul",
+      "client_name": "Horizon Logistics Ltd",
+      "location": "Nairobi, Kenya",
+      "service_tag": "Brand Identity",
+      "result": "New brand identity increased client enquiries by 60% within the first quarter after launch",
+      "category": "branding",
+      "visual_class": "pv-branding-1",
+      "visual_html": "<div class=\"pv-mark\">H</div>",
+      "is_featured": true
+    },
+    {
+      "position": 2,
+      "title": "Savanna Foods — E-commerce platform",
+      "client_name": "Savanna Foods Ltd",
+      "location": "Nairobi, Kenya",
+      "service_tag": "Web Design & Development",
+      "result": "Online orders up 140% in the first 2 months after the new site launched",
+      "category": "web",
+      "visual_class": "pv-web-1",
+      "visual_html": "<div class=\"pv-browser\">\n            <div class=\"pv-browser-bar\">\n              <div class=\"pv-dot\" style=\"background:#ff5f56\"></div>\n              <div class=\"pv-dot\" style=\"background:#ffbd2e\"></div>\n              <div class=\"pv-dot\" style=\"background:#27c93f\"></div>\n            </div>\n            <div class=\"pv-browser-body\"><span>savannafoodsltd.co.ke</span></div>\n          </div>",
+      "is_featured": false
+    },
+    {
+      "position": 3,
+      "title": "Summit Capital — Corporate stationery suite",
+      "client_name": "Summit Capital Group",
+      "location": "Nairobi, Kenya",
+      "service_tag": "Print Design",
+      "result": "Complete stationery system across 6 document types, printed and delivered in 5 business days",
+      "category": "print",
+      "visual_class": "pv-print-1",
+      "visual_html": "<div class=\"pv-cards\">\n            <div class=\"pv-card-item\"></div>\n            <div class=\"pv-card-item\"></div>\n            <div class=\"pv-card-item\"></div>\n          </div>",
+      "is_featured": false
+    },
+    {
+      "position": 4,
+      "title": "Pearl Properties — Instagram & Facebook growth",
+      "client_name": "Pearl Properties Kenya",
+      "location": "Nairobi, Kenya",
+      "service_tag": "Social Media Management",
+      "result": "Follower count grew from 800 to 12,400 in 6 months, generating 35+ qualified property enquiries per month",
+      "category": "social",
+      "visual_class": "pv-social-1",
+      "visual_html": "<div class=\"pv-posts\">\n            <div class=\"pv-post\" style=\"height:60px\"></div>\n            <div class=\"pv-post\" style=\"height:40px\"></div>\n            <div class=\"pv-post\" style=\"height:40px\"></div>\n            <div class=\"pv-post\" style=\"height:60px\"></div>\n          </div>",
+      "is_featured": false
+    },
+    {
+      "position": 5,
+      "title": "Greenleaf NGO — Office & reception branding",
+      "client_name": "Greenleaf Foundation",
+      "location": "Nairobi, Kenya",
+      "service_tag": "Office Signage",
+      "result": "Full office branding installation across 3 floors completed within one week of brief sign-off",
+      "category": "signage",
+      "visual_class": "pv-signage-1",
+      "visual_html": "<div class=\"pv-sign\"><span>Greenleaf NGO</span></div>",
+      "is_featured": false
+    },
+    {
+      "position": 6,
+      "title": "Afrique Media — From page 4 to page 1 in 90 days",
+      "client_name": "Afrique Media Group",
+      "location": "Nairobi, Kenya",
+      "service_tag": "SEO",
+      "result": "Organic traffic increased by 320% in 3 months; 14 target keywords now ranking on page one of Google Kenya",
+      "category": "seo",
+      "visual_class": "pv-seo-1",
+      "visual_html": "<div class=\"pv-chart\">\n            <div class=\"pv-bar\"></div>\n            <div class=\"pv-bar\"></div>\n            <div class=\"pv-bar\"></div>\n            <div class=\"pv-bar\"></div>\n            <div class=\"pv-bar\"></div>\n            <div class=\"pv-bar\"></div>\n            <div class=\"pv-bar\"></div>\n          </div>",
+      "is_featured": true
+    },
+    {
+      "position": 7,
+      "title": "Amara Wellness — Brand identity from scratch",
+      "client_name": "Amara Wellness Centre",
+      "location": "Westlands, Nairobi",
+      "service_tag": "Brand Identity",
+      "result": "Brand launched to a sold-out opening event; 200+ Instagram followers gained on launch day alone",
+      "category": "branding",
+      "visual_class": "pv-branding-2",
+      "visual_html": "<div class=\"pv-logo-stack\">\n            <div class=\"pv-logo-mark\"></div>\n            <div class=\"pv-logo-line\"></div>\n            <div class=\"pv-logo-line\" style=\"width:32px; margin-top:2px;\"></div>\n          </div>",
+      "is_featured": false
+    },
+    {
+      "position": 8,
+      "title": "Karibu Hotels — Mobile-first website redesign",
+      "client_name": "Karibu Hotels & Resorts",
+      "location": "Kenya",
+      "service_tag": "Web Design & Development",
+      "result": "Bounce rate dropped by 48%; direct online bookings increased by 95% in the first month post-launch",
+      "category": "web",
+      "visual_class": "pv-web-2",
+      "visual_html": "<div class=\"pv-mobile\">\n            <div class=\"pv-mobile-header\"></div>\n            <div class=\"pv-mobile-content\">\n              <div class=\"pv-mobile-row\"></div>\n              <div class=\"pv-mobile-row\"></div>\n              <div class=\"pv-mobile-row\"></div>\n              <div class=\"pv-mobile-btn\"></div>\n            </div>\n          </div>",
+      "is_featured": false
+    },
+    {
+      "position": 9,
+      "title": "Greenleaf NGO — Annual report & brochures",
+      "client_name": "Greenleaf Foundation",
+      "location": "Nairobi, Kenya",
+      "service_tag": "Print Design",
+      "result": "2,000 copies of the annual report printed and distributed to donors; praised by board as the best-ever edition",
+      "category": "print",
+      "visual_class": "pv-print-2",
+      "visual_html": "<div class=\"pv-brochure\">\n            <div class=\"pv-brochure-left\"></div>\n            <div class=\"pv-brochure-right\">\n              <div class=\"pv-text-line\"></div>\n              <div class=\"pv-text-line\"></div>\n              <div class=\"pv-text-line\"></div>\n            </div>\n          </div>",
+      "is_featured": false
+    },
+    {
+      "position": 10,
+      "title": "Summit Capital — LinkedIn thought leadership",
+      "client_name": "Summit Capital Group",
+      "location": "Nairobi, Kenya",
+      "service_tag": "Social Media Management",
+      "result": "LinkedIn page grew from 120 to 4,800 followers in 4 months; CEO recognised as a top finance voice in Kenya",
+      "category": "social",
+      "visual_class": "pv-social-2",
+      "visual_html": "<div class=\"pv-linkedin\">\n            <div class=\"pv-li-header\">\n              <div class=\"pv-li-avatar\"></div>\n              <div class=\"pv-li-name\"></div>\n            </div>\n            <div class=\"pv-li-body\"></div>\n            <div class=\"pv-li-body\" style=\"width:80%\"></div>\n            <div class=\"pv-li-body\" style=\"width:60%; margin-top:4px;\"></div>\n          </div>",
+      "is_featured": false
+    },
+    {
+      "position": 11,
+      "title": "Horizon Logistics — Fleet of 22 vehicles",
+      "client_name": "Horizon Logistics Ltd",
+      "location": "Kenya-wide",
+      "service_tag": "Vehicle Branding",
+      "result": "Full fleet branded consistently across 22 vehicles in 10 days; client reported 30% increase in brand recognition on key routes",
+      "category": "signage",
+      "visual_class": "pv-signage-2",
+      "visual_html": "<div class=\"pv-vehicle\"><span>Fleet Branding</span></div>",
+      "is_featured": false
+    },
+    {
+      "position": 12,
+      "title": "Afrique Media — Brand + custom CMS build",
+      "client_name": "Afrique Media Group",
+      "location": "Nairobi, Kenya",
+      "service_tag": "Brand Identity + IT",
+      "result": "New brand identity paired with a custom content management system that cut editorial workflow time by 65%",
+      "category": "branding",
+      "visual_class": "pv-it-1",
+      "visual_html": "<div class=\"pv-code\">\n            <div><span class=\"c-blue\">const</span> <span class=\"c-gold\">brand</span> = {</div>\n            <div>&nbsp;&nbsp;<span class=\"c-green\">name</span>: <span class=\"c-red\">'Afrique'</span>,</div>\n            <div>&nbsp;&nbsp;<span class=\"c-green\">identity</span>: <span class=\"c-blue\">new</span></div>\n            <div>&nbsp;&nbsp;<span class=\"c-gold\">BrandSystem</span>()</div>\n            <div>}</div>\n          </div>",
+      "is_featured": false
+    }
+  ],
+  "case_studies": [
+    {
+      "position": 1,
+      "anchor": "case-horizon",
+      "title": "How Horizon Logistics went from invisible to unmistakable",
+      "tag": "Brand Identity · Signage · Web",
+      "client_line": "Horizon Logistics Ltd — Nairobi, Kenya",
+      "challenge": "Horizon Logistics had been operating for 8 years with a logo designed on Microsoft Word. Despite being one of the most reliable logistics firms in Nairobi, clients consistently underestimated their scale and professionalism at first impression.",
+      "approach": "We conducted a full brand audit and competitor analysis, then developed a new visual identity system — logo, typography, colour palette, and brand guide. This was applied across a redesigned website, a full stationery suite, and a fleet branding programme covering all 22 vehicles.",
+      "headline_number": "60",
+      "headline_suffix": "%",
+      "headline_label": "More enquiries",
+      "visual_class": "cs-visual-1",
+      "is_reversed": false,
+      "results": [
+        {
+          "number": "60",
+          "suffix": "%",
+          "label": "More client enquiries"
+        },
+        {
+          "number": "22",
+          "suffix": "",
+          "label": "Vehicles branded"
+        },
+        {
+          "number": "3",
+          "suffix": "wk",
+          "label": "Full delivery time"
+        }
+      ]
+    },
+    {
+      "position": 2,
+      "anchor": "case-afrique",
+      "title": "How Afrique Media tripled their organic traffic in 90 days",
+      "tag": "SEO · Web Optimisation · Content",
+      "client_line": "Afrique Media Group — Nairobi, Kenya",
+      "challenge": "Afrique Media had strong editorial content but almost no online visibility. Their website was buried on page 4 of Google for their most important keywords, and organic traffic had flatlined for 18 months.",
+      "approach": "We started with a comprehensive technical SEO audit, fixing 47 crawl errors and improving site speed by 62%. We then developed a keyword strategy targeting 28 high-intent search terms relevant to the Kenyan media market and built a content calendar to support each one consistently over 12 weeks.",
+      "headline_number": "320",
+      "headline_suffix": "%",
+      "headline_label": "Organic traffic growth",
+      "visual_class": "cs-visual-2",
+      "is_reversed": true,
+      "results": [
+        {
+          "number": "320",
+          "suffix": "%",
+          "label": "Traffic increase"
+        },
+        {
+          "number": "14",
+          "suffix": "",
+          "label": "Page 1 keywords"
+        },
+        {
+          "number": "90",
+          "suffix": "d",
+          "label": "To see results"
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "anchor": "case-pearl",
+      "title": "How Pearl Properties turned social media into their top lead source",
+      "tag": "Social Media · Content Creation · Paid Ads",
+      "client_line": "Pearl Properties Kenya — Nairobi, Kenya",
+      "challenge": "Pearl Properties had active social media accounts but no strategy — sporadic posting, inconsistent visuals, and almost zero engagement from potential buyers. Their sales team was relying entirely on word-of-mouth referrals.",
+      "approach": "We rebuilt their social presence from the ground up: a new content strategy focused on lifestyle and aspiration, professionally designed post templates consistent with their brand, a 3-posts-per-week publishing schedule, and targeted paid ads reaching potential buyers in specific Nairobi neighbourhoods. Community management was handled daily to respond to every enquiry and comment.",
+      "headline_number": "",
+      "headline_suffix": "",
+      "headline_label": "Instagram followers gained",
+      "visual_class": "cs-visual-3",
+      "is_reversed": false,
+      "results": [
+        {
+          "number": "35",
+          "suffix": "+",
+          "label": "Monthly enquiries"
+        }
+      ]
+    }
+  ],
+  "sectors": [
+    {
+      "slug": "corporate",
+      "label": "Corporates & Finance",
+      "position": 2
+    },
+    {
+      "slug": "sme",
+      "label": "SMEs & Startups",
+      "position": 3
+    },
+    {
+      "slug": "ngo",
+      "label": "NGOs & Nonprofits",
+      "position": 4
+    },
+    {
+      "slug": "hospitality",
+      "label": "Hospitality & Retail",
+      "position": 5
+    },
+    {
+      "slug": "health",
+      "label": "Healthcare",
+      "position": 6
+    }
+  ],
+  "clients": [
+    {
+      "position": 1,
+      "name": "Horizon Logistics Ltd",
+      "industry": "Logistics & Transport",
+      "services": "Branding · Web · Signage",
+      "sector": "corporate"
+    },
+    {
+      "position": 2,
+      "name": "Savanna Foods Ltd",
+      "industry": "FMCG & Retail",
+      "services": "Web · Packaging · Print",
+      "sector": "hospitality"
+    },
+    {
+      "position": 3,
+      "name": "Pearl Properties Kenya",
+      "industry": "Real Estate",
+      "services": "Branding · Social Media · Web",
+      "sector": "sme"
+    },
+    {
+      "position": 4,
+      "name": "Summit Capital Group",
+      "industry": "Finance & Investment",
+      "services": "Branding · Print · Social",
+      "sector": "corporate"
+    },
+    {
+      "position": 5,
+      "name": "Greenleaf Foundation",
+      "industry": "NGO & Nonprofit",
+      "services": "Branding · Print · Signage",
+      "sector": "ngo"
+    },
+    {
+      "position": 6,
+      "name": "Afrique Media Group",
+      "industry": "Media & Publishing",
+      "services": "SEO · Web · Branding",
+      "sector": "corporate"
+    },
+    {
+      "position": 7,
+      "name": "Amara Wellness Centre",
+      "industry": "Healthcare & Wellness",
+      "services": "Branding · Social · Web",
+      "sector": "sme"
+    },
+    {
+      "position": 8,
+      "name": "Karibu Hotels & Resorts",
+      "industry": "Hospitality & Tourism",
+      "services": "Web · Social · Print",
+      "sector": "hospitality"
+    },
+    {
+      "position": 9,
+      "name": "Kilimani Clinic",
+      "industry": "Healthcare",
+      "services": "Branding · Web · Signage",
+      "sector": "health"
+    },
+    {
+      "position": 10,
+      "name": "Eastgate Properties",
+      "industry": "Real Estate",
+      "services": "Branding · Web · Print",
+      "sector": "corporate"
+    },
+    {
+      "position": 11,
+      "name": "Savannah Tech",
+      "industry": "Technology & Startups",
+      "services": "Web · Branding · IT",
+      "sector": "sme"
+    },
+    {
+      "position": 12,
+      "name": "Nairobi Eats",
+      "industry": "Food & Hospitality",
+      "services": "Branding · Social · Print",
+      "sector": "sme"
+    }
+  ],
+  "marquee": [
+    "Afrique Media Group",
+    "Amara Wellness",
+    "Eastgate Properties",
+    "Greenleaf Foundation",
+    "Horizon Logistics",
+    "Karibu Hotels",
+    "Kilimani Clinic",
+    "Nairobi Eats",
+    "Pearl Properties",
+    "Savanna Foods",
+    "Savannah Tech",
+    "Summit Capital"
+  ],
+  "testimonials": [
+    {
+      "position": 1,
+      "quote": "Designplus didn't just give us a new logo — they gave us a new identity. Our clients, drivers, and even our own staff carry themselves differently now. The quality of business we attract has genuinely changed since the rebrand. I can't recommend them highly enough.",
+      "author": "James Kariuki",
+      "role": "CEO",
+      "company": "Horizon Logistics Ltd",
+      "rating": 5,
+      "is_featured": true
+    },
+    {
+      "position": 2,
+      "quote": "Social media went from being our weakest channel to our number one source of property leads. The strategy, the content, the community management — everything was handled with real professionalism.",
+      "author": "Wanjiru Mwenda",
+      "role": "Sales Director",
+      "company": "Pearl Properties Kenya",
+      "rating": 5,
+      "is_featured": false
+    },
+    {
+      "position": 3,
+      "quote": "Page 4 to page 1 in three months. The SEO results have genuinely changed the trajectory of our business online. Clear reporting, honest communication, real results.",
+      "author": "David Odhiambo",
+      "role": "Digital Director",
+      "company": "Afrique Media Group",
+      "rating": 5,
+      "is_featured": false
+    },
+    {
+      "position": 4,
+      "quote": "Our new website has completely changed how guests find and book us. Direct bookings nearly doubled in the first month. The team understood hospitality immediately — no lengthy explanations needed.",
+      "author": "Aisha Omondi",
+      "role": "General Manager",
+      "company": "Karibu Hotels & Resorts",
+      "rating": 5,
+      "is_featured": false
+    },
+    {
+      "position": 5,
+      "quote": "Our annual report had never looked this good. Donors were commenting on the design before they'd even read the content. Designplus understood our mission from day one.",
+      "author": "Faith Njoroge",
+      "role": "Executive Director",
+      "company": "Greenleaf Foundation",
+      "rating": 5,
+      "is_featured": false
+    },
+    {
+      "position": 6,
+      "quote": "We launched our wellness centre with zero brand recognition. Within three months of working with Designplus, we had a waiting list. The brand they created for us feels genuinely premium.",
+      "author": "Stella Kamau",
+      "role": "Founder",
+      "company": "Amara Wellness Centre",
+      "rating": 5,
+      "is_featured": false
+    }
+  ]
+}

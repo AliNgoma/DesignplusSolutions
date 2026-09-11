@@ -1,0 +1,6 @@
+{% extends "admin/base.html" %}
+{% block title %}{{ code }}{% endblock %}
+{% block content %}
+<div class="page-head"><div><h1>{{ code }}</h1><p>{{ message }}</p></div></div>
+<a class="btn btn-primary" href="{{ url_for('admin.dashboard') }}">Back to the dashboard</a>
+{% endblock %}

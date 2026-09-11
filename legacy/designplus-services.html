@@ -1,28 +1,301 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services — Designplus Solutions</title>
+<meta name="description" content="Seven services, one agency: graphic design, web design and development, SEO, printing, branding and signage, social media management and custom IT solutions in Nairobi, Kenya.">
+<link rel="canonical" href="https://designplussolutions.co.ke/designplus-services.html">
+<meta name="theme-color" content="#0a1f44">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Designplus Solutions">
+<meta property="og:locale" content="en_KE">
+<meta property="og:title" content="Services — Designplus Solutions">
+<meta property="og:description" content="Seven services, one agency: graphic design, web design and development, SEO, printing, branding and signage, social media management and custom IT solutions in Nairobi, Kenya.">
+<meta property="og:url" content="https://designplussolutions.co.ke/designplus-services.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Services — Designplus Solutions">
+<meta name="twitter:description" content="Seven services, one agency: graphic design, web design and development, SEO, printing, branding and signage, social media management and custom IT solutions in Nairobi, Kenya.">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<script src="assets/js/site.js" defer></script>
+<style>
+
+
+  /* PAGE HERO */
+  .page-hero {
+    background: var(--navy); padding: 148px 5vw 100px;
+    position: relative; overflow: hidden;
+  }
+  .hero-dots {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .hero-shape {
+    position: absolute; right: 0; top: 0; bottom: 0; width: 45%;
+    background: rgba(255,255,255,0.015);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    pointer-events: none;
+  }
+  .hero-glow {
+    position: absolute; right: 10vw; top: 50%; transform: translateY(-50%);
+    width: 420px; height: 420px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,149,42,0.13) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 2; animation: fadeUp 0.8s ease both; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.32); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px; }
+  .breadcrumb span { color: var(--gold); }
+  .hero-inner h1 {
+    font-family: var(--font-display);
+    font-size: clamp(46px, 6.5vw, 88px); font-weight: 700;
+    color: var(--white); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 28px;
+  }
+  .hero-inner h1 em { font-style: italic; color: var(--gold); }
+  .hero-inner p { font-size: 18px; color: rgba(255,255,255,0.58); line-height: 1.75; max-width: 580px; font-weight: 300; margin-bottom: 44px; }
+  .hero-service-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .hero-pill {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px; padding: 7px 18px; font-size: 13px;
+    color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.2s; text-decoration: none;
+  }
+  .hero-pill:hover { background: rgba(200,149,42,0.15); border-color: rgba(200,149,42,0.4); color: var(--gold-light); }
+
+  /* SECTION COMMON */
+  .section-label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 10px; }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 3.5vw, 46px); font-weight: 700;
+    color: var(--navy); line-height: 1.18; letter-spacing: -0.01em;
+  }
+  .section-title-light { color: var(--white); }
+  .section-sub { font-size: 16px; color: var(--text-muted); line-height: 1.75; font-weight: 300; max-width: 560px; margin-top: 14px; }
+
+  /* SERVICE OVERVIEW STRIP */
+  .overview-strip {
+    background: var(--off-white); padding: 0; overflow: hidden;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  .overview-inner {
+    display: flex; overflow-x: auto; scrollbar-width: none;
+  }
+  .overview-inner::-webkit-scrollbar { display: none; }
+  .ov-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 18px 28px; flex-shrink: 0;
+    border-right: 1px solid var(--gray-light);
+    text-decoration: none; color: var(--text-mid);
+    font-size: 13px; font-weight: 400; transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .ov-item:hover { background: var(--white); color: var(--navy); }
+  .ov-item svg { opacity: 0.5; flex-shrink: 0; }
+  .ov-item:hover svg { opacity: 1; }
+
+  /* INDIVIDUAL SERVICE SECTIONS */
+  .service-section {
+    padding: 96px 5vw; border-bottom: 1px solid var(--gray-light);
+  }
+  .service-section:nth-child(even) { background: var(--off-white); }
+  .service-section:nth-child(odd) { background: var(--white); }
+
+  .service-layout {
+    display: grid; grid-template-columns: 380px 1fr; gap: 80px; align-items: start;
+  }
+  .service-layout.reverse { grid-template-columns: 1fr 380px; }
+  .service-layout.reverse .service-left { order: 2; }
+  .service-layout.reverse .service-right { order: 1; }
+
+  .service-left { position: sticky; top: 96px; }
+  .service-num {
+    font-family: var(--font-display);
+    font-size: 72px; font-weight: 700; line-height: 1;
+    color: var(--gray-light); margin-bottom: 16px;
+    display: block; letter-spacing: -0.03em;
+  }
+  .service-icon-ring {
+    width: 56px; height: 56px; border-radius: 12px;
+    background: rgba(10,31,68,0.07); display: flex; align-items: center;
+    justify-content: center; margin-bottom: 20px;
+  }
+  .service-left h2 {
+    font-family: var(--font-display);
+    font-size: 28px; font-weight: 700; color: var(--navy); line-height: 1.25; margin-bottom: 14px;
+  }
+  .service-left p { font-size: 15px; color: var(--text-muted); line-height: 1.75; font-weight: 300; margin-bottom: 24px; }
+  .service-tag {
+    display: inline-block; background: rgba(10,31,68,0.07);
+    border-radius: 100px; padding: 5px 14px; font-size: 12px;
+    color: var(--navy-mid); font-weight: 500; letter-spacing: 0.03em; margin-right: 6px; margin-bottom: 6px;
+  }
+  .get-quote-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 24px; font-size: 14px; font-weight: 500;
+    color: var(--gold); text-decoration: none; letter-spacing: 0.02em;
+    border-bottom: 1px solid rgba(200,149,42,0.3); padding-bottom: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .get-quote-link:hover { color: var(--gold-light); border-color: var(--gold-light); }
+
+  .service-right {}
+  .deliverables-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); font-weight: 500; margin-bottom: 20px; }
+  .deliverables-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 36px; }
+  .deliverable-card {
+    background: var(--white); border: 1px solid var(--gray-light); border-radius: 8px;
+    padding: 18px 20px; transition: border-color 0.2s, transform 0.2s;
+  }
+  .service-section:nth-child(even) .deliverable-card { background: var(--white); }
+  .deliverable-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+  .deliverable-card h4 { font-size: 14px; font-weight: 500; color: var(--text-dark); margin-bottom: 5px; }
+  .deliverable-card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; font-weight: 300; }
+
+  .why-choose-box {
+    background: var(--navy); border-radius: 8px; padding: 28px 32px;
+    margin-top: 4px;
+  }
+  .why-choose-box h4 { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 14px; }
+  .why-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .why-list li { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.55; font-weight: 300; display: flex; gap: 10px; align-items: flex-start; }
+  .why-list li::before { content: '→'; color: var(--gold); flex-shrink: 0; font-size: 13px; margin-top: 1px; }
+
+  /* PACKAGES */
+  .packages { background: var(--navy); padding: 100px 5vw; }
+  .packages-header { margin-bottom: 56px; }
+  .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pkg-card {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px; padding: 36px 32px; position: relative; transition: border-color 0.2s;
+  }
+  .pkg-card:hover { border-color: rgba(255,255,255,0.25); }
+  .pkg-card.featured { border-color: var(--gold); background: rgba(200,149,42,0.06); }
+  .pkg-badge {
+    position: absolute; top: -13px; left: 32px;
+    background: var(--gold); color: var(--navy); font-size: 11px;
+    font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 14px; border-radius: 100px;
+  }
+  .pkg-name { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-weight: 500; margin-bottom: 10px; }
+  .pkg-title { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+  .pkg-subtitle { font-size: 14px; color: rgba(255,255,255,0.45); font-weight: 300; margin-bottom: 28px; line-height: 1.5; }
+  .pkg-divider { height: 1px; background: rgba(255,255,255,0.1); margin-bottom: 24px; }
+  .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 11px; margin-bottom: 32px; }
+  .pkg-features li { font-size: 14px; color: rgba(255,255,255,0.65); font-weight: 300; display: flex; gap: 10px; align-items: flex-start; line-height: 1.5; }
+  .pkg-features li::before { content: '✓'; color: var(--gold); flex-shrink: 0; font-size: 13px; font-weight: 500; }
+  .pkg-cta {
+    display: block; text-align: center; padding: 13px 24px; border-radius: 5px;
+    font-size: 14px; font-weight: 500; text-decoration: none; letter-spacing: 0.02em; transition: all 0.2s;
+  }
+  .pkg-cta-outline { border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); }
+  .pkg-cta-outline:hover { border-color: rgba(255,255,255,0.5); color: var(--white); }
+  .pkg-cta-gold { background: var(--gold); color: var(--navy); }
+  .pkg-cta-gold:hover { background: var(--gold-light); }
+
+  /* PROCESS */
+  .process { background: var(--cream); padding: 100px 5vw; }
+  .process-header { margin-bottom: 60px; }
+  .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+  .process-steps::before {
+    content: ''; position: absolute; top: 28px; left: 10%; right: 10%;
+    height: 1px; background: var(--gray-light); z-index: 0;
+  }
+  .process-step { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+  .step-bubble {
+    width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 18px; font-weight: 700;
+    color: var(--white); background: var(--navy); border: 3px solid var(--cream);
+    position: relative; z-index: 2;
+  }
+  .process-step:nth-child(3) .step-bubble { background: var(--gold); }
+  .step-title { font-size: 15px; font-weight: 500; color: var(--text-dark); margin-bottom: 8px; }
+  .step-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; font-weight: 300; }
+
+  /* FAQ */
+  .faq { background: var(--white); padding: 100px 5vw; }
+  .faq-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
+  .faq-left { position: sticky; top: 100px; }
+  .faq-left .section-sub { margin-top: 14px; }
+  .faq-list { display: flex; flex-direction: column; gap: 0; }
+  .faq-item { border-bottom: 1px solid var(--gray-light); }
+  .faq-q {
+    width: 100%; background: none; border: none; text-align: left;
+    padding: 20px 0; display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-body); font-size: 15px; font-weight: 500;
+    color: var(--text-dark); cursor: pointer; gap: 16px; transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--navy); }
+  .faq-icon { font-size: 20px; color: var(--gold); flex-shrink: 0; line-height: 1; transition: transform 0.25s; font-weight: 300; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a { display: none; padding: 0 0 20px; font-size: 14px; color: var(--text-muted); line-height: 1.75; font-weight: 300; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* CTA */
+  .services-cta {
+    background: var(--black); padding: 100px 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 48px; flex-wrap: wrap; position: relative; overflow: hidden;
+  }
+  .services-cta::after {
+    content: ''; position: absolute; left: -80px; bottom: -80px;
+    width: 360px; height: 360px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,149,42,0.08) 0%, transparent 70%);
+  }
+  .cta-text { position: relative; z-index: 1; }
+  .cta-text h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 46px); font-weight: 700;
+    color: var(--white); line-height: 1.2; margin-bottom: 12px;
+  }
+  .cta-text p { font-size: 16px; color: rgba(255,255,255,0.45); max-width: 480px; line-height: 1.7; font-weight: 300; }
+  .cta-btns { display: flex; gap: 14px; flex-wrap: wrap; position: relative; z-index: 1; flex-shrink: 0; }
+  .btn-gold { background: var(--gold); color: var(--navy); padding: 15px 34px; border-radius: 4px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-wa { background: #25D366; color: #fff; padding: 15px 28px; border-radius: 4px; font-size: 15px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s, transform 0.15s; }
+  .btn-wa:hover { background: #1db954; transform: translateY(-1px); }
+
+  @media (max-width: 960px) {
+    .service-layout, .service-layout.reverse { grid-template-columns: 1fr; gap: 40px; }
+    .service-layout.reverse .service-left, .service-layout.reverse .service-right { order: unset; }
+    .service-left { position: static; }
+    .packages-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .process-steps::before { display: none; }
+    .faq-layout { grid-template-columns: 1fr; gap: 40px; }
+    .faq-left { position: static; }
+    .services-cta { flex-direction: column; }
+  }
+  @media (max-width: 600px) {
+    .deliverables-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
-<body id="page-services">
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV -->
 <nav>
   <a href="designplus-homepage.html" class="nav-logo">Designplus<span>.</span></a>
-  <ul class="nav-links">
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="designplus-homepage.html">Home</a></li>
     <li><a href="designplus-about.html">About</a></li>
-    <li><a href="designplus-services.html" class="active">Services</a></li>
+    <li><a href="designplus-services.html" aria-current="page">Services</a></li>
     <li><a href="designplus-portfolio.html">Portfolio</a></li>
     <li><a href="designplus-clients.html">Clients</a></li>
     <li><a href="designplus-contact.html" class="nav-cta">Get a quote</a></li>
   </ul>
 </nav>
+
+<main id="main">
 
 <!-- HERO -->
 <section class="page-hero">
@@ -94,7 +367,7 @@
         <span class="service-tag">Print Design</span>
         <span class="service-tag">Digital Graphics</span>
       </div>
-      <a href="designplus-contact.html" class="get-quote-link">Get a quote for this service &rarr;</a>
+      <a href="designplus-contact.html?service=graphic-design" class="get-quote-link">Get a quote for this service →</a>
     </div>
     <div class="service-right">
       <div class="deliverables-label">What's included</div>
@@ -152,7 +425,7 @@
         <span class="service-tag">E-commerce</span>
         <span class="service-tag">Landing Pages</span>
       </div>
-      <a href="designplus-contact.html" class="get-quote-link">Get a quote for this service &rarr;</a>
+      <a href="designplus-contact.html?service=web-design" class="get-quote-link">Get a quote for this service →</a>
     </div>
     <div class="service-right">
       <div class="deliverables-label">What's included</div>
@@ -210,7 +483,7 @@
         <span class="service-tag">Technical SEO</span>
         <span class="service-tag">Content Strategy</span>
       </div>
-      <a href="designplus-contact.html" class="get-quote-link">Get a quote for this service &rarr;</a>
+      <a href="designplus-contact.html?service=seo" class="get-quote-link">Get a quote for this service →</a>
     </div>
     <div class="service-right">
       <div class="deliverables-label">What's included</div>
@@ -268,7 +541,7 @@
         <span class="service-tag">Large Format</span>
         <span class="service-tag">Marketing Print</span>
       </div>
-      <a href="designplus-contact.html" class="get-quote-link">Get a quote for this service &rarr;</a>
+      <a href="designplus-contact.html?service=printing" class="get-quote-link">Get a quote for this service →</a>
     </div>
     <div class="service-right">
       <div class="deliverables-label">What's included</div>
@@ -326,7 +599,7 @@
         <span class="service-tag">Office Signage</span>
         <span class="service-tag">Outdoor Advertising</span>
       </div>
-      <a href="designplus-contact.html" class="get-quote-link">Get a quote for this service &rarr;</a>
+      <a href="designplus-contact.html?service=branding-signage" class="get-quote-link">Get a quote for this service →</a>
     </div>
     <div class="service-right">
       <div class="deliverables-label">What's included</div>
@@ -384,7 +657,7 @@
         <span class="service-tag">Community Management</span>
         <span class="service-tag">Paid Advertising</span>
       </div>
-      <a href="designplus-contact.html" class="get-quote-link">Get a quote for this service &rarr;</a>
+      <a href="designplus-contact.html?service=social-media" class="get-quote-link">Get a quote for this service →</a>
     </div>
     <div class="service-right">
       <div class="deliverables-label">What's included</div>
@@ -442,7 +715,7 @@
         <span class="service-tag">System Integration</span>
         <span class="service-tag">IT Support</span>
       </div>
-      <a href="designplus-contact.html" class="get-quote-link">Get a quote for this service &rarr;</a>
+      <a href="designplus-contact.html?service=it-solutions" class="get-quote-link">Get a quote for this service →</a>
     </div>
     <div class="service-right">
       <div class="deliverables-label">What's included</div>
@@ -507,7 +780,7 @@
         <li>Social media profile setup (2 platforms)</li>
         <li>Google Business Profile setup</li>
       </ul>
-      <a href="designplus-contact.html" class="pkg-cta pkg-cta-outline">Get a quote &rarr;</a>
+      <a href="designplus-contact.html?service=multiple" class="pkg-cta pkg-cta-outline">Get a quote →</a>
     </div>
 
     <div class="pkg-card featured">
@@ -525,7 +798,7 @@
         <li>Signage or vehicle branding</li>
         <li>Monthly performance report</li>
       </ul>
-      <a href="designplus-contact.html" class="pkg-cta pkg-cta-gold">Get a quote &rarr;</a>
+      <a href="designplus-contact.html?service=multiple" class="pkg-cta pkg-cta-gold">Get a quote →</a>
     </div>
 
     <div class="pkg-card">
@@ -543,7 +816,7 @@
         <li>Dedicated account manager</li>
         <li>Custom IT &amp; integration support</li>
       </ul>
-      <a href="designplus-contact.html" class="pkg-cta pkg-cta-outline">Get a quote &rarr;</a>
+      <a href="designplus-contact.html?service=multiple" class="pkg-cta pkg-cta-outline">Get a quote →</a>
     </div>
   </div>
 
@@ -596,59 +869,59 @@
       <div class="section-label">Common questions</div>
       <h2 class="section-title">Things clients often ask us.</h2>
       <p class="section-sub">Can't find your answer here? Get in touch — we're always happy to have a conversation before you commit to anything.</p>
-      <a href="designplus-contact.html" style="display:inline-flex; align-items:center; gap:8px; margin-top:28px; font-size:14px; font-weight:500; color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(200,149,42,0.3); padding-bottom:2px;">Ask us directly &rarr;</a>
+      <a href="designplus-contact.html?service=not-sure" style="display:inline-flex; align-items:center; gap:8px; margin-top:28px; font-size:14px; font-weight:500; color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(200,149,42,0.3); padding-bottom:2px;">Ask us directly →</a>
     </div>
 
     <div class="faq-right">
       <div class="faq-list">
         <div class="faq-item open">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">
             How long does a typical project take?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">It depends on the scope. A logo design typically takes 3–5 business days. A full brand identity takes 1–2 weeks. A website takes 2–6 weeks depending on complexity. We'll give you a clear timeline in your proposal — and we stick to it.</div>
+          <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" hidden>It depends on the scope. A logo design typically takes 3–5 business days. A full brand identity takes 1–2 weeks. A website takes 2–6 weeks depending on complexity. We'll give you a clear timeline in your proposal — and we stick to it.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">
             Do you work with businesses outside Nairobi?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">Absolutely. We work with clients across Kenya and East Africa. For design, web, SEO, and social media work, everything can be handled remotely. For physical services like signage and vehicle branding, we can discuss logistics depending on your location.</div>
+          <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" hidden>Absolutely. We work with clients across Kenya and East Africa. For design, web, SEO, and social media work, everything can be handled remotely. For physical services like signage and vehicle branding, we can discuss logistics depending on your location.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">
             How much does it cost?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">Every project is unique, so we don't publish fixed prices — we'd rather give you an accurate quote than a ballpark figure that doesn't reflect your actual needs. Contact us with a brief summary of what you need and we'll get back to you with a detailed, transparent proposal. There are no hidden fees.</div>
+          <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" hidden>Every project is unique, so we don't publish fixed prices — we'd rather give you an accurate quote than a ballpark figure that doesn't reflect your actual needs. Contact us with a brief summary of what you need and we'll get back to you with a detailed, transparent proposal. There are no hidden fees.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">
             What information do you need to get started?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">Don't worry if you don't have everything figured out — that's partly what we're here for. The more context you can give us about your business, your target audience, and what you're trying to achieve, the better. If you have existing brand materials, share those too. We'll ask the right questions to fill in any gaps.</div>
+          <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>Don't worry if you don't have everything figured out — that's partly what we're here for. The more context you can give us about your business, your target audience, and what you're trying to achieve, the better. If you have existing brand materials, share those too. We'll ask the right questions to fill in any gaps.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">
             Do you offer ongoing support after a project is completed?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">Yes — and this is something we actively encourage. Your brand will evolve, your website will need updates, and your marketing needs will grow. We offer ongoing retainer packages for web maintenance, social media, SEO, and general creative support so you always have a trusted partner on hand.</div>
+          <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5" hidden>Yes — and this is something we actively encourage. Your brand will evolve, your website will need updates, and your marketing needs will grow. We offer ongoing retainer packages for web maintenance, social media, SEO, and general creative support so you always have a trusted partner on hand.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" id="faq-q-6" aria-expanded="false" aria-controls="faq-a-6">
             Can you handle multiple services at once?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">Yes — and it actually works better that way. When one team handles your design, your website, your print, and your social media, everything stays consistent. There's no briefing multiple agencies or trying to make sure different suppliers match your brand guidelines. We coordinate everything internally, so you get a seamless result.</div>
+          <div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6" hidden>Yes — and it actually works better that way. When one team handles your design, your website, your print, and your social media, everything stays consistent. There's no briefing multiple agencies or trying to make sure different suppliers match your brand guidelines. We coordinate everything internally, so you get a seamless result.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" type="button" id="faq-q-7" aria-expanded="false" aria-controls="faq-a-7">
             What payment terms do you offer?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">We typically require a 50% deposit to begin work, with the balance due on completion. For larger projects or ongoing retainers, we can discuss phased payment schedules. We accept M-Pesa, bank transfer, and other payment methods convenient to you.</div>
+          <div class="faq-a" id="faq-a-7" role="region" aria-labelledby="faq-q-7" hidden>We typically require a 50% deposit to begin work, with the balance due on completion. For larger projects or ongoing retainers, we can discuss phased payment schedules. We accept M-Pesa, bank transfer, and other payment methods convenient to you.</div>
         </div>
       </div>
     </div>
@@ -662,7 +935,7 @@
     <p>Tell us about your business and what you're trying to achieve. We'll recommend the right services, give you a transparent quote, and get to work — no pressure, no jargon.</p>
   </div>
   <div class="cta-btns">
-    <a href="https://wa.me/254743270939" target="_blank" class="btn-wa">
+    <a href="https://wa.me/254700000000" class="btn-wa" target="_blank" rel="noopener">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
       Chat on WhatsApp
     </a>
@@ -671,22 +944,24 @@
 </section>
 
 <!-- FOOTER -->
+</main>
+
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <div class="footer-logo">Designplus<span>.</span></div>
+      <a href="designplus-homepage.html" class="footer-logo">Designplus<span>.</span></a>
       <p class="footer-tagline">Your brand, built right. Full-service creative and digital solutions for businesses across Kenya.</p>
     </div>
     <div class="footer-links">
       <h4>Services</h4>
       <ul>
-        <li><a href="#graphic-design">Graphic Design</a></li>
-        <li><a href="#web-design">Web Design &amp; Development</a></li>
-        <li><a href="#seo">SEO</a></li>
-        <li><a href="#printing">Printing Services</a></li>
-        <li><a href="#branding-signage">Branding &amp; Signage</a></li>
-        <li><a href="#social-media">Social Media</a></li>
-        <li><a href="#it-solutions">Custom IT &amp; Digital</a></li>
+        <li><a href="designplus-services.html#graphic-design">Graphic Design</a></li>
+        <li><a href="designplus-services.html#web-design">Web Design &amp; Development</a></li>
+        <li><a href="designplus-services.html#seo">SEO</a></li>
+        <li><a href="designplus-services.html#printing">Printing Services</a></li>
+        <li><a href="designplus-services.html#branding-signage">Branding &amp; Signage</a></li>
+        <li><a href="designplus-services.html#social-media">Social Media</a></li>
+        <li><a href="designplus-services.html#it-solutions">Custom IT &amp; Digital</a></li>
       </ul>
     </div>
     <div class="footer-links">
@@ -702,25 +977,46 @@
       <h4>Contact</h4>
       <ul>
         <li><a href="mailto:info@designplussolutions.co.ke">info@designplussolutions.co.ke</a></li>
-        <li><a href="tel:+254743270939">+254 743 270 939</a></li>
-        <li><a href="https://maps.google.com/?q=Nairobi,+Kenya" target="_blank">Nairobi, Kenya</a></li>
-        <li><a href="https://wa.me/254743270939" target="_blank">WhatsApp us</a></li>
+        <li><a href="tel:+254700000000">+254 700 000 000</a></li>
+        <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp us</a></li>
+        <li><a href="designplus-contact.html#office">Nairobi, Kenya</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 Designplus Solutions. All rights reserved.</p>
+    <p>&copy; <span data-current-year>2026</span> Designplus Solutions. All rights reserved.</p>
     <p>Designed with care in Nairobi, Kenya.</p>
   </div>
 </footer>
 
 <script>
-  function toggleFaq(btn) {
-    const item = btn.parentElement;
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-  }
+(function () {
+  'use strict';
+
+  var items = Array.prototype.slice.call(document.querySelectorAll('.faq-item'));
+
+  var setOpen = function (item, open) {
+    var button = item.querySelector('.faq-q');
+    var answer = item.querySelector('.faq-a');
+    item.classList.toggle('open', open);
+    if (button) button.setAttribute('aria-expanded', String(open));
+    if (answer) answer.hidden = !open;
+  };
+
+  items.forEach(function (item) {
+    // The markup marks one item open on load; mirror that into ARIA.
+    setOpen(item, item.classList.contains('open'));
+
+    var button = item.querySelector('.faq-q');
+    if (!button) return;
+
+    button.addEventListener('click', function () {
+      var willOpen = !item.classList.contains('open');
+      items.forEach(function (other) { setOpen(other, false); });
+      setOpen(item, willOpen);
+    });
+  });
+})();
 </script>
 
 </body>

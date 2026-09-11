@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>{% block title %}Admin{% endblock %} · Designplus</title>
+<link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <a href="{{ url_for('admin.dashboard') }}" class="sidebar-brand">Designplus<span>.</span></a>
+
+    <div class="nav-group">
+      <a class="nav-link" href="{{ url_for('admin.dashboard') }}"
+         {% if request.endpoint == 'admin.dashboard' %}aria-current="page"{% endif %}>Dashboard</a>
+      <a class="nav-link" href="{{ url_for('admin.enquiries') }}"
+         {% if 'enquir' in request.endpoint %}aria-current="page"{% endif %}>
+        Enquiries
+        {% if new_enquiries %}<span class="nav-badge">{{ new_enquiries }}</span>{% endif %}
+      </a>
+    </div>
+
+    {% for group, items in admin_groups.items() %}
+    <div class="nav-group">
+      <div class="nav-group-label">{{ group }}</div>
+      {% for item in items %}
+      <a class="nav-link" href="{{ url_for('admin.resource_list', key=item.key) }}"
+         {% if resource is defined and resource and resource.key == item.key %}aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+    <div class="nav-group">
+      <div class="nav-group-label">Configuration</div>
+      <a class="nav-link" href="{{ url_for('admin.settings') }}"
+         {% if request.endpoint == 'admin.settings' %}aria-current="page"{% endif %}>Site settings</a>
+    </div>
+
+    <div class="sidebar-foot">
+      Signed in as<br>{{ current_user.email }}
+      <a href="{{ url_for('public.home') }}" target="_blank" rel="noopener">View the site &rarr;</a>
+      <a href="{{ url_for('admin.password') }}">Change password</a>
+      <form method="POST" action="{{ url_for('admin.logout') }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit">Sign out</button>
+      </form>
+    </div>
+  </aside>
+
+  <main class="main">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+      <div class="flashes">
+        {% for category, message in messages %}
+        <div class="flash flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+</div>
+</body>
+</html>

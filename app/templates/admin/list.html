@@ -1,0 +1,89 @@
+{% extends "admin/base.html" %}
+{% block title %}{{ resource.title }}{% endblock %}
+
+{% block content %}
+<div class="page-head">
+  <div>
+    <div class="crumb"><a href="{{ url_for('admin.dashboard') }}">Dashboard</a> / {{ resource.group }}</div>
+    <h1>{{ resource.title }}</h1>
+    {% if resource.blurb %}<p>{{ resource.blurb }}</p>{% endif %}
+  </div>
+  {% if resource.can_create %}
+  <a class="btn btn-primary" href="{{ url_for('admin.resource_create', key=resource.key) }}">Add {{ resource.singular | lower }}</a>
+  {% endif %}
+</div>
+
+<div class="panel">
+  {% if rows %}
+  <div class="table-scroll">
+  <table>
+    <thead>
+      <tr>
+        {% if resource.sortable %}<th style="width:64px">Order</th>{% endif %}
+        {% for _, heading in resource.columns %}<th>{{ heading }}</th>{% endfor %}
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        {% if resource.sortable %}
+        <td>
+          <form method="POST" action="{{ url_for('admin.resource_move', key=resource.key, row_id=row.id) }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="direction" value="up">
+            <button class="order-btn" type="submit" title="Move up"
+                    {% if loop.first %}disabled{% endif %} aria-label="Move {{ row }} up">&uarr;</button>
+          </form>
+          <form method="POST" action="{{ url_for('admin.resource_move', key=resource.key, row_id=row.id) }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="direction" value="down">
+            <button class="order-btn" type="submit" title="Move down"
+                    {% if loop.last %}disabled{% endif %} aria-label="Move {{ row }} down">&darr;</button>
+          </form>
+        </td>
+        {% endif %}
+
+        {% for attr, _ in resource.columns %}
+          {% set value = row[attr] %}
+          <td {% if loop.first %}class="primary"{% endif %}>
+            {%- if loop.first -%}
+              <a href="{{ url_for('admin.resource_edit', key=resource.key, row_id=row.id) }}">{{ value or '—' }}</a>
+            {%- elif value is boolean -%}
+              <span class="pill pill-{{ 'yes' if value else 'no' }}">{{ 'Yes' if value else 'No' }}</span>
+            {%- elif value is none or value == '' -%}
+              <span class="muted">—</span>
+            {%- else -%}
+              {{ value }}
+            {%- endif -%}
+          </td>
+        {% endfor %}
+
+        <td class="actions">
+          <a class="btn btn-secondary btn-small"
+             href="{{ url_for('admin.resource_edit', key=resource.key, row_id=row.id) }}">Edit</a>
+          {% if resource.can_delete %}
+          <form method="POST" action="{{ url_for('admin.resource_delete', key=resource.key, row_id=row.id) }}"
+                onsubmit="return confirm('Delete “{{ row }}”? This cannot be undone.');">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit" class="btn btn-danger btn-small">Delete</button>
+          </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% else %}
+  <div class="empty">
+    <p>No {{ resource.title | lower }} yet.</p>
+    {% if resource.can_create %}
+    <p style="margin-top:14px">
+      <a class="btn btn-primary" href="{{ url_for('admin.resource_create', key=resource.key) }}">Add the first one</a>
+    </p>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
